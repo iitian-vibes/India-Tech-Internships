@@ -37,6 +37,13 @@ test('work authorisation blocks: sponsorship negation', () => {
   for (const t of ['We sponsor visas for interns.', 'Visa sponsorship is available for this role.', 'Open to students across India.', '']) assert.equal(hasWorkAuthBlock(t), false, t);
 });
 
+test('work authorisation blocks: negation must govern sponsor verb', () => {
+  // Must return FALSE (not a block)
+  for (const t of ['We are an equal opportunity employer and do not discriminate based on sponsorship status.', 'No problem: we sponsor visas.', 'No problem, we sponsor H1B visas for the right candidate.', 'We do not require you to already have work authorization; sponsorship is available.']) assert.equal(hasWorkAuthBlock(t), false, t);
+  // Must still return TRUE (block)
+  for (const t of ['This employer will not sponsor employment visas.', 'No visa sponsorship is available for this role.', 'We are not able to sponsor applicants for work visas.', 'This role does not offer sponsorship now or in the future.', 'Visa sponsorship is not available.', 'We are unable to provide visa sponsorship for this role.']) assert.equal(hasWorkAuthBlock(t), true, t);
+});
+
 test('student roles: bare graduate is ambiguous', () => {
   for (const t of ['Graduate Recruiter', 'Graduate Admissions Coordinator']) assert.equal(isStudentRole(t, ''), false, t);
   for (const t of ['Graduate Engineer Trainee', 'Graduate Software Engineer', 'Graduate Programme 2027', 'New Graduate SWE']) assert.equal(isStudentRole(t, ''), true, t);

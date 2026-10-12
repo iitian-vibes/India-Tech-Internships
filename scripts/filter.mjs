@@ -21,8 +21,8 @@ export function classifyLocation(job, company) {
 const AUTH = [
   /\b(must|need to|required to|should)\s+(be|have)\s+(legally\s+)?(authori[sz]ed|eligible|the right)\s+to\s+work\s+in\s+(the\s+)?(?:us|u\.s\.|united states|uk|u\.k\.|united kingdom|eu|european union|canada|australia)(?=\W|$)/i,
   /\b(?:us|u\.s\.|american)\s+citizens?(hip)?\s+(only|required)(?=\W|$)/i,
-  /\b(no|not|won't|will not|unable|cannot|can't|does not|do not|don't|never)\b[^.\n,;]{0,50}?\b(sponsor(ship|ed|ing)?|visas?)(?=\W|$)/i,
-  /\b(sponsorship|sponsor(ship|ed|ing)?)\b[^.\n,;]{0,30}?\b(not available|unavailable|is not offered|not provided)(?=\W|$)/i,
+  /\b(no|not|won't|will not|unable to|cannot|can't|does not|do not|don't|never)\b\s+(?:(?:to|be|able|already|any)\s+)*(?:sponsor(?:s|ing)?\b|(?:provide|offer|support)\s+(?:visa\s+|work\s+)?sponsorship|(?:visa\s+|work\s+)?sponsorship)(?=\W|$)/i,
+  /\b(sponsorship|sponsor(ship|ed|ing)?)\b[^.\n,;:]{0,30}?\b(not available|unavailable|is not offered|not provided)(?=\W|$)/i,
   /\bsecurity clearance\b/i,
   /\bgreen card\b/i,
 ];
