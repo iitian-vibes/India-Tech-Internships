@@ -1,4 +1,4 @@
-const STUDENT = /\b(intern|internship|new grad|new graduate|graduate|trainee|apprentice(ship)?)\b/i;
+const STUDENT = /\b(intern|internship|new grad|new graduate|graduate\s+(engineer|software|developer|programme|program|scheme|trainee|analyst)|trainee|apprentice(ship)?)\b/i;
 const SENIOR = /\b(senior|sr\.?|staff|lead|manager|principal|director|head|vp)\b/i;
 const PHD = /\bph\.?\s?d\b/i;
 export function isStudentRole(title = '', employmentType = '') {
@@ -19,9 +19,10 @@ export function classifyLocation(job, company) {
 }
 
 const AUTH = [
-  /\b(must|need to|required to|should)\s+(be|have)\s+(legally\s+)?(authori[sz]ed|eligible|the right)\s+to\s+work\s+in\s+(the\s+)?(us|u\.s\.|united states|uk|u\.k\.|united kingdom|eu|european union|canada|australia)\b/i,
-  /\b(us|u\.s\.|american)\s+citizens?(hip)?\s+(only|required)\b/i,
-  /\b(unable|not able|cannot|can't|will not|won't|do not|does not)\s+(to\s+)?(provide|offer|sponsor)\s+(visa\s+|work\s+)?(sponsorship|visas?)\b/i,
+  /\b(must|need to|required to|should)\s+(be|have)\s+(legally\s+)?(authori[sz]ed|eligible|the right)\s+to\s+work\s+in\s+(the\s+)?(?:us|u\.s\.|united states|uk|u\.k\.|united kingdom|eu|european union|canada|australia)(?=\W|$)/i,
+  /\b(?:us|u\.s\.|american)\s+citizens?(hip)?\s+(only|required)(?=\W|$)/i,
+  /\b(no|not|won't|will not|unable|cannot|can't|does not|do not|don't|never)\b[^.\n,;]{0,50}?\b(sponsor(ship|ed|ing)?|visas?)(?=\W|$)/i,
+  /\b(sponsorship|sponsor(ship|ed|ing)?)\b[^.\n,;]{0,30}?\b(not available|unavailable|is not offered|not provided)(?=\W|$)/i,
   /\bsecurity clearance\b/i,
   /\bgreen card\b/i,
 ];
@@ -35,7 +36,9 @@ export function batchOf(title = '', text = '') {
 const MONEY = /(?:₹|INR|Rs\.?|\$|USD|£|GBP|€|EUR)\s?\d[\d,]*(?:\.\d+)?(?:\s?(?:k|K|L|lakh|LPA))?(?:\s?(?:\/|per)\s?(?:month|mo|week|hour|hr))?/;
 export function stipendOf(text = '', hint = null) {
   if (hint) return String(hint).trim();
-  const m = text.match(new RegExp(`stipend[^.\\n]{0,40}?(${MONEY.source})`, 'i'));
+  // Check for negation directly before "stipend"
+  if (/\b(no|not|without|unpaid)\s+\w*stipend\b/i.test(text)) return null;
+  const m = text.match(new RegExp(`stipend[^.,;\\n]{0,40}?(${MONEY.source})`, 'i'));
   return m ? m[1].trim() : null;
 }
 
