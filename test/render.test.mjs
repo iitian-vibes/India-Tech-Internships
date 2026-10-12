@@ -53,3 +53,9 @@ test('empty sections say so instead of rendering an empty table', () => {
 test('stale rows are marked', () => {
   assert.match(renderReadme({ rows: [row({ stale: true })], closed: [], desk: [], meta }), /SDE Intern ⚠️/);
 });
+
+test('fix round 2, finding 6: the desk table deadline cell is escaped through cell(), not interpolated raw', () => {
+  const md = renderReadme({ rows: [], closed: [], desk: [{ company: 'Jane Street', role: 'SWE Intern', deadline: 'Rolling | [Click](https://phish.example)', url: 'https://js/x', who: 'third years' }], meta });
+  // a raw deadline would inject a literal "|" and break the table into extra columns, and would render a clickable link
+  assert.match(md, /\| Rolling \\\| \\\[Click\\\]\\\(https:\/\/phish\.example\\\) \|/);
+});

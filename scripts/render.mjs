@@ -30,8 +30,11 @@ function table(rows, nowIso) {
 export function renderReadme({ rows, closed, desk, meta }) {
   const c = meta.counts ?? { total: 0 };
   const sec = (s) => rows.filter((r) => r.section === s);
+  // Fix round 2, finding 6: the deadline came from an upstream feed and was interpolated raw — wrap it in
+  // cell() like every other user/upstream-controlled value in this table, so a "|" or markdown link/emphasis
+  // special in it can't break the table structure or render as a clickable/embedded element.
   const deskTable = desk.length
-    ? '| Company | Role | Closes | Who can apply | Apply |\n|---|---|---|---|---|\n' + desk.map((d) => `| ${cell(d.company)} | ${cell(d.role)} | ${d.deadline ?? 'rolling'} | ${cell(d.who)} | [Apply](${encodeUrl(d.url)}) |`).join('\n') + '\n'
+    ? '| Company | Role | Closes | Who can apply | Apply |\n|---|---|---|---|---|\n' + desk.map((d) => `| ${cell(d.company)} | ${cell(d.role)} | ${cell(d.deadline ?? 'rolling')} | ${cell(d.who)} | [Apply](${encodeUrl(d.url)}) |`).join('\n') + '\n'
     : '_Nothing here right now._\n';
   const closedList = closed.length
     ? closed.map((r) => `- ~~${cell(r.role)}~~ at ${cell(r.company)} (closed ${r.closed_at})`).join('\n') + '\n'
