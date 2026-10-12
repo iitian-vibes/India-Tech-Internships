@@ -24,6 +24,10 @@ export async function runBuild({ companies, prev, prevClosed, prevMeta = {}, fet
       for (const j of jobs) { const row = toRow(j, c, today); if (row) fresh.push(row); }
     } catch (e) {
       failed.add(c.slug);
+      // Carry the previous day's count forward. Otherwise a company that fails on day N
+      // drops out of jobs_by_company, so on day N+1 "returned 0 jobs" looks like business
+      // as usual instead of a second failure, and its rows get closed instead of staying stale.
+      jobsByCompany[c.slug] = prevMeta.jobs_by_company?.[c.slug] ?? 0;
       errors.push({ slug: c.slug, message: String(e.message ?? e) });
     }
   }
@@ -46,7 +50,8 @@ export async function runBuild({ companies, prev, prevClosed, prevMeta = {}, fet
   const keptClosed = prevClosed.filter((r) => daysBetween(r.closed_at, today) <= 7 && !liveIds.has(r.id));
   const closed = [...newlyClosed, ...keptClosed.filter((r) => !newlyClosed.some((n) => n.id === r.id))];
 
-  if (!force && prev.length >= 20 && rows.length < prev.length * 0.7) {
+  const removed = prev.filter((r) => !liveIds.has(r.id)).length;
+  if (!force && prev.length >= 20 && removed > prev.length * 0.3) {
     return { ok: false, reason: 'shrink', rows: prev, closed: prevClosed, meta: prevMeta, errors };
   }
 
@@ -57,4 +62,19 @@ export async function runBuild({ companies, prev, prevClosed, prevMeta = {}, fet
     companies_ok: companies.length - failed.size, companies_failed: [...failed].sort(), jobs_by_company: jobsByCompany,
   };
   return { ok: true, rows, closed, meta, errors };
+}
+
+// Decides what gets written to disk for a completed runBuild() result. Returns null when
+// there is nothing to write (a blocked run, or a --dry-run) so every data file either changes
+// together or not at all — a blocked/dry run must never leave submitted.json out of step with
+// internships.json/closed.json.
+export function planWrites(result, { liveSubmitted, desk, dryRun = false } = {}) {
+  if (!result.ok || dryRun) return null;
+  return {
+    'data/internships.json': result.rows,
+    'data/closed.json': result.closed,
+    'data/meta.json': result.meta,
+    'data/desk.json': desk,
+    'data/submitted.json': liveSubmitted,
+  };
 }

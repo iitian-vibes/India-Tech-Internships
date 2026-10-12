@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { runBuild } from './build-core.mjs';
+import { runBuild, planWrites } from './build-core.mjs';
 import { renderReadme } from './render.mjs';
 import { fetchGreenhouse } from './fetch/greenhouse.mjs';
 import { fetchLever } from './fetch/lever.mjs';
@@ -44,7 +44,6 @@ for (const s of submitted) {
   if (s.dead_count >= 2) retired.push(s);
 }
 const liveSubmitted = submitted.filter((s) => !retired.includes(s));
-if (!args.has('--dry-run')) write('data/submitted.json', liveSubmitted);
 prevClosed.push(...retired.map(({ dead_count, ...s }) => ({ ...s, closed_at: today })));
 
 const r = await runBuild({
@@ -57,10 +56,10 @@ if (!r.ok) { console.error(`BUILD BLOCKED: ${r.reason}. Nothing written.`); proc
 
 const before = new Set(prev.map((x) => x.id)), after = new Set(r.rows.map((x) => x.id));
 console.log(`rows ${prev.length} -> ${r.rows.length} (+${[...after].filter((i) => !before.has(i)).length}, -${[...before].filter((i) => !after.has(i)).length}); companies ok ${r.meta.companies_ok}, failed ${r.meta.companies_failed.length}`);
-if (args.has('--dry-run')) process.exit(0);
 
-write('data/internships.json', r.rows);
-write('data/closed.json', r.closed);
-write('data/meta.json', r.meta);
-write('data/desk.json', desk);
+// All data files change together or not at all — a blocked run already exited above;
+// a --dry-run plans nothing here either.
+const plan = planWrites(r, { liveSubmitted, desk, dryRun: args.has('--dry-run') });
+if (!plan) process.exit(0);
+for (const [path, value] of Object.entries(plan)) write(path, value);
 writeFileSync('README.md', renderReadme({ rows: r.rows, closed: r.closed, desk, meta: r.meta }));
