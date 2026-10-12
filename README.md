@@ -8,7 +8,9 @@ Tech internships you can actually apply to as a student in India: SWE, ML, data,
 
 ## 🇮🇳 India-based
 
-_Nothing open here right now. New roles are added every day._
+| Company | Role | Location | Batch | Stipend | Apply | Posted |
+|---|---|---|---|---|---|---|
+| Stripe | Software Engineer, Intern | Bengaluru | Any | not stated | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 0d |
 
 ## 🏠 Remote
 
