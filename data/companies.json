@@ -1,0 +1,10 @@
+[
+  { "name": "Razorpay", "slug": "razorpay", "ats": "greenhouse", "board": "razorpaysoftwareprivatelimited", "abroad_visa": false },
+  { "name": "Groww", "slug": "groww", "ats": "greenhouse", "board": "groww", "abroad_visa": false },
+  { "name": "CRED", "slug": "cred", "ats": "lever", "board": "cred", "abroad_visa": false },
+  { "name": "Meesho", "slug": "meesho", "ats": "lever", "board": "meesho", "abroad_visa": false },
+  { "name": "Paytm", "slug": "paytm", "ats": "lever", "board": "paytm", "abroad_visa": false },
+  { "name": "Sarvam AI", "slug": "sarvam", "ats": "ashby", "board": "sarvam", "abroad_visa": false },
+  { "name": "Composio", "slug": "composio", "ats": "ashby", "board": "composio", "abroad_visa": false },
+  { "name": "NVIDIA", "slug": "nvidia", "ats": "workday", "workday": { "host": "nvidia.wd5.myworkdayjobs.com", "tenant": "nvidia", "site": "NVIDIAExternalCareerSite" }, "abroad_visa": false }
+]
