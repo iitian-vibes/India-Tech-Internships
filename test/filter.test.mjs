@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { isStudentRole, classifyLocation, hasWorkAuthBlock, batchOf, stipendOf, toRow } from '../scripts/filter.mjs';
+import { isStudentRole, isTechRole, classifyLocation, hasWorkAuthBlock, batchOf, stipendOf, toRow } from '../scripts/filter.mjs';
 
 const job = (o) => ({ jobId: '1', title: 'SDE Intern', locations: ['Bengaluru'], remote: false, url: 'https://x/1', posted: '2026-10-10T00:00:00.000Z', text: '', employmentType: '', stipendHint: null, ...o });
 const co = { name: 'Acme', slug: 'acme', ats: 'lever', abroad_visa: false };
@@ -10,6 +10,13 @@ test('student roles', () => {
   for (const t of ['Senior Software Engineer', 'Intern Program Manager', 'Staff ML Engineer', 'PhD Research Intern', 'Engineering Lead, Interns', 'Accounts Payable Manager']) assert.equal(isStudentRole(t, ''), false, t);
   assert.equal(isStudentRole('Software Engineer', 'Internship'), true);
   assert.equal(isStudentRole('Software Engineer', 'Intern'), true);
+});
+
+test('tech role classification', () => {
+  // Must return TRUE
+  for (const t of ['Software Engineering Intern', 'SDE Intern', 'Data Science Intern', 'ML Research Intern', 'Quant Trading Intern', 'Backend Developer Intern', 'ASIC Design Verification Intern', 'Data Intern', 'ML Intern', 'Graduate Software Engineer']) assert.equal(isTechRole(t), true, t);
+  // Must return FALSE
+  for (const t of ['Video Editor Intern', 'YouTube & Content - Internship', 'Trainee - Recruitment Coordinator', 'Talent Acquisition Intern', 'HR Onboarding Intern', 'Marketing Intern', 'Growth Marketing Intern', 'Finance Intern', 'Content Writing Intern', 'UI/UX Designer Intern', 'Sales Intern']) assert.equal(isTechRole(t), false, t);
 });
 
 test('location classification table', () => {

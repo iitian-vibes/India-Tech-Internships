@@ -2,7 +2,7 @@ const REPO = 'https://github.com/iitian-vibes/India-Tech-Internships-2027';
 const DESK = 'https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships';
 const GCAL = 'https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics';
 
-export const cell = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/\s*\r?\n\s*/g, ' ').trim();
+export const cell = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/\s*\r?\n\s*/g, ' ').replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
 
 export function istStamp(iso) {
   const d = new Date(Date.parse(iso) + 5.5 * 3600e3);
@@ -18,14 +18,16 @@ const byNewest = (a, b) => String(b.posted ?? b.first_seen).localeCompare(String
 function table(rows, nowIso) {
   if (!rows.length) return '_Nothing open here right now. New roles are added every day._\n';
   const head = '| Company | Role | Location | Batch | Stipend | Apply | Posted |\n|---|---|---|---|---|---|---|\n';
-  return head + [...rows].sort(byNewest).map((r) => `| ${cell(r.company)} | ${cell(r.role)}${r.stale ? ' ⚠️' : ''} | ${cell(r.location)} | ${cell(r.batch)} | ${cell(r.stipend ?? 'not stated')} | [Apply](${r.url}) | ${age(r.posted ?? r.first_seen, nowIso)} |`).join('\n') + '\n';
+  const encodeUrl = (url) => url.replace(/\(/g, '%28').replace(/\)/g, '%29');
+  return head + [...rows].sort(byNewest).map((r) => `| ${cell(r.company)} | ${cell(r.role)}${r.stale ? ' ⚠️' : ''} | ${cell(r.location)} | ${cell(r.batch)} | ${cell(r.stipend ?? 'not stated')} | [Apply](${encodeUrl(r.url)}) | ${age(r.posted ?? r.first_seen, nowIso)} |`).join('\n') + '\n';
 }
 
 export function renderReadme({ rows, closed, desk, meta }) {
   const c = meta.counts ?? { total: 0 };
   const sec = (s) => rows.filter((r) => r.section === s);
+  const encodeUrl = (url) => url.replace(/\(/g, '%28').replace(/\)/g, '%29');
   const deskTable = desk.length
-    ? '| Company | Role | Closes | Who can apply | Apply |\n|---|---|---|---|---|\n' + desk.map((d) => `| ${cell(d.company)} | ${cell(d.role)} | ${d.deadline ?? 'rolling'} | ${cell(d.who)} | [Apply](${d.url}) |`).join('\n') + '\n'
+    ? '| Company | Role | Closes | Who can apply | Apply |\n|---|---|---|---|---|\n' + desk.map((d) => `| ${cell(d.company)} | ${cell(d.role)} | ${d.deadline ?? 'rolling'} | ${cell(d.who)} | [Apply](${encodeUrl(d.url)}) |`).join('\n') + '\n'
     : '_Nothing here right now._\n';
   const closedList = closed.length
     ? closed.map((r) => `- ~~${cell(r.role)}~~ at ${cell(r.company)} (closed ${r.closed_at})`).join('\n') + '\n'
@@ -34,7 +36,7 @@ export function renderReadme({ rows, closed, desk, meta }) {
 
 Tech internships you can actually apply to as a student in India: SWE, ML, data, quant and new-grad roles, based in India, remote, or abroad with visa sponsorship. Pulled every day from companies' own job boards. Run by IITians, open to every student.
 
-**${c.total} open** · Last updated: ${meta.updated_at ? istStamp(meta.updated_at) : 'not yet'} · ⭐ Star this repo to keep it on your radar
+**${c.total} open** · Last updated: ${meta.updated_at ? istStamp(meta.updated_at) : 'not yet'} · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](${GCAL}) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](${DESK}) · ➕ [Submit an internship](${REPO}/issues/new?template=submit-internship.yml)
 

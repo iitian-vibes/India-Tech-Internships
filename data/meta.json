@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-12T15:34:23.151Z",
+  "updated_at": "2026-10-12T15:46:44.342Z",
   "counts": {
-    "india": 12,
+    "india": 0,
     "remote": 0,
     "abroad": 0,
-    "desk": 46,
-    "total": 58
+    "desk": 39,
+    "total": 39
   },
   "companies_ok": 7,
   "companies_failed": [

@@ -6,6 +6,12 @@ export function isStudentRole(title = '', employmentType = '') {
   return STUDENT.test(title) || /\bintern/i.test(employmentType);
 }
 
+const TECH = /\b(software|sde|swe|engineer|engineering|developer|backend|back-end|frontend|front-end|full\s+stack|full-stack|fullstack|mobile|android|ios|web|data|analytics|machine\s+learning|ml|ai|artificial\s+intelligence|deep\s+learning|nlp|computer\s+vision|research|quant|quantitative|trading|trader|devops|sre|site\s+reliability|cloud|infrastructure|security|cyber|embedded|firmware|hardware|vlsi|asic|fpga|silicon|chip|robotics|platform|qa|test|testing|automation|algorithm|systems)\b/i;
+const NON_TECH = /\b(hr|human\s+resources|talent|recruit|people|marketing|growth\s+marketing|sales|business\s+development|content|video|editor|youtube|social\s+media|community|brand|pr|public\s+relations|finance|accounting|audit|legal|compliance|operations|customer|support|admin|office|designer|graphic|ui\/ux|ux|product\s+design)\b/i;
+export function isTechRole(title = '') {
+  return TECH.test(title) && !NON_TECH.test(title);
+}
+
 const INDIA = /\b(india|bengaluru|bangalore|hyderabad|pune|gurugram|gurgaon|noida|new delhi|delhi|mumbai|chennai|kolkata|ahmedabad|jaipur|kochi|thiruvananthapuram|trivandrum|coimbatore|indore|chandigarh|mohali|bhubaneswar|vadodara|surat|nagpur|lucknow|mysuru|mysore|goa)\b/i;
 const REGION_REMOTE = /\b(apac|asia|asia pacific|worldwide|anywhere|global)\b/i;
 export function classifyLocation(job, company) {
@@ -47,6 +53,7 @@ const ymd = (isoStr) => (isoStr ? isoStr.slice(0, 10) : null);
 export function toRow(job, company, today) {
   if (!job.url || !job.title) return null;
   if (!isStudentRole(job.title, job.employmentType)) return null;
+  if (!isTechRole(job.title)) return null;
   const section = classifyLocation(job, company);
   if (!section) return null;
   if (hasWorkAuthBlock(job.text)) return null;

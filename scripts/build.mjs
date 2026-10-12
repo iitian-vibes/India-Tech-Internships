@@ -16,7 +16,7 @@ const today = new Date(now.getTime() + 5.5 * 3600e3).toISOString().slice(0, 10);
 async function deskRows() {
   try {
     const all = await fetchJson('https://raw.githubusercontent.com/iitian-vibes/deadline-desk/main/data/opportunities.json');
-    return all.filter((r) => r.lane === 'B-industry' && ['OPEN', 'ROLLING'].includes(r.status))
+    return all.filter((r) => r.lane === 'B-industry' && ['OPEN', 'ROLLING'].includes(r.status) && ['Internship', 'Full-time'].includes(r.kind))
       .map((r) => ({ company: r.org, role: r.name, deadline: r.status === 'OPEN' ? r.deadline ?? null : null, url: r.apply_url, who: r.who ?? r.eligibility ?? '' }));
   } catch (e) { console.error(`desk fetch failed, keeping previous desk rows: ${e.message}`); return null; }
 }

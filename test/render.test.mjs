@@ -5,18 +5,20 @@ import { renderReadme, cell, istStamp } from '../scripts/render.mjs';
 const row = (o) => ({ id: 'a:lever:1', company: 'Acme', company_slug: 'acme', role: 'SDE Intern', location: 'Pune', section: 'india', url: 'https://jobs/1', posted: '2026-10-10', batch: 'Any', stipend: null, source: 'lever', first_seen: '2026-10-10', ...o });
 const meta = { updated_at: '2026-10-12T03:44:00.000Z', counts: { india: 1, remote: 0, abroad: 0, desk: 0, total: 1 } };
 
-test('cell escapes pipes and newlines', () => {
+test('cell escapes pipes, newlines, and angle brackets', () => {
   assert.equal(cell('SDE | Intern\nBLR'), 'SDE \\| Intern BLR');
+  assert.equal(cell('a <b> c'), 'a &lt;b&gt; c');
 });
 
 test('istStamp formats in IST', () => {
   assert.equal(istStamp('2026-10-12T03:44:00.000Z'), '12 Oct 2026, 09:14 IST');
 });
 
-test('README has header, sections, not stated stipend, age, and no em-dashes', () => {
+test('README has header with updated phrase, sections, not stated stipend, age, and no em-dashes', () => {
   const md = renderReadme({ rows: [row({}), row({ id: 'b', company: 'Beta', section: 'remote', stipend: '₹40,000/month', url: 'https://jobs/2' })], closed: [{ ...row({ id: 'c', role: 'Old Intern' }), closed_at: '2026-10-11' }], desk: [{ company: 'Jane Street', role: 'SWE Intern', deadline: '2026-11-01', url: 'https://js/x', who: 'third years' }], meta });
   assert.match(md, /^# 🇮🇳 India Tech Internships 2027/m);
   assert.match(md, /Last updated: 12 Oct 2026, 09:14 IST/);
+  assert.match(md, /⭐ Star to get updates/);
   assert.match(md, /## 🇮🇳 India-based/);
   assert.match(md, /## 🏠 Remote/);
   assert.match(md, /\| Acme \| SDE Intern \| Pune \| Any \| not stated \| \[Apply\]\(https:\/\/jobs\/1\) \| 2d \|/);
@@ -25,6 +27,11 @@ test('README has header, sections, not stated stipend, age, and no em-dashes', (
   assert.match(md, /## 📌 Verified on the Deadline Desk/);
   assert.match(md, /Jane Street/);
   assert.doesNotMatch(md, /—/);
+});
+
+test('Apply links encode parentheses', () => {
+  const md = renderReadme({ rows: [row({ url: 'https://x/job(1)' })], closed: [], desk: [], meta });
+  assert.match(md, /\[Apply\]\(https:\/\/x\/job%281%29\)/);
 });
 
 test('empty sections say so instead of rendering an empty table', () => {
