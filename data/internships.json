@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "fampay:lever:bbbbbfd2-1855-4991-82d5-84ef57607c24",
+    "company": "FamPay",
+    "company_slug": "fampay",
+    "role": "Security Engineer Intern",
+    "location": "Bengaluru",
+    "section": "india",
+    "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24",
+    "posted": "2026-09-23",
+    "batch": "Any",
+    "stipend": null,
+    "source": "lever",
+    "first_seen": "2026-10-12"
+  },
+  {
+    "id": "tower-research-capital:greenhouse:8143756",
+    "company": "Tower Research Capital",
+    "company_slug": "tower-research-capital",
+    "role": "Intern - AI/ML",
+    "location": "Gurgaon",
+    "section": "india",
+    "url": "https://www.tower-research.com/open-positions/?gh_jid=8143756",
+    "posted": "2026-08-20",
+    "batch": "Any",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-12"
+  },
+  {
+    "id": "flow-traders:greenhouse:8102618",
+    "company": "Flow Traders",
+    "company_slug": "flow-traders",
+    "role": "Trading Intern",
+    "location": "Hong Kong",
+    "section": "abroad",
+    "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8102618",
+    "posted": "2026-08-04",
+    "batch": "2027",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-12"
+  },
+  {
+    "id": "stripe:greenhouse:8031833",
+    "company": "Stripe",
+    "company_slug": "stripe",
+    "role": "Software Engineer, Intern",
+    "location": "Bengaluru",
+    "section": "india",
+    "url": "https://stripe.com/jobs/search?gh_jid=8031833",
+    "posted": "2026-07-10",
+    "batch": "Any",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-12"
+  }
+]

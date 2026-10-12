@@ -1,10 +1,615 @@
 [
-  { "name": "Razorpay", "slug": "razorpay", "ats": "greenhouse", "board": "razorpaysoftwareprivatelimited", "abroad_visa": false },
-  { "name": "Groww", "slug": "groww", "ats": "greenhouse", "board": "groww", "abroad_visa": false },
-  { "name": "CRED", "slug": "cred", "ats": "lever", "board": "cred", "abroad_visa": false },
-  { "name": "Meesho", "slug": "meesho", "ats": "lever", "board": "meesho", "abroad_visa": false },
-  { "name": "Paytm", "slug": "paytm", "ats": "lever", "board": "paytm", "abroad_visa": false },
-  { "name": "Sarvam AI", "slug": "sarvam", "ats": "ashby", "board": "sarvam", "abroad_visa": false },
-  { "name": "Composio", "slug": "composio", "ats": "ashby", "board": "composio", "abroad_visa": false },
-  { "name": "NVIDIA", "slug": "nvidia", "ats": "workday", "workday": { "host": "nvidia.wd5.myworkdayjobs.com", "tenant": "nvidia", "site": "NVIDIAExternalCareerSite" }, "abroad_visa": false }
+  {
+    "name": "Razorpay",
+    "slug": "razorpay",
+    "ats": "greenhouse",
+    "board": "razorpaysoftwareprivatelimited",
+    "abroad_visa": false
+  },
+  {
+    "name": "Groww",
+    "slug": "groww",
+    "ats": "greenhouse",
+    "board": "groww",
+    "abroad_visa": false
+  },
+  {
+    "name": "CRED",
+    "slug": "cred",
+    "ats": "lever",
+    "board": "cred",
+    "abroad_visa": false
+  },
+  {
+    "name": "Meesho",
+    "slug": "meesho",
+    "ats": "lever",
+    "board": "meesho",
+    "abroad_visa": false
+  },
+  {
+    "name": "Paytm",
+    "slug": "paytm",
+    "ats": "lever",
+    "board": "paytm",
+    "abroad_visa": false
+  },
+  {
+    "name": "Sarvam AI",
+    "slug": "sarvam",
+    "ats": "ashby",
+    "board": "sarvam",
+    "abroad_visa": false
+  },
+  {
+    "name": "Composio",
+    "slug": "composio",
+    "ats": "ashby",
+    "board": "composio",
+    "abroad_visa": false
+  },
+  {
+    "name": "NVIDIA",
+    "slug": "nvidia",
+    "ats": "workday",
+    "workday": {
+      "host": "nvidia.wd5.myworkdayjobs.com",
+      "tenant": "nvidia",
+      "site": "NVIDIAExternalCareerSite"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Adobe",
+    "slug": "adobe",
+    "ats": "workday",
+    "workday": {
+      "host": "adobe.wd5.myworkdayjobs.com",
+      "tenant": "adobe",
+      "site": "external_experienced"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Intel",
+    "slug": "intel",
+    "ats": "workday",
+    "workday": {
+      "host": "intel.wd1.myworkdayjobs.com",
+      "tenant": "intel",
+      "site": "External"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Samsung R&D",
+    "slug": "samsung",
+    "ats": "workday",
+    "workday": {
+      "host": "sec.wd3.myworkdayjobs.com",
+      "tenant": "sec",
+      "site": "Samsung_Careers"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Arcesium",
+    "slug": "arcesium",
+    "ats": "greenhouse",
+    "board": "arcesiumllc",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Barclays",
+    "slug": "barclays",
+    "ats": "workday",
+    "workday": {
+      "host": "barclays.wd3.myworkdayjobs.com",
+      "tenant": "barclays",
+      "site": "External_Career_Site_Barclays"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Mastercard",
+    "slug": "mastercard",
+    "ats": "workday",
+    "workday": {
+      "host": "mastercard.wd1.myworkdayjobs.com",
+      "tenant": "mastercard",
+      "site": "CorporateCareers"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Cadence",
+    "slug": "cadence",
+    "ats": "workday",
+    "workday": {
+      "host": "cadence.wd1.myworkdayjobs.com",
+      "tenant": "cadence",
+      "site": "External_Careers"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Fi Money",
+    "slug": "fi-money",
+    "ats": "lever",
+    "board": "epifi",
+    "abroad_visa": false
+  },
+  {
+    "name": "FamPay",
+    "slug": "fampay",
+    "ats": "lever",
+    "board": "fampay",
+    "abroad_visa": false
+  },
+  {
+    "name": "Zenoti",
+    "slug": "zenoti",
+    "ats": "greenhouse",
+    "board": "zenoti",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Druva",
+    "slug": "druva",
+    "ats": "greenhouse",
+    "board": "druva",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Mindtickle",
+    "slug": "mindtickle",
+    "ats": "lever",
+    "board": "mindtickle",
+    "abroad_visa": false
+  },
+  {
+    "name": "Bounce",
+    "slug": "bounce",
+    "ats": "ashby",
+    "board": "bounce",
+    "abroad_visa": false
+  },
+  {
+    "name": "Jane Street",
+    "slug": "jane-street",
+    "ats": "greenhouse",
+    "board": "janestreet",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Hudson River Trading",
+    "slug": "hudson-river-trading",
+    "ats": "greenhouse",
+    "board": "hrttalentcommunity",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Jump Trading",
+    "slug": "jump-trading",
+    "ats": "greenhouse",
+    "board": "jumptrading",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Tower Research Capital",
+    "slug": "tower-research-capital",
+    "ats": "greenhouse",
+    "board": "towerresearchcapital",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "IMC Trading",
+    "slug": "imc-trading",
+    "ats": "greenhouse",
+    "board": "imc",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Optiver",
+    "slug": "optiver",
+    "ats": "greenhouse",
+    "board": "optiver",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Flow Traders",
+    "slug": "flow-traders",
+    "ats": "greenhouse",
+    "board": "flowtraders",
+    "eu": false,
+    "abroad_visa": true,
+    "notes": "Hong Kong Trading Intern posting, evidence: https://job-boards.greenhouse.io/flowtraders/jobs/8102618 (also hand-verified in the Deadline Desk). Company has no US/UK/EU office in its current board, so abroad_visa cannot flood in non-APAC roles today."
+  },
+  {
+    "name": "Graviton Research Capital",
+    "slug": "graviton-research-capital",
+    "ats": "greenhouse",
+    "board": "gravitonresearchcapital",
+    "eu": false,
+    "abroad_visa": true,
+    "notes": "Direct Gurugram office (India) plus a Singapore Graduate Central Execution Trader program, evidence: https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002 (hand-verified in the Deadline Desk). Company has no US/UK/EU office in its current board."
+  },
+  {
+    "name": "Squarepoint Capital",
+    "slug": "squarepoint-capital",
+    "ats": "greenhouse",
+    "board": "squarepointcapital",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "WorldQuant",
+    "slug": "worldquant",
+    "ats": "greenhouse",
+    "board": "worldquant",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "AlphaGrep",
+    "slug": "alphagrep",
+    "ats": "greenhouse",
+    "board": "alphagrepsecurities",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "QRT (Qube Research & Technologies)",
+    "slug": "qrt-qube-research-and-technologies",
+    "ats": "greenhouse",
+    "board": "quberesearchandtechnologies",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Maven Securities",
+    "slug": "maven-securities",
+    "ats": "greenhouse",
+    "board": "mavensecuritiesholdingltd",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "NK Securities",
+    "slug": "nk-securities",
+    "ats": "greenhouse",
+    "board": "nksecuritiesresearch",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "GitLab",
+    "slug": "gitlab",
+    "ats": "greenhouse",
+    "board": "gitlab",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Remote.com",
+    "slug": "remote",
+    "ats": "greenhouse",
+    "board": "remote",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "ats": "greenhouse",
+    "board": "vercel",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Grafana Labs",
+    "slug": "grafana-labs",
+    "ats": "greenhouse",
+    "board": "grafanalabs",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Canonical",
+    "slug": "canonical",
+    "ats": "greenhouse",
+    "board": "canonical",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Elastic",
+    "slug": "elastic",
+    "ats": "greenhouse",
+    "board": "elastic",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Cloudflare",
+    "slug": "cloudflare",
+    "ats": "greenhouse",
+    "board": "cloudflare",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "ats": "greenhouse",
+    "board": "stripe",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Twilio",
+    "slug": "twilio",
+    "ats": "greenhouse",
+    "board": "twilio",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Figma",
+    "slug": "figma",
+    "ats": "greenhouse",
+    "board": "figma",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "CircleCI",
+    "slug": "circleci",
+    "ats": "greenhouse",
+    "board": "circleci",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Netlify",
+    "slug": "netlify",
+    "ats": "greenhouse",
+    "board": "netlify",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Sourcegraph",
+    "slug": "sourcegraph",
+    "ats": "greenhouse",
+    "board": "sourcegraph91",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Deel",
+    "slug": "deel",
+    "ats": "ashby",
+    "board": "deel",
+    "abroad_visa": false
+  },
+  {
+    "name": "Zapier",
+    "slug": "zapier",
+    "ats": "ashby",
+    "board": "zapier",
+    "abroad_visa": false
+  },
+  {
+    "name": "Supabase",
+    "slug": "supabase",
+    "ats": "ashby",
+    "board": "supabase",
+    "abroad_visa": false
+  },
+  {
+    "name": "PostHog",
+    "slug": "posthog",
+    "ats": "ashby",
+    "board": "posthog",
+    "abroad_visa": false
+  },
+  {
+    "name": "Airbyte",
+    "slug": "airbyte",
+    "ats": "ashby",
+    "board": "airbyte",
+    "abroad_visa": false
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "ats": "ashby",
+    "board": "notion",
+    "abroad_visa": false
+  },
+  {
+    "name": "Linear",
+    "slug": "linear",
+    "ats": "ashby",
+    "board": "linear",
+    "abroad_visa": false
+  },
+  {
+    "name": "Buffer",
+    "slug": "buffer",
+    "ats": "ashby",
+    "board": "buffer",
+    "abroad_visa": false
+  },
+  {
+    "name": "1Password",
+    "slug": "1password",
+    "ats": "ashby",
+    "board": "1password",
+    "abroad_visa": false
+  },
+  {
+    "name": "Render",
+    "slug": "render",
+    "ats": "ashby",
+    "board": "render",
+    "abroad_visa": false
+  },
+  {
+    "name": "Zendesk",
+    "slug": "zendesk",
+    "ats": "workday",
+    "workday": {
+      "host": "zendesk.wd1.myworkdayjobs.com",
+      "tenant": "zendesk",
+      "site": "zendesk"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "InMobi",
+    "slug": "inmobi",
+    "ats": "greenhouse",
+    "board": "inmobi",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Observe.AI",
+    "slug": "observe-ai",
+    "ats": "greenhouse",
+    "board": "observeai",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Sigmoid",
+    "slug": "sigmoid",
+    "ats": "greenhouse",
+    "board": "sigmoid",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Glean",
+    "slug": "glean",
+    "ats": "greenhouse",
+    "board": "gleanwork",
+    "eu": false,
+    "abroad_visa": false
+  },
+  {
+    "name": "Freshworks",
+    "slug": "freshworks",
+    "ats": "lever",
+    "board": "freshworks",
+    "abroad_visa": false
+  },
+  {
+    "name": "BrowserStack",
+    "slug": "browserstack",
+    "ats": "workday",
+    "workday": {
+      "host": "browserstack.wd3.myworkdayjobs.com",
+      "tenant": "browserstack",
+      "site": "External"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Sprinklr",
+    "slug": "sprinklr",
+    "ats": "workday",
+    "workday": {
+      "host": "sprinklr.wd1.myworkdayjobs.com",
+      "tenant": "sprinklr",
+      "site": "careers"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Uniphore",
+    "slug": "uniphore",
+    "ats": "workday",
+    "workday": {
+      "host": "uniphore.wd503.myworkdayjobs.com",
+      "tenant": "uniphore",
+      "site": "Uniphore"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Fractal Analytics",
+    "slug": "fractal-analytics",
+    "ats": "workday",
+    "workday": {
+      "host": "fractal.wd1.myworkdayjobs.com",
+      "tenant": "fractal",
+      "site": "Careers"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Postman",
+    "slug": "postman",
+    "ats": "workday",
+    "workday": {
+      "host": "postman.wd108.myworkdayjobs.com",
+      "tenant": "postman",
+      "site": "careers"
+    },
+    "abroad_visa": false
+  },
+  {
+    "name": "Swiggy",
+    "slug": "swiggy",
+    "ats": "smartrecruiters",
+    "board": "Swiggy",
+    "abroad_visa": false
+  },
+  {
+    "name": "Myntra",
+    "slug": "myntra",
+    "ats": "smartrecruiters",
+    "board": "Myntra",
+    "abroad_visa": false
+  },
+  {
+    "name": "Nykaa",
+    "slug": "nykaa",
+    "ats": "smartrecruiters",
+    "board": "Nykaa",
+    "abroad_visa": false
+  },
+  {
+    "name": "Xpressbees",
+    "slug": "xpressbees",
+    "ats": "smartrecruiters",
+    "board": "Xpressbees",
+    "abroad_visa": false
+  },
+  {
+    "name": "Ecom Express",
+    "slug": "ecom-express",
+    "ats": "smartrecruiters",
+    "board": "EcomExpress",
+    "abroad_visa": false
+  },
+  {
+    "name": "Western Digital",
+    "slug": "western-digital",
+    "ats": "smartrecruiters",
+    "board": "WesternDigital",
+    "abroad_visa": false
+  }
 ]

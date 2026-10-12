@@ -2,13 +2,17 @@
 
 Tech internships you can actually apply to as a student in India: SWE, ML, data, quant and new-grad roles, based in India, remote, or abroad with visa sponsorship. Pulled every day from companies' own job boards. Run by IITians, open to every student.
 
-**39 open** · Last updated: 12 Oct 2026, 21:34 IST · ⭐ Star to get updates
+**43 open** · Last updated: 12 Oct 2026, 23:35 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships-2027/issues/new?template=submit-internship.yml)
 
 ## 🇮🇳 India-based
 
-_Nothing open here right now. New roles are added every day._
+| Company | Role | Location | Batch | Stipend | Apply | Posted |
+|---|---|---|---|---|---|---|
+| FamPay | Security Engineer Intern | Bengaluru | Any | not stated | [Apply](https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24) | 19d |
+| Tower Research Capital | Intern - AI/ML | Gurgaon | Any | not stated | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8143756) | 53d |
+| Stripe | Software Engineer, Intern | Bengaluru | Any | not stated | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 94d |
 
 ## 🏠 Remote
 
@@ -16,7 +20,9 @@ _Nothing open here right now. New roles are added every day._
 
 ## 🌏 Abroad (visa sponsored)
 
-_Nothing open here right now. New roles are added every day._
+| Company | Role | Location | Batch | Stipend | Apply | Posted |
+|---|---|---|---|---|---|---|
+| Flow Traders | Trading Intern | Hong Kong | 2027 | not stated | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 69d |
 
 ## 📌 Verified on the Deadline Desk
 
