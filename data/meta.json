@@ -1,1 +1,24 @@
-{}
+{
+  "updated_at": "2026-10-12T15:34:23.151Z",
+  "counts": {
+    "india": 12,
+    "remote": 0,
+    "abroad": 0,
+    "desk": 46,
+    "total": 58
+  },
+  "companies_ok": 7,
+  "companies_failed": [
+    "nvidia"
+  ],
+  "jobs_by_company": {
+    "razorpay": 28,
+    "groww": 10,
+    "cred": 8,
+    "meesho": 57,
+    "paytm": 175,
+    "sarvam": 41,
+    "composio": 30,
+    "nvidia": 0
+  }
+}
