@@ -25,7 +25,23 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md data/
-          git diff --cached --quiet || { git commit -m "data: daily update $(date -u +%F)"; git push; }
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "data: daily update $(date -u +%F)"
+            pushed=0
+            for i in 1 2 3; do
+              if git pull --rebase origin main; then
+                if git push; then pushed=1; break; fi
+              else
+                echo "rebase conflict against main, aborting"
+                git rebase --abort || true
+                exit 1
+              fi
+              sleep 5
+            done
+            if [ "$pushed" -ne 1 ]; then echo "push failed after 3 attempts"; exit 1; fi
+          fi
       - name: Close the health issue after a good run
         if: success()
         env: { GH_TOKEN: '${{ github.token }}' }
