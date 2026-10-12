@@ -19,9 +19,23 @@ test('editedAfterChecks: true when a renamed event is newer than the latest chec
   assert.equal(editedAfterChecks(events, null), true);
 });
 
-test('editedAfterChecks: true when the issue was updated after the latest checks-passed labelling, even with no matching timeline event', () => {
+test('editedAfterChecks: true when the issue body was last edited after the latest checks-passed labelling (GraphQL lastEditedAt), even with no matching timeline event', () => {
   const events = [{ event: 'labeled', label: { name: 'checks-passed' }, created_at: '2026-10-12T10:05:00Z' }];
   assert.equal(editedAfterChecks(events, '2026-10-12T10:09:00Z'), true);
+});
+
+// Regression: a REST issue.updated_at bump from label churn alone (adding 'approved', the sweep's own later
+// unlabel/relabel) must NEVER be mistaken for a body edit. The second argument must be the issue's body-edit
+// timestamp (GraphQL Issue.lastEditedAt, which stays null when only labels changed), not issue.updated_at —
+// updated_at is bumped by every labeled/unlabeled event and would make every approval look "edited after
+// checks" even when nothing was ever edited. This exact bug blocked a real approval in fix round 1's own e2e.
+test('editedAfterChecks: false when only labels changed after checks-passed (lastEditedAt is null) — no false positive from label churn', () => {
+  const events = [
+    { event: 'labeled', label: { name: 'submission' }, created_at: '2026-10-12T10:00:00Z' },
+    { event: 'labeled', label: { name: 'checks-passed' }, created_at: '2026-10-12T10:05:00Z' },
+    { event: 'labeled', label: { name: 'approved' }, created_at: '2026-10-12T10:20:00Z' },
+  ];
+  assert.equal(editedAfterChecks(events, null), false);
 });
 
 test('editedAfterChecks: uses the LATEST checks-passed labelling when checks re-ran more than once', () => {

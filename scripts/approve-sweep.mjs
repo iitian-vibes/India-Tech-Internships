@@ -53,6 +53,24 @@ async function fetchTimeline(n) {
   return Array.isArray(json) ? json : null;
 }
 
+// The issue's body-edit timestamp. Deliberately NOT the REST issue.updated_at field: that field is bumped by
+// every labeled/unlabeled event too (including the sweep's own relabelling and the 'approved' label itself),
+// so using it produced a false positive on every approval in this fix's own live e2e test — every issue looked
+// "edited after checks" the instant it was approved, because approving IS an update. GraphQL's
+// Issue.lastEditedAt tracks only body edits (stays null for label-only changes; title renames are tracked
+// separately and still come from the REST timeline's 'renamed' event, handled in editedAfterChecks).
+async function fetchLastEditedAt(n) {
+  const [owner, repo] = GITHUB_REPOSITORY.split('/');
+  const query = 'query($owner:String!,$repo:String!,$n:Int!){ repository(owner:$owner,name:$repo){ issue(number:$n){ lastEditedAt } } }';
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${GH_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, variables: { owner, repo, n } }),
+  });
+  const json = await res.json();
+  return json?.data?.repository?.issue?.lastEditedAt ?? null;
+}
+
 async function reportFailure(issueNumber, reasons) {
   const body = `❌ This can't be added yet:\n\n${reasons.map((x) => `- ${x}`).join('\n')}\n\nEdit the issue to fix it and the checks run again.`;
   await api(`/issues/${issueNumber}/comments`, { method: 'POST', body: JSON.stringify({ body }) });
@@ -77,7 +95,8 @@ async function prepare() {
     if (hasIssueNumber(submitted, n)) continue; // already applied by an earlier sweep run
 
     const timeline = await fetchTimeline(n);
-    if (timeline === null || editedAfterChecks(timeline, issue.updated_at)) {
+    const lastEditedAt = await fetchLastEditedAt(n);
+    if (timeline === null || editedAfterChecks(timeline, lastEditedAt)) {
       failures.push({ issueNumber: n, reasons: ['The issue was edited after the checks; the checks will re-run.'] });
       continue;
     }
