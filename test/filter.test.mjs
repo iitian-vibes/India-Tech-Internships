@@ -44,6 +44,43 @@ test('work authorisation blocks: negation must govern sponsor verb', () => {
   for (const t of ['This employer will not sponsor employment visas.', 'No visa sponsorship is available for this role.', 'We are not able to sponsor applicants for work visas.', 'This role does not offer sponsorship now or in the future.', 'Visa sponsorship is not available.', 'We are unable to provide visa sponsorship for this role.']) assert.equal(hasWorkAuthBlock(t), true, t);
 });
 
+test('work authorisation blocks: comprehensive table', () => {
+  // Must return TRUE (block)
+  const trueBlocks = [
+    'We do not currently sponsor work visas.',
+    'We will not currently sponsor visas for this role.',
+    'We no longer sponsor work visas for new hires.',
+    'We are not able to sponsor at this time.',
+    'Applicants requiring sponsorship will not be considered.',
+    'Candidates who need visa sponsorship will not be considered.',
+    'This employer will not sponsor employment visas.',
+    'No visa sponsorship is available for this role.',
+    'We are not able to sponsor applicants for work visas.',
+    'This role does not offer sponsorship now or in the future.',
+    'Visa sponsorship is not available.',
+    'We are unable to provide visa sponsorship for this role.',
+    'We cannot sponsor H-1B visas.',
+    'Candidates must be authorized to work in the U.S. without sponsorship.',
+    'Must be eligible to work in the U.S.',
+    'US citizens only.',
+    'Requires an active security clearance.',
+  ];
+  for (const t of trueBlocks) assert.equal(hasWorkAuthBlock(t), true, t);
+
+  // Must return FALSE
+  const falseBlocks = [
+    'We are an equal opportunity employer and do not discriminate based on sponsorship status.',
+    'No problem: we sponsor visas.',
+    'No problem, we sponsor H1B visas for the right candidate.',
+    'We do not require you to already have work authorization; sponsorship is available.',
+    'We sponsor visas for interns.',
+    'Visa sponsorship is available for this role.',
+    'Open to students across India.',
+    '',
+  ];
+  for (const t of falseBlocks) assert.equal(hasWorkAuthBlock(t), false, t);
+});
+
 test('student roles: bare graduate is ambiguous', () => {
   for (const t of ['Graduate Recruiter', 'Graduate Admissions Coordinator']) assert.equal(isStudentRole(t, ''), false, t);
   for (const t of ['Graduate Engineer Trainee', 'Graduate Software Engineer', 'Graduate Programme 2027', 'New Graduate SWE']) assert.equal(isStudentRole(t, ''), true, t);
