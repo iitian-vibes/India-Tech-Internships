@@ -1,4 +1,7 @@
 # 🇮🇳 India Tech Internships 2027
+<!-- freshness -->
+> ⚠️ **update delayed.** This list was last refreshed 9 Oct 2026, 21:25 IST. Links may have closed since; check the posting before applying.
+<!-- /freshness -->
 
 Tech internships you can actually apply to as a student in India: SWE, ML, data, quant and new-grad roles, based in India, remote, or abroad with visa sponsorship. Pulled every day from companies' own job boards. Run by IITians, open to every student.
 
