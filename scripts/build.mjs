@@ -1,0 +1,66 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { runBuild } from './build-core.mjs';
+import { renderReadme } from './render.mjs';
+import { fetchGreenhouse } from './fetch/greenhouse.mjs';
+import { fetchLever } from './fetch/lever.mjs';
+import { fetchAshby } from './fetch/ashby.mjs';
+import { fetchWorkday } from './fetch/workday.mjs';
+import { fetchJson } from './fetch/util.mjs';
+
+const args = new Set(process.argv.slice(2));
+const read = (f, d) => { try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return d; } };
+const write = (f, v) => writeFileSync(f, JSON.stringify(v, null, 2) + '\n');
+const now = new Date();
+const today = new Date(now.getTime() + 5.5 * 3600e3).toISOString().slice(0, 10); // IST date
+
+async function deskRows() {
+  try {
+    const all = await fetchJson('https://raw.githubusercontent.com/iitian-vibes/deadline-desk/main/data/opportunities.json');
+    return all.filter((r) => r.lane === 'B-industry' && ['OPEN', 'ROLLING'].includes(r.status))
+      .map((r) => ({ company: r.org, role: r.name, deadline: r.status === 'OPEN' ? r.deadline ?? null : null, url: r.apply_url, who: r.who ?? r.eligibility ?? '' }));
+  } catch (e) { console.error(`desk fetch failed, keeping previous desk rows: ${e.message}`); return null; }
+}
+
+const prev = read('data/internships.json', []);
+const prevClosed = read('data/closed.json', []);
+const prevMeta = read('data/meta.json', {});
+const submitted = read('data/submitted.json', []);
+const prevDesk = read('data/desk.json', []);
+
+if (args.has('--render-only')) {
+  writeFileSync('README.md', renderReadme({ rows: [...prev.filter((r) => r.source !== 'submitted'), ...submitted], closed: prevClosed, desk: prevDesk, meta: prevMeta }));
+  process.exit(0);
+}
+
+const desk = (await deskRows()) ?? prevDesk;
+
+// Approved submissions are not on a job-board API, so check their links daily.
+// Two consecutive 404/410 answers retire a row into closed.json; network errors never count.
+const retired = [];
+for (const s of submitted) {
+  let status = 0;
+  try { status = (await fetch(s.url, { redirect: 'follow', signal: AbortSignal.timeout(20000) })).status; } catch {}
+  s.dead_count = status === 404 || status === 410 ? (s.dead_count ?? 0) + 1 : 0;
+  if (s.dead_count >= 2) retired.push(s);
+}
+const liveSubmitted = submitted.filter((s) => !retired.includes(s));
+if (!args.has('--dry-run')) write('data/submitted.json', liveSubmitted);
+prevClosed.push(...retired.map(({ dead_count, ...s }) => ({ ...s, closed_at: today })));
+
+const r = await runBuild({
+  companies: read('data/companies.json', []), prev, prevClosed, prevMeta,
+  fetchers: { greenhouse: fetchGreenhouse, lever: fetchLever, ashby: fetchAshby, workday: fetchWorkday },
+  today, now, desk, submitted: liveSubmitted, force: args.has('--force'),
+});
+for (const e of r.errors) console.error(`company failed: ${e.slug}: ${e.message}`);
+if (!r.ok) { console.error(`BUILD BLOCKED: ${r.reason}. Nothing written.`); process.exit(1); }
+
+const before = new Set(prev.map((x) => x.id)), after = new Set(r.rows.map((x) => x.id));
+console.log(`rows ${prev.length} -> ${r.rows.length} (+${[...after].filter((i) => !before.has(i)).length}, -${[...before].filter((i) => !after.has(i)).length}); companies ok ${r.meta.companies_ok}, failed ${r.meta.companies_failed.length}`);
+if (args.has('--dry-run')) process.exit(0);
+
+write('data/internships.json', r.rows);
+write('data/closed.json', r.closed);
+write('data/meta.json', r.meta);
+write('data/desk.json', desk);
+writeFileSync('README.md', renderReadme({ rows: r.rows, closed: r.closed, desk, meta: r.meta }));
