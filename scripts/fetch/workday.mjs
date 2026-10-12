@@ -1,4 +1,5 @@
 import { fetchJson, htmlToText } from './util.mjs';
+import { classifyLocation } from '../filter.mjs';
 const day = (now, back) => {
   // Convert UTC now to IST (add 5.5 hours)
   const istNow = new Date(now.getTime() + 5.5 * 60 * 60 * 1000);
@@ -55,6 +56,11 @@ export async function fetchWorkday(company, { wantDetail = () => true, now = new
   }
   for (const j of out) {
     if (!wantDetail(j.title)) continue;
+    // A posting whose location can't classify into any section gets dropped by toRow()
+    // regardless of its text, so detail-fetching it one-by-one is pure waste. This is what
+    // made NVIDIA (83s) and Intel (45s) blow past build-core's 60s per-company timeout: both
+    // post hundreds of "intern"-titled roles worldwide, and only a handful are India/Remote.
+    if (!classifyLocation(j, company)) continue;
     const path = j.externalPath;
     try { j.text = htmlToText((await fetchJsonImpl(`${base}${path}`)).jobPostingInfo?.jobDescription ?? ''); } catch { j.text = ''; }
   }

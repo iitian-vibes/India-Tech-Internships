@@ -41,13 +41,40 @@ test('fetchWorkday extracts detail path correctly when site name appears in exte
   const mockFetcher = mock.fn(async (url, opts) => {
     const body = opts?.body || {};
     if (url.includes('/jobs')) {
-      return { jobPostings: [{ title: 'Intern Role', externalPath: '/job/Careers-Team/Intern_JR9', locationsText: 'Test', postedOn: 'Posted Today', bulletFields: ['JR9'] }] };
+      // locationsText must classify to a section (India here) — a posting that can't classify
+      // into any section is skipped for detail-fetching regardless of wantDetail (see workday.mjs).
+      return { jobPostings: [{ title: 'Intern Role', externalPath: '/job/Careers-Team/Intern_JR9', locationsText: 'India', postedOn: 'Posted Today', bulletFields: ['JR9'] }] };
     }
     detailUrls.push(url);
     return { jobPostingInfo: { jobDescription: 'Test description' } };
   });
   await fetchWorkday(co, { wantDetail: () => true, now, fetchJsonImpl: mockFetcher });
   assert.ok(detailUrls[0].endsWith('/job/Careers-Team/Intern_JR9'), `Detail URL should end with /job/Careers-Team/Intern_JR9, got ${detailUrls[0]}`);
+});
+
+test('fetchWorkday skips the detail fetch for postings that cannot classify into any section, even when wantDetail is true', async () => {
+  // This is what made NVIDIA (83s) and Intel (45s) blow past build-core's 60s per-company
+  // timeout in Task 6's live build: hundreds of worldwide "intern" postings, detail-fetched
+  // one at a time, most of which toRow() would discard anyway since their location never
+  // classifies to a section. Skipping those changes zero output, only speed.
+  const co = { slug: 'test', workday: { host: 'test.example.com', tenant: 'test', site: 'TestSite' } };
+  const detailUrls = [];
+  const mockFetcher = mock.fn(async (url) => {
+    if (url.includes('/jobs')) {
+      return { jobPostings: [
+        { title: 'Intern Role', externalPath: '/job/x/Intern_JR1', locationsText: 'Austin, TX, United States', postedOn: 'Posted Today', bulletFields: ['JR1'] },
+        { title: 'Intern Role', externalPath: '/job/x/Intern_JR2', locationsText: 'India, Bengaluru', postedOn: 'Posted Today', bulletFields: ['JR2'] },
+        { title: 'Intern Role', externalPath: '/job/x/Intern_JR3', locationsText: 'Remote - India', postedOn: 'Posted Today', bulletFields: ['JR3'] },
+      ] };
+    }
+    detailUrls.push(url);
+    return { jobPostingInfo: { jobDescription: 'Test description' } };
+  });
+  const jobs = await fetchWorkday(co, { wantDetail: () => true, now, fetchJsonImpl: mockFetcher });
+  assert.equal(jobs.length, 3, 'all postings are still returned');
+  assert.equal(detailUrls.length, 2, 'only the India/Remote-India postings get detail-fetched');
+  assert.ok(detailUrls.every((u) => /JR2|JR3/.test(u)), detailUrls.join(', '));
+  assert.equal(jobs.find((j) => j.jobId === 'JR1').text, '', 'the Austin posting is never detail-fetched, so its text stays empty');
 });
 
 test('fetchWorkday warns when hitting 200-job cap with more results', async () => {

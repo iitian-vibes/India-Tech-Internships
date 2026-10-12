@@ -5,6 +5,7 @@ import { fetchGreenhouse } from './fetch/greenhouse.mjs';
 import { fetchLever } from './fetch/lever.mjs';
 import { fetchAshby } from './fetch/ashby.mjs';
 import { fetchWorkday } from './fetch/workday.mjs';
+import { fetchSmartRecruiters } from './fetch/smartrecruiters.mjs';
 import { fetchJson } from './fetch/util.mjs';
 
 const args = new Set(process.argv.slice(2));
@@ -48,7 +49,7 @@ prevClosed.push(...retired.map(({ dead_count, ...s }) => ({ ...s, closed_at: tod
 
 const r = await runBuild({
   companies: read('data/companies.json', []), prev, prevClosed, prevMeta,
-  fetchers: { greenhouse: fetchGreenhouse, lever: fetchLever, ashby: fetchAshby, workday: fetchWorkday },
+  fetchers: { greenhouse: fetchGreenhouse, lever: fetchLever, ashby: fetchAshby, workday: fetchWorkday, smartrecruiters: fetchSmartRecruiters },
   today, now, desk, submitted: liveSubmitted, force: args.has('--force'),
 });
 for (const e of r.errors) console.error(`company failed: ${e.slug}: ${e.message}`);
