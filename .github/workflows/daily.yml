@@ -19,6 +19,13 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: npm test
+      # Fix round 1, findings 4 & 5: a cancelled/missed approve.yml run (concurrency group collision, runner
+      # outage) is picked up here within a day. The sweep is idempotent: issues already applied in a prior
+      # sweep are skipped (mergeApprovedRows), so re-running it here is always safe.
+      - run: node scripts/approve-sweep.mjs prepare
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
       - run: npm run build
       - name: Commit if changed
         run: |
@@ -42,6 +49,11 @@ jobs:
             done
             if [ "$pushed" -ne 1 ]; then echo "push failed after 3 attempts"; exit 1; fi
           fi
+      - name: Close and thank submitters whose rows were pushed by the sweep above
+        run: node scripts/approve-sweep.mjs finalize
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
       - name: Close the health issue after a good run
         if: success()
         env: { GH_TOKEN: '${{ github.token }}' }

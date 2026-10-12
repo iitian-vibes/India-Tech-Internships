@@ -7,7 +7,9 @@ permissions:
   issues: write
 jobs:
   check:
-    if: contains(github.event.issue.labels.*.name, 'submission')
+    # Fix round 1, finding 9: editing a closed issue (e.g. one the spam gate already closed) must not re-run
+    # the checks and re-open the whole comment/label dance.
+    if: github.event.issue.state == 'open' && contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

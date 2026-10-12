@@ -19,7 +19,7 @@ Company: Zepto. Role: SDE Intern. Link: `https://jobs.lever.co/zepto/abc`. Locat
 
 ### Example that would be rejected
 
-Company: Zepto. Role: SDE Intern. Link: `https://unstop.com/internship/sde-intern-zepto`. Same role, but the link is to an aggregator rather than Zepto's own posting, so it is rejected with "The link must be on the company's own site or job board." Resubmit with the direct Lever/Greenhouse/Ashby/company link instead.
+Company: Zepto. Role: SDE Intern. Link: `https://unstop.com/internship/sde-intern-zepto`. Same role, but the link is to an aggregator rather than Zepto's own posting, so it is rejected with "Aggregator and user-content links are not accepted; link the company's own posting." Resubmit with the direct Lever/Greenhouse/Ashby/company link instead.
 
 ## How to submit
 
@@ -31,8 +31,14 @@ Open an issue using the [submission form](https://github.com/iitian-vibes/India-
 2. If the automatic checks pass, a maintainer verifies the role by hand against the company's own page.
 3. Once verified and approved, a bot adds it to `data/submitted.json`, regenerates the README, and closes the issue with a thank-you crediting your GitHub username.
 
+You can have at most 5 open submissions at a time; a 6th will close itself automatically so it does not sit as an open issue. Repeated spam submissions get the account blocked by the maintainer.
+
 ## Code contributions
 
-Changes to the code (scripts, workflows, templates) go through a pull request against `main`, reviewed by [@Arun-Raghav-S](https://github.com/Arun-Raghav-S). `README.md` is generated from the data files and scripts, never edit it by hand, your changes will be overwritten on the next run.
+Changes to the code (scripts, workflows, templates) go through a pull request against `main`, reviewed by [@Arun-Raghav-S](https://github.com/Arun-Raghav-S), and merged with squash merge only (the repo has merge commits and rebase merging turned off). `README.md` is generated from the data files and scripts, never edit it by hand, your changes will be overwritten on the next run.
+
+### Maintainer note: labels
+
+If the repo's labels (`submission`, `checks-passed`, `needs-fix`, `verified`, `approved`, `health`) are ever missing or deleted, re-create them with `./scripts/setup-labels.sh` (idempotent, safe to re-run).
 
 By contributing data, you agree it is licensed under CC BY 4.0. By contributing code, you agree it is licensed under MIT, matching the rest of the repository.

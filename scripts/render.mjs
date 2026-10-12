@@ -2,7 +2,13 @@ const REPO = 'https://github.com/iitian-vibes/India-Tech-Internships-2027';
 const DESK = 'https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships';
 const GCAL = 'https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics';
 
-export const cell = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/\s*\r?\n\s*/g, ' ').replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();
+// Fix round 1, finding 10: also backslash-escape markdown link/emphasis specials so a company or stipend like
+// 'Zepto [Free](https://phish)' or '![](x)' renders as plain text instead of a clickable/embedded element.
+export const cell = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/\s*\r?\n\s*/g, ' ').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/([[\]()!*_`])/g, '\\$1').trim();
+
+// Fix round 1, finding 1: also percent-encode pipe, space, angle brackets, quote and backtick so a URL
+// containing them (which `new URL()` does not reject) can never break out of the `[Apply](...)` markdown link.
+export const encodeUrl = (url) => url.replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\|/g, '%7C').replace(/ /g, '%20').replace(/</g, '%3C').replace(/>/g, '%3E').replace(/"/g, '%22').replace(/`/g, '%60');
 
 export function istStamp(iso) {
   const d = new Date(Date.parse(iso) + 5.5 * 3600e3);
@@ -18,14 +24,12 @@ const byNewest = (a, b) => String(b.posted ?? b.first_seen).localeCompare(String
 function table(rows, nowIso) {
   if (!rows.length) return '_Nothing open here right now. New roles are added every day._\n';
   const head = '| Company | Role | Location | Batch | Stipend | Apply | Posted |\n|---|---|---|---|---|---|---|\n';
-  const encodeUrl = (url) => url.replace(/\(/g, '%28').replace(/\)/g, '%29');
   return head + [...rows].sort(byNewest).map((r) => `| ${cell(r.company)} | ${cell(r.role)}${r.stale ? ' ⚠️' : ''} | ${cell(r.location)} | ${cell(r.batch)} | ${cell(r.stipend ?? 'not stated')} | [Apply](${encodeUrl(r.url)}) | ${age(r.posted ?? r.first_seen, nowIso)} |`).join('\n') + '\n';
 }
 
 export function renderReadme({ rows, closed, desk, meta }) {
   const c = meta.counts ?? { total: 0 };
   const sec = (s) => rows.filter((r) => r.section === s);
-  const encodeUrl = (url) => url.replace(/\(/g, '%28').replace(/\)/g, '%29');
   const deskTable = desk.length
     ? '| Company | Role | Closes | Who can apply | Apply |\n|---|---|---|---|---|\n' + desk.map((d) => `| ${cell(d.company)} | ${cell(d.role)} | ${d.deadline ?? 'rolling'} | ${cell(d.who)} | [Apply](${encodeUrl(d.url)}) |`).join('\n') + '\n'
     : '_Nothing here right now._\n';

@@ -3,26 +3,32 @@ on:
   issues:
     types: [labeled]
 permissions:
-  contents: write
+  contents: read
   issues: write
 concurrency:
   group: data-writer
   cancel-in-progress: false
 jobs:
   approve:
-    if: github.event.label.name == 'approved' && github.actor == 'Arun-Raghav-S' && contains(github.event.issue.labels.*.name, 'submission')
+    # Fast-path filter only: the actual gate (both 'approved' AND 'checks-passed' present, re-validated, not
+    # edited since the checks ran) lives in approve-sweep.mjs, which re-queries fresh state for ALL qualifying
+    # issues rather than trusting this event's payload. Both actor and sender must be the owner (fix round 1,
+    # finding 11); contents stays read-only because the push uses the deploy key, not github.token.
+    if: >-
+      github.event.label.name == 'approved' &&
+      github.actor == 'Arun-Raghav-S' &&
+      github.event.sender.login == 'Arun-Raghav-S' &&
+      contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { ssh-key: '${{ secrets.BOT_DEPLOY_KEY }}' }
+        with: { ref: main, ssh-key: '${{ secrets.BOT_DEPLOY_KEY }}' }
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: node scripts/approve-submission.mjs
+      - run: node scripts/approve-sweep.mjs prepare
         env:
-          ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-      - run: npm run render
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
@@ -30,32 +36,31 @@ jobs:
           git add data/submitted.json README.md
           if git diff --cached --quiet; then
             echo "no changes to commit"
-            exit 1
+          else
+            git commit -m "data: approval sweep $(date -u +%F)"
+            pushed=0
+            for i in 1 2 3; do
+              if git pull --rebase origin main; then
+                if git push; then pushed=1; break; fi
+              else
+                echo "rebase conflict against main, aborting"
+                git rebase --abort || true
+                exit 1
+              fi
+              sleep 5
+            done
+            if [ "$pushed" -ne 1 ]; then echo "push failed after 3 attempts"; exit 1; fi
           fi
-          git commit -m "data: add submission #$ISSUE_NUMBER"
-          pushed=0
-          for i in 1 2 3; do
-            if git pull --rebase origin main; then
-              if git push; then pushed=1; break; fi
-            else
-              echo "rebase conflict against main, aborting"
-              git rebase --abort || true
-              exit 1
-            fi
-            sleep 5
-          done
-          if [ "$pushed" -ne 1 ]; then echo "push failed after 3 attempts"; exit 1; fi
+      - name: Close and thank the submitters whose rows were actually pushed
+        run: node scripts/approve-sweep.mjs finalize
         env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-      - name: Close with a thank-you
-        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-        run: |
-          gh issue close "$ISSUE_NUMBER" --comment "Added to the list. Thank you @$ISSUE_AUTHOR!"
-      - name: Report a failed approval
+      - name: Open or update the health issue on failure
         if: failure()
-        env: { GH_TOKEN: '${{ github.token }}', ISSUE_NUMBER: '${{ github.event.issue.number }}', RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}' }
+        env: { GH_TOKEN: '${{ github.token }}', RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}' }
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "Approval failed: either the posting no longer passes the checks, or something went wrong while adding it. Nothing was added. See $RUN_URL for details."
+          gh label create health --color B60205 --description "Daily update problems" 2>/dev/null || true
+          n=$(gh issue list --label health --state open --json number --jq '.[0].number')
+          if [ -n "$n" ]; then gh issue comment "$n" --body "Approval sweep failed $(date -u +%F): $RUN_URL"
+          else gh issue create --label health --title "Approval sweep failed" --body "The approval sweep failed partway through. Check data/submitted.json and README.md against the issues labelled approved before retrying. Run: $RUN_URL"; fi

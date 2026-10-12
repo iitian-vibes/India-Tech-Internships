@@ -10,6 +10,12 @@ test('cell escapes pipes, newlines, and angle brackets', () => {
   assert.equal(cell('a <b> c'), 'a &lt;b&gt; c');
 });
 
+test('fix round 1, finding 10: cell escapes markdown link/emphasis specials so they render as plain text', () => {
+  assert.equal(cell('Zepto [Free](https://phish.example)'), 'Zepto \\[Free\\]\\(https://phish.example\\)');
+  assert.equal(cell('![](x)'), '\\!\\[\\]\\(x\\)');
+  assert.equal(cell('*bold* _em_ `code`'), '\\*bold\\* \\_em\\_ \\`code\\`');
+});
+
 test('istStamp formats in IST', () => {
   assert.equal(istStamp('2026-10-12T03:44:00.000Z'), '12 Oct 2026, 09:14 IST');
 });
@@ -32,6 +38,11 @@ test('README has header with updated phrase, sections, not stated stipend, age, 
 test('Apply links encode parentheses', () => {
   const md = renderReadme({ rows: [row({ url: 'https://x/job(1)' })], closed: [], desk: [], meta });
   assert.match(md, /\[Apply\]\(https:\/\/x\/job%281%29\)/);
+});
+
+test('fix round 1, finding 1: Apply links also encode pipe, space, angle brackets, quote and backtick', () => {
+  const md = renderReadme({ rows: [row({ url: 'https://x/a|b c<d>e"f`g' })], closed: [], desk: [], meta });
+  assert.match(md, /\[Apply\]\(https:\/\/x\/a%7Cb%20c%3Cd%3Ee%22f%60g\)/);
 });
 
 test('empty sections say so instead of rendering an empty table', () => {
