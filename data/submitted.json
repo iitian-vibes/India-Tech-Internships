@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "stripe:submitted:6",
+    "company": "Stripe",
+    "company_slug": "stripe",
+    "role": "Software Engineer, Intern",
+    "location": "Bengaluru",
+    "section": "india",
+    "url": "https://stripe.com/jobs/search?gh_jid=8031833",
+    "posted": "2026-10-12",
+    "batch": "Any",
+    "stipend": null,
+    "source": "submitted",
+    "first_seen": "2026-10-12",
+    "submitted_by": "Arun-Raghav-S"
+  }
+]
