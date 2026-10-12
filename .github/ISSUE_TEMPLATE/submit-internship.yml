@@ -1,0 +1,27 @@
+name: Submit an internship
+description: Add a tech internship or new-grad role open to students in India.
+title: "[Submission] "
+labels: [submission]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for helping. A bot checks the link within a few minutes and replies here, then we verify it on the company's page. Only roles open to students in India (Indian city, or remote open to India or APAC). No aggregator links."
+  - type: input
+    attributes: { label: Company }
+    validations: { required: true }
+  - type: input
+    attributes: { label: Role title (exactly as on the posting) }
+    validations: { required: true }
+  - type: input
+    attributes: { label: Link to the posting, description: "The company's own careers page or job board (Greenhouse, Lever, Ashby, Workday...). Must start with https." }
+    validations: { required: true }
+  - type: input
+    attributes: { label: Location, placeholder: "Bengaluru / Remote - India" }
+    validations: { required: true }
+  - type: input
+    attributes: { label: Stipend (only if the posting says), placeholder: "₹50,000 per month" }
+  - type: input
+    attributes: { label: Graduation year it is for (optional), placeholder: "2027" }
+  - type: input
+    attributes: { label: Company careers site, placeholder: "https://company.com/careers" }
+    validations: { required: true }

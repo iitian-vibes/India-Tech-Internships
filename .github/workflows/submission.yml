@@ -1,0 +1,21 @@
+name: Check submission
+on:
+  issues:
+    types: [opened, edited]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    if: contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/validate-submission.mjs
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          GH_TOKEN: ${{ github.token }}

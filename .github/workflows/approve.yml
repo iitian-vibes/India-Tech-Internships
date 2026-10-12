@@ -1,0 +1,61 @@
+name: Approve submission
+on:
+  issues:
+    types: [labeled]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
+jobs:
+  approve:
+    if: github.event.label.name == 'approved' && github.actor == 'Arun-Raghav-S' && contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ssh-key: '${{ secrets.BOT_DEPLOY_KEY }}' }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/approve-submission.mjs
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+      - run: npm run render
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/submitted.json README.md
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+            exit 1
+          fi
+          git commit -m "data: add submission #$ISSUE_NUMBER"
+          pushed=0
+          for i in 1 2 3; do
+            if git pull --rebase origin main; then
+              if git push; then pushed=1; break; fi
+            else
+              echo "rebase conflict against main, aborting"
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep 5
+          done
+          if [ "$pushed" -ne 1 ]; then echo "push failed after 3 attempts"; exit 1; fi
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+      - name: Close with a thank-you
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          gh issue close "$ISSUE_NUMBER" --comment "Added to the list. Thank you @$ISSUE_AUTHOR!"
+      - name: Report a failed approval
+        if: failure()
+        env: { GH_TOKEN: '${{ github.token }}', ISSUE_NUMBER: '${{ github.event.issue.number }}', RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}' }
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Approval failed: either the posting no longer passes the checks, or something went wrong while adding it. Nothing was added. See $RUN_URL for details."
