@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { editedAfterChecks, hasIssueNumber, mergeApprovedRows } from '../scripts/approve-sweep.mjs';
+import { editedAfterChecks, hasIssueNumber, mergeApprovedRows, fetchLastEditedAt, verifyApprovedByOwner, OWNER_LOGIN, buildFinalizeManifest } from '../scripts/approve-sweep.mjs';
 
 // --- editedAfterChecks ---
 
@@ -51,6 +51,97 @@ test('editedAfterChecks: uses the LATEST checks-passed labelling when checks re-
 
 test('editedAfterChecks: true when there is no checks-passed labelling at all (defensive default)', () => {
   assert.equal(editedAfterChecks([{ event: 'labeled', label: { name: 'submission' }, created_at: '2026-10-12T10:00:00Z' }], null), true);
+});
+
+// --- fetchLastEditedAt (fix round 2, finding 2: must never fail open) ---
+
+const jsonResponse = (status, body) => async () => ({ ok: status >= 200 && status < 300, status, json: async () => body });
+
+test('fetchLastEditedAt: a GraphQL {errors} response throws rather than returning null', async () => {
+  const fetchImpl = jsonResponse(200, { errors: [{ message: 'Could not resolve to an Issue' }] });
+  await assert.rejects(() => fetchLastEditedAt(1, { fetchImpl }));
+});
+
+test('fetchLastEditedAt: a non-OK HTTP status throws rather than returning null', async () => {
+  const fetchImpl = jsonResponse(502, {});
+  await assert.rejects(() => fetchLastEditedAt(1, { fetchImpl }));
+});
+
+test('fetchLastEditedAt: a response missing data.repository.issue throws rather than returning null', async () => {
+  const fetchImpl = jsonResponse(200, { data: { repository: { issue: null } } });
+  await assert.rejects(() => fetchLastEditedAt(1, { fetchImpl }));
+});
+
+test('fetchLastEditedAt: a valid response with lastEditedAt: null (never edited) resolves to null, not a throw', async () => {
+  const fetchImpl = jsonResponse(200, { data: { repository: { issue: { lastEditedAt: null } } } });
+  const r = await fetchLastEditedAt(1, { fetchImpl });
+  assert.equal(r, null);
+});
+
+test('fetchLastEditedAt: a valid response with a real timestamp is passed through', async () => {
+  const fetchImpl = jsonResponse(200, { data: { repository: { issue: { lastEditedAt: '2026-10-12T10:10:00Z' } } } });
+  const r = await fetchLastEditedAt(1, { fetchImpl });
+  assert.equal(r, '2026-10-12T10:10:00Z');
+});
+
+// --- verifyApprovedByOwner (fix round 2, finding 5) ---
+
+test('OWNER_LOGIN is the single constant naming the maintainer', () => {
+  assert.equal(OWNER_LOGIN, 'Arun-Raghav-S');
+});
+
+test('verifyApprovedByOwner: true when the most recent "approved" labelling was done by the owner', () => {
+  const events = [
+    { event: 'labeled', label: { name: 'checks-passed' }, created_at: '2026-10-12T10:00:00Z', actor: { login: 'github-actions[bot]' } },
+    { event: 'labeled', label: { name: 'approved' }, created_at: '2026-10-12T10:05:00Z', actor: { login: 'Arun-Raghav-S' } },
+  ];
+  assert.equal(verifyApprovedByOwner(events), true);
+});
+
+test('verifyApprovedByOwner: false when the most recent "approved" labelling was done by someone else', () => {
+  const events = [{ event: 'labeled', label: { name: 'approved' }, created_at: '2026-10-12T10:05:00Z', actor: { login: 'some-random-collaborator' } }];
+  assert.equal(verifyApprovedByOwner(events), false);
+});
+
+test('verifyApprovedByOwner: uses the LATEST "approved" labelling, not an earlier one, when it was unlabeled and relabeled', () => {
+  const events = [
+    { event: 'labeled', label: { name: 'approved' }, created_at: '2026-10-12T09:00:00Z', actor: { login: 'Arun-Raghav-S' } },
+    { event: 'unlabeled', label: { name: 'approved' }, created_at: '2026-10-12T09:30:00Z', actor: { login: 'Arun-Raghav-S' } },
+    { event: 'labeled', label: { name: 'approved' }, created_at: '2026-10-12T10:00:00Z', actor: { login: 'some-random-collaborator' } },
+  ];
+  assert.equal(verifyApprovedByOwner(events), false);
+});
+
+test('verifyApprovedByOwner: false (fail closed) when there is no "approved" labelling event at all', () => {
+  assert.equal(verifyApprovedByOwner([{ event: 'labeled', label: { name: 'checks-passed' }, created_at: '2026-10-12T10:00:00Z', actor: { login: 'Arun-Raghav-S' } }]), false);
+});
+
+// --- buildFinalizeManifest (fix round 2, finding 7) ---
+
+const submittedRow = (n, over = {}) => ({ id: `acme:submitted:${n}`, company: 'Acme', company_slug: 'acme', role: 'SDE Intern', location: 'Pune', section: 'india', url: `https://x/${n}`, posted: '2026-10-12', batch: 'Any', stipend: null, source: 'submitted', first_seen: '2026-10-12', submitted_by: `student${n}`, ...over });
+
+test('buildFinalizeManifest: includes an issue newly added this run', () => {
+  const candidates = [{ issueNumber: 7, row: submittedRow(7) }];
+  const manifest = buildFinalizeManifest({ openIssueNumbers: [7], submitted: [submittedRow(7)], candidates, added: [7] });
+  assert.deepEqual(manifest, [{ issueNumber: 7, url: 'https://x/7', author: 'student7' }]);
+});
+
+test('buildFinalizeManifest: includes an issue whose row is already in submitted.json (from an earlier run) but is still open and approved — no duplicate row, but it still gets closed', () => {
+  // issue 3 is open+approved (so listCandidateIssues returned it) but its row already exists from a prior sweep,
+  // so prepare()'s loop skips it before ever building a candidate for it this run.
+  const manifest = buildFinalizeManifest({ openIssueNumbers: [3], submitted: [submittedRow(3)], candidates: [], added: [] });
+  assert.deepEqual(manifest, [{ issueNumber: 3, url: 'https://x/3', author: 'student3' }]);
+});
+
+test('buildFinalizeManifest: an open issue with neither a candidate nor an existing row is excluded (not actually applied yet)', () => {
+  const manifest = buildFinalizeManifest({ openIssueNumbers: [9], submitted: [], candidates: [], added: [] });
+  assert.deepEqual(manifest, []);
+});
+
+test('buildFinalizeManifest: never lists the same issue number twice', () => {
+  const candidates = [{ issueNumber: 7, row: submittedRow(7) }];
+  const manifest = buildFinalizeManifest({ openIssueNumbers: [7], submitted: [submittedRow(7)], candidates, added: [7] });
+  assert.equal(manifest.length, 1);
 });
 
 // --- hasIssueNumber / mergeApprovedRows (idempotence) ---
