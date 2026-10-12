@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseIssueForm, validateSubmission, submissionRow, isSafePublicUrl, isDenyHost, RATE_LIMIT_MSG } from '../scripts/submission.mjs';
+import { parseIssueForm, validateSubmission, submissionRow, isSafePublicUrl, isDenyHost, RATE_LIMIT_MSG, isPrivateAddress, fetchPosting } from '../scripts/submission.mjs';
 
 const body = `### Company\n\nZepto\n\n### Role title (exactly as on the posting)\n\nSDE Intern\n\n### Link to the posting\n\nhttps://jobs.lever.co/zepto/abc\n\n### Location\n\nMumbai\n\n### Stipend (only if the posting says)\n\n_No response_\n\n### Graduation year it is for (optional)\n\n2027\n\n### Company careers site\n\nhttps://www.zeptonow.com/careers`;
 const fields = parseIssueForm(body);
@@ -101,6 +101,81 @@ test('fix round 1, finding 6: isSafePublicUrl rejects non-https, IP literals, an
   for (const u of bad) assert.equal(isSafePublicUrl(u), false, u);
   const good = ['https://example.com/x', 'https://jobs.lever.co/zepto/abc', 'https://careers.zeptonow.com/job/1?x=1'];
   for (const u of good) assert.equal(isSafePublicUrl(u), true, u);
+});
+
+test('fix round 2, finding 1: isSafePublicUrl strips a trailing dot before the localhost check', () => {
+  assert.equal(isSafePublicUrl('https://localhost./x'), false);
+  assert.equal(isSafePublicUrl('https://foo.localhost./x'), false);
+});
+
+test('fix round 2, finding 1: isPrivateAddress table — loopback, private, link-local, unique-local, CGNAT, 0.0.0.0/8, multicast, IPv6-mapped', () => {
+  const bad = [
+    '127.0.0.1', '127.255.255.255',          // loopback
+    '10.0.0.1', '10.255.255.255',            // 10/8
+    '172.16.0.1', '172.31.255.255',          // 172.16/12
+    '192.168.0.1', '192.168.255.255',        // 192.168/16
+    '169.254.169.254', '169.254.0.1',        // link-local
+    '100.64.0.1', '100.127.255.255',         // CGNAT
+    '0.0.0.0', '0.1.2.3',                    // 0.0.0.0/8
+    '224.0.0.1', '239.255.255.255',          // multicast
+    '::1',                                   // IPv6 loopback
+    '::',                                    // unspecified
+    'fe80::1',                                // link-local v6
+    'fc00::1', 'fd12::1',                     // unique-local v6
+    'ff02::1',                                // multicast v6
+    '::ffff:127.0.0.1',                       // IPv4-mapped loopback
+    '::ffff:169.254.169.254',                 // IPv4-mapped link-local
+  ];
+  for (const ip of bad) assert.equal(isPrivateAddress(ip), true, ip);
+
+  const good = [
+    '8.8.8.8', '1.1.1.1',                     // public v4s
+    '172.15.255.255', '172.32.0.0',          // just outside 172.16/12
+    '2606:4700:4700::1111',                   // public IPv6 (cloudflare)
+    '::ffff:8.8.8.8',                         // IPv4-mapped public
+  ];
+  for (const ip of good) assert.equal(isPrivateAddress(ip), false, ip);
+});
+
+test('fix round 2, finding 1: fetchPosting refuses a host resolving to a link-local/metadata address', async () => {
+  const lookup = async () => [{ address: '169.254.169.254', family: 4 }];
+  const fetchImpl = async () => { throw new Error('fetch must not be called when the address is private'); };
+  const r = await fetchPosting('https://attacker-controlled.example/x', { lookup, fetchImpl });
+  assert.equal(r, null);
+});
+
+test('fix round 2, finding 1: fetchPosting refuses "localhost." with a trailing dot without even resolving', async () => {
+  const lookup = async () => { throw new Error('lookup must not be called for an unsafe URL'); };
+  const fetchImpl = async () => { throw new Error('fetch must not be called for an unsafe URL'); };
+  const r = await fetchPosting('https://localhost./x', { lookup, fetchImpl });
+  assert.equal(r, null);
+});
+
+test('fix round 2, finding 1: fetchPosting proceeds when the host resolves only to public addresses', async () => {
+  const lookup = async () => [{ address: '8.8.8.8', family: 4 }];
+  const fetchImpl = async () => new Response('hello world', { status: 200 });
+  const r = await fetchPosting('https://example.com/x', { lookup, fetchImpl });
+  assert.equal(r.status, 200);
+  assert.equal(r.text, 'hello world');
+});
+
+test('fix round 2, finding 1: fetchPosting re-resolves and re-checks on EVERY redirect hop, not just the first', async () => {
+  const lookup = async (host) => {
+    if (host === 'public.example') return [{ address: '8.8.8.8', family: 4 }];
+    if (host === 'internal.example') return [{ address: '10.0.0.5', family: 4 }];
+    throw new Error(`unexpected host ${host}`);
+  };
+  let calls = 0;
+  const fetchImpl = async (url) => {
+    calls++;
+    if (url === 'https://public.example/start') {
+      return new Response(null, { status: 302, headers: { location: 'https://internal.example/x' } });
+    }
+    throw new Error('fetch must not reach the redirect target');
+  };
+  const r = await fetchPosting('https://public.example/start', { lookup, fetchImpl });
+  assert.equal(r, null);
+  assert.equal(calls, 1, 'the redirect target itself must never be fetched');
 });
 
 test('submissionRow credits the author and uses a stable id', () => {

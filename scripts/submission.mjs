@@ -1,3 +1,5 @@
+import dns from 'node:dns';
+import net from 'node:net';
 import { isStudentRole, isTechRole, classifyLocation, hasWorkAuthBlock } from './filter.mjs';
 import { htmlToText } from './fetch/util.mjs';
 
@@ -55,10 +57,64 @@ export function isSafePublicUrl(raw) {
   let url;
   try { url = new URL(raw); } catch { return false; }
   if (url.protocol !== 'https:') return false;
-  const host = url.hostname.toLowerCase();
+  // Fix round 2, finding 1: a trailing dot ("localhost.") is a different string but the same FQDN to any
+  // resolver, and survives `new URL()` unchanged — strip it before the hostname checks below.
+  const host = url.hostname.toLowerCase().replace(/\.$/, '');
   if (host === 'localhost' || host.endsWith('.localhost')) return false;
   if (looksLikeIpLiteral(host)) return false;
   return true;
+}
+
+// --- DNS-resolution-based SSRF guard (fix round 2, finding 1) ---
+//
+// isSafePublicUrl only looks at the URL string: a hostname like "127.0.0.1.nip.io" or any attacker-controlled
+// DNS name string-matches as "public" while actually resolving to a private/loopback/link-local address
+// (DNS rebinding also lets a hostname resolve to a public address at check time and a private one at fetch
+// time). isPrivateAddress is the pure classifier; fetchPosting below calls it against every address a hostname
+// resolves to, on every hop, right before issuing that hop's request.
+
+const IPV4_PRIVATE_RANGES = [
+  ['0.0.0.0', 8],        // "this network"
+  ['10.0.0.0', 8],        // RFC1918
+  ['100.64.0.0', 10],     // CGNAT (RFC6598)
+  ['127.0.0.0', 8],        // loopback
+  ['169.254.0.0', 16],     // link-local (incl. cloud metadata, 169.254.169.254)
+  ['172.16.0.0', 12],      // RFC1918
+  ['192.168.0.0', 16],     // RFC1918
+  ['224.0.0.0', 4],        // multicast
+];
+
+function ipv4ToInt(ip) {
+  const parts = ip.split('.');
+  if (parts.length !== 4) return null;
+  const nums = parts.map((p) => Number(p));
+  if (nums.some((n) => !Number.isInteger(n) || n < 0 || n > 255)) return null;
+  return ((nums[0] << 24) | (nums[1] << 16) | (nums[2] << 8) | nums[3]) >>> 0;
+}
+
+function inCidr(intIp, baseIp, bits) {
+  const mask = bits === 0 ? 0 : (0xffffffff << (32 - bits)) >>> 0;
+  return (intIp & mask) === (ipv4ToInt(baseIp) & mask);
+}
+
+function isPrivateIPv4(ip) {
+  const n = ipv4ToInt(ip);
+  if (n === null) return true; // unparsable -> fail closed
+  return IPV4_PRIVATE_RANGES.some(([base, bits]) => inCidr(n, base, bits));
+}
+
+export function isPrivateAddress(ip) {
+  if (!ip) return true;
+  if (net.isIPv4(ip)) return isPrivateIPv4(ip);
+  if (!net.isIPv6(ip)) return true; // not an IP at all -> fail closed
+  const lower = ip.toLowerCase();
+  if (lower === '::1' || lower === '::') return true; // loopback / unspecified
+  const mapped = lower.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/);
+  if (mapped) return isPrivateIPv4(mapped[1]); // IPv4-mapped IPv6
+  if (/^fe[89ab][0-9a-f]:/.test(lower)) return true; // link-local, fe80::/10
+  if (/^f[cd][0-9a-f]{2}:/.test(lower)) return true; // unique-local, fc00::/7
+  if (lower.startsWith('ff')) return true; // multicast, ff00::/8
+  return false;
 }
 
 const FETCH_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36 india-tech-internships-bot (+https://github.com/iitian-vibes/India-Tech-Internships-2027)';
@@ -92,16 +148,26 @@ async function readCapped(body, maxBytes) {
 
 // The one place that fetches a posting, used by both validate-submission.mjs (at check time) and
 // approve-sweep.mjs (re-checked at approval time), fix round 1 finding 6.
-export async function fetchPosting(rawUrl) {
+//
+// Fix round 2, finding 1: a string-only host check (isSafePublicUrl) is necessary but not sufficient — the
+// hostname still has to actually resolve, and it's resolved and re-checked separately before EVERY hop
+// (including every redirect target), because a redirect can point anywhere and DNS can answer differently
+// between hops. `lookup`/`fetchImpl` are injectable so tests never touch the real network/DNS.
+export async function fetchPosting(rawUrl, { lookup = dns.promises.lookup, fetchImpl = fetch } = {}) {
   if (!isSafePublicUrl(rawUrl)) return null;
   let current = new URL(rawUrl);
   const seen = new Set();
   for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
     if (seen.has(current.href) || !isSafePublicUrl(current.href)) return null;
     seen.add(current.href);
+
+    let addrs;
+    try { addrs = await lookup(current.hostname, { all: true }); } catch { return null; }
+    if (!addrs?.length || addrs.some((a) => isPrivateAddress(a.address))) return null;
+
     let res;
     try {
-      res = await fetch(current.href, { redirect: 'manual', signal: AbortSignal.timeout(20000), headers: { 'User-Agent': FETCH_USER_AGENT } });
+      res = await fetchImpl(current.href, { redirect: 'manual', signal: AbortSignal.timeout(20000), headers: { 'User-Agent': FETCH_USER_AGENT } });
     } catch { return null; }
     if ([301, 302, 303, 307, 308].includes(res.status)) {
       const loc = res.headers.get('location');
