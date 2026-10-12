@@ -133,6 +133,8 @@ async function finalize() {
   let manifest = { added: [] };
   try { manifest = JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')); } catch { /* nothing prepared, e.g. zero additions */ }
   for (const a of manifest.added ?? []) {
+    // drop any stale 'needs-fix' from an earlier failed attempt on the same issue; mark it verified+added.
+    await api(`/issues/${a.issueNumber}/labels`, { method: 'PUT', body: JSON.stringify({ labels: ['submission', 'checks-passed', 'approved', 'verified'] }) });
     await api(`/issues/${a.issueNumber}/comments`, { method: 'POST', body: JSON.stringify({ body: `Added to the list: ${a.url}. Thank you @${a.author}!` }) });
     await api(`/issues/${a.issueNumber}`, { method: 'PATCH', body: JSON.stringify({ state: 'closed', state_reason: 'completed' }) });
   }
