@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { runBuild, planWrites } from '../scripts/build-core.mjs';
+import { runBuild, planWrites, chooseDesk } from '../scripts/build-core.mjs';
 
 const C = (slug, ats = 'lever') => ({ name: slug.toUpperCase(), slug, ats, board: slug, abroad_visa: false });
 const J = (id, title = 'SDE Intern') => ({ jobId: id, title, locations: ['Pune'], remote: false, url: `https://jobs/${id}`, posted: '2026-10-10T00:00:00Z', text: '', employmentType: '', stipendHint: null });
@@ -101,6 +101,37 @@ test('shrink guard triggers on rows removed, not net row count (10 removed + 10 
   assert.equal(r.reason, 'shrink');
 });
 
+// --- fix round 2, finding 4: chooseDesk never lets an upstream schema change silently empty the desk section ---
+
+const deskRow = (n) => ({ company: `Co${n}`, role: 'SWE Intern', deadline: null, url: `https://x/${n}`, who: 'students' });
+
+test('chooseDesk: fetch failed (null) with a non-empty previous desk keeps the previous rows and warns', () => {
+  const prevDesk = [deskRow(1), deskRow(2)];
+  const r = chooseDesk(null, prevDesk);
+  assert.deepEqual(r.desk, prevDesk);
+  assert.ok(r.warning, 'expected a warning string');
+});
+
+test('chooseDesk: fetch returned [] with a non-empty previous desk keeps the previous rows and warns (the upstream-schema-change case)', () => {
+  const prevDesk = [deskRow(1)];
+  const r = chooseDesk([], prevDesk);
+  assert.deepEqual(r.desk, prevDesk);
+  assert.ok(r.warning);
+});
+
+test('chooseDesk: fetch returned [] and previous desk was also [] — genuinely empty, no warning', () => {
+  const r = chooseDesk([], []);
+  assert.deepEqual(r.desk, []);
+  assert.equal(r.warning, null);
+});
+
+test('chooseDesk: fetch returned real rows — used as-is, no warning, regardless of previous', () => {
+  const fetched = [deskRow(3)];
+  const r = chooseDesk(fetched, [deskRow(1)]);
+  assert.deepEqual(r.desk, fetched);
+  assert.equal(r.warning, null);
+});
+
 test('planWrites returns null on a blocked result (circuit/shrink) so nothing is written', () => {
   const blocked = { ok: false, reason: 'circuit', rows: [], closed: [], meta: {}, errors: [] };
   assert.equal(planWrites(blocked, { liveSubmitted: [], desk: [], dryRun: false }), null);
@@ -109,6 +140,26 @@ test('planWrites returns null on a blocked result (circuit/shrink) so nothing is
 test('planWrites returns null on a dry run even when the result is ok', () => {
   const ok = { ok: true, rows: [], closed: [], meta: {}, errors: [] };
   assert.equal(planWrites(ok, { liveSubmitted: [], desk: [], dryRun: true }), null);
+});
+
+// --- fix round 2, finding 3: bounded concurrency ---
+
+test('runBuild fetches companies with bounded concurrency: 10 companies at 50ms each finish in well under 500ms serial time', async () => {
+  const companies = Array.from({ length: 10 }, (_, i) => C(`c${i}`));
+  const fetchersConc = { lever: async (c) => { await new Promise((r) => setTimeout(r, 50)); return [J(`${c.slug}-1`)]; } };
+  const start = Date.now();
+  const r = await runBuild({ ...base, companies, prev: [], fetchers: fetchersConc });
+  const elapsed = Date.now() - start;
+  assert.equal(r.ok, true);
+  assert.ok(elapsed < 500, `expected well under 500ms serial-equivalent, got ${elapsed}ms`);
+});
+
+test('runBuild output order matches companies.json input order regardless of fetch completion order', async () => {
+  const companies = Array.from({ length: 10 }, (_, i) => C(`c${i}`));
+  // deliberately make later companies finish first, to prove output order is NOT completion order
+  const fetchersConc = { lever: async (c) => { const n = Number(c.slug.slice(1)); await new Promise((r) => setTimeout(r, (9 - n) * 5)); return [J(`${c.slug}-1`)]; } };
+  const r = await runBuild({ ...base, companies, prev: [], fetchers: fetchersConc });
+  assert.deepEqual(r.rows.map((x) => x.id), companies.map((c) => `${c.slug}:lever:${c.slug}-1`));
 });
 
 test('planWrites bundles all five data files together on a successful, non-dry run', () => {

@@ -54,6 +54,20 @@ jobs:
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
+      # Fix round 2, finding 4: chooseDesk() (build-core.mjs) keeps yesterday's desk rows and sets
+      # meta.desk_warning when the upstream deadline-desk feed failed or came back empty while we had rows
+      # before — so the Deadline Desk section never silently empties, it just goes stale with a flag. This
+      # runs AFTER the commit step above so a desk_warning never blocks the data from landing; it only turns
+      # the already-green run into a visible failure so the existing health-issue step below fires.
+      - name: Fail loudly if the desk feed needed a fallback
+        run: |
+          node -e "
+            const meta = JSON.parse(require('fs').readFileSync('data/meta.json', 'utf8'));
+            if (meta.desk_warning) {
+              console.error('Deadline Desk warning: ' + meta.desk_warning);
+              process.exit(1);
+            }
+          "
       - name: Close the health issue after a good run
         if: success()
         env: { GH_TOKEN: '${{ github.token }}' }
@@ -61,11 +75,18 @@ jobs:
           for n in $(gh issue list --label health --state open --json number --jq '.[].number'); do
             gh issue close "$n" --comment "Recovered: daily update succeeded on $(date -u +%F)."
           done
-      - name: Open or update the health issue on failure
-        if: failure()
+      # Fix round 2, finding 3: a run that hit the 30-minute job timeout is CANCELLED by GitHub, not FAILED —
+      # `if: failure()` alone never caught that case, so a timed-out run left no health issue at all.
+      - name: Open or update the health issue on failure or timeout
+        if: failure() || cancelled()
         env: { GH_TOKEN: '${{ github.token }}', RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}' }
         run: |
           gh label create health --color B60205 --description "Daily update problems" 2>/dev/null || true
           n=$(gh issue list --label health --state open --json number --jq '.[0].number')
-          if [ -n "$n" ]; then gh issue comment "$n" --body "Failed again $(date -u +%F): $RUN_URL"
-          else gh issue create --label health --title "Daily update failed" --body "The daily update failed and nothing was written, so yesterday's list is still up. Run: $RUN_URL"; fi
+          if [ "${{ job.status }}" = "cancelled" ]; then
+            msg="Cancelled (likely timed out after 30 minutes) on $(date -u +%F): $RUN_URL"
+          else
+            msg="Failed again $(date -u +%F): $RUN_URL"
+          fi
+          if [ -n "$n" ]; then gh issue comment "$n" --body "$msg"
+          else gh issue create --label health --title "Daily update failed" --body "The daily update failed and nothing was written, so yesterday's list is still up. $msg"; fi

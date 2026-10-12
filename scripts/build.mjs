@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { runBuild, planWrites } from './build-core.mjs';
+import { runBuild, planWrites, chooseDesk } from './build-core.mjs';
 import { renderReadme } from './render.mjs';
 import { fetchGreenhouse } from './fetch/greenhouse.mjs';
 import { fetchLever } from './fetch/lever.mjs';
@@ -33,7 +33,8 @@ if (args.has('--render-only')) {
   process.exit(0);
 }
 
-const desk = (await deskRows()) ?? prevDesk;
+const { desk, warning: deskWarning } = chooseDesk(await deskRows(), prevDesk);
+if (deskWarning) console.error(`DESK WARNING: ${deskWarning}`);
 
 // Approved submissions are not on a job-board API, so check their links daily.
 // Two consecutive 404/410 answers retire a row into closed.json; network errors never count.
@@ -50,7 +51,7 @@ prevClosed.push(...retired.map(({ dead_count, ...s }) => ({ ...s, closed_at: tod
 const r = await runBuild({
   companies: read('data/companies.json', []), prev, prevClosed, prevMeta,
   fetchers: { greenhouse: fetchGreenhouse, lever: fetchLever, ashby: fetchAshby, workday: fetchWorkday, smartrecruiters: fetchSmartRecruiters },
-  today, now, desk, submitted: liveSubmitted, force: args.has('--force'),
+  today, now, desk, submitted: liveSubmitted, force: args.has('--force'), deskWarning,
 });
 for (const e of r.errors) console.error(`company failed: ${e.slug}: ${e.message}`);
 if (!r.ok) { console.error(`BUILD BLOCKED: ${r.reason}. Nothing written.`); process.exit(1); }
