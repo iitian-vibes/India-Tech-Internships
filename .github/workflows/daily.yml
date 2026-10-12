@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with: { ssh-key: '${{ secrets.BOT_DEPLOY_KEY }}' }
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: npm test
