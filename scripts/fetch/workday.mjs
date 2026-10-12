@@ -1,5 +1,19 @@
 import { fetchJson, htmlToText } from './util.mjs';
-const day = (now, back) => { const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())); d.setUTCDate(d.getUTCDate() - back); return d.toISOString(); };
+const day = (now, back) => {
+  // Convert UTC now to IST (add 5.5 hours)
+  const istNow = new Date(now.getTime() + 5.5 * 60 * 60 * 1000);
+  // Get IST calendar date
+  const istYear = istNow.getUTCFullYear();
+  const istMonth = istNow.getUTCMonth();
+  const istDate = istNow.getUTCDate();
+  // Create UTC midnight for this IST date
+  let d = new Date(Date.UTC(istYear, istMonth, istDate));
+  // Subtract the requested days
+  d.setUTCDate(d.getUTCDate() - back);
+  // Subtract 5.5 hours to convert IST midnight to UTC
+  d.setTime(d.getTime() - 5.5 * 60 * 60 * 1000);
+  return d.toISOString();
+};
 export function parsePostedOn(s, now = new Date()) {
   if (!s) return null;
   if (/today/i.test(s)) return day(now, 0);
@@ -10,27 +24,39 @@ export function parsePostedOn(s, now = new Date()) {
 }
 export function parseWorkdayList(json, company, now = new Date()) {
   const { host, site } = company.workday;
-  return (json?.jobPostings ?? []).map((p) => ({
-    jobId: String(p.bulletFields?.[0] ?? p.externalPath), title: String(p.title ?? '').trim(),
-    locations: p.locationsText ? [p.locationsText] : [], remote: /\bremote\b/i.test(p.locationsText ?? ''),
-    url: `https://${host}/en-US/${site}${p.externalPath}`, posted: parsePostedOn(p.postedOn, now),
-    text: '', employmentType: '', stipendHint: null,
-  }));
+  return (json?.jobPostings ?? []).map((p) => {
+    const result = {
+      jobId: String(p.bulletFields?.[0] ?? p.externalPath), title: String(p.title ?? '').trim(),
+      locations: p.locationsText ? [p.locationsText] : [], remote: /\bremote\b/i.test(p.locationsText ?? ''),
+      url: `https://${host}/en-US/${site}${p.externalPath}`, posted: parsePostedOn(p.postedOn, now),
+      text: '', employmentType: '', stipendHint: null,
+    };
+    // Store externalPath as non-enumerable property for detail fetching
+    Object.defineProperty(result, 'externalPath', { value: p.externalPath, enumerable: false });
+    return result;
+  });
 }
-export async function fetchWorkday(company, { wantDetail = () => true, now = new Date() } = {}) {
+export async function fetchWorkday(company, { wantDetail = () => true, now = new Date(), fetchJsonImpl = fetchJson } = {}) {
   const { host, tenant, site } = company.workday;
   const base = `https://${host}/wday/cxs/${tenant}/${site}`;
   const out = [];
   for (let offset = 0; offset < 200; offset += 20) {
-    const page = await fetchJson(`${base}/jobs`, { method: 'POST', body: { appliedFacets: {}, limit: 20, offset, searchText: 'intern' } });
+    const page = await fetchJsonImpl(`${base}/jobs`, { method: 'POST', body: { appliedFacets: {}, limit: 20, offset, searchText: 'intern' } });
     const jobs = parseWorkdayList(page, company, now);
     out.push(...jobs);
-    if (jobs.length < 20 || offset + 20 >= (page.total ?? 0)) break;
+    // Break when page is short (less than 20 results)
+    if (jobs.length < 20) break;
+    // Break if total is known and we've reached it
+    if (page.total && offset + 20 >= page.total) break;
+  }
+  // Check if we hit the 200-job cap (loop exited normally)
+  if (out.length >= 200) {
+    console.warn(`workday ${company.slug}: capped at 200 results`);
   }
   for (const j of out) {
     if (!wantDetail(j.title)) continue;
-    const path = j.url.split(`/${site}`)[1];
-    try { j.text = htmlToText((await fetchJson(`${base}${path}`)).jobPostingInfo?.jobDescription ?? ''); } catch { j.text = ''; }
+    const path = j.externalPath;
+    try { j.text = htmlToText((await fetchJsonImpl(`${base}${path}`)).jobPostingInfo?.jobDescription ?? ''); } catch { j.text = ''; }
   }
   return out;
 }
