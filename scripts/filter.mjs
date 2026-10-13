@@ -7,7 +7,13 @@ export function isStudentRole(title = '', employmentType = '') {
 }
 
 const TECH = /\b(software|sde|swe|engineer|engineering|developer|backend|back-end|frontend|front-end|full\s+stack|full-stack|fullstack|mobile|android|ios|web|data|analytics|machine\s+learning|ml|ai|artificial\s+intelligence|deep\s+learning|nlp|computer\s+vision|research|quant|quantitative|trading|trader|devops|sre|site\s+reliability|cloud|infrastructure|security|cyber|embedded|firmware|hardware|vlsi|asic|fpga|silicon|chip|robotics|platform|qa|test|testing|automation|algorithm|systems)\b/i;
-const NON_TECH = /\b(hr|human\s+resources|talent|recruit|people|marketing|growth\s+marketing|sales|business\s+development|content|video|editor|youtube|social\s+media|community|brand|pr|public\s+relations|finance|accounting|audit|legal|compliance|operations|customer|support|admin|office|designer|graphic|ui\/ux|ux|product\s+design)\b/i;
+// Fix round 2, item 2: several entries were bare word-stems whose \b...\b boundaries silently missed the
+// common suffixed/plural form (recruit matches "recruit"/"recruited" but not "recruiter"/"recruiting" — a
+// word-char immediately follows "recruit" in both, so the closing \b never lands). `\w*` fixes the actual
+// reported gap (recruit) and the same audit widened market/account/operation/editor/admin/talent/human
+// resources the same way. `designer` only gains an explicit plural (`designers?`), never broadened to bare
+// "design" — that would veto every legitimate "Hardware/Mechanical Design Intern" CORE_WORDS title.
+const NON_TECH = /\b(hr|human\s+resources?|talent\w*|recruit\w*|people|market\w*|sales|business\s+development|content|video|account\w*|editor\w*|youtube|social\s+media|community|brand|pr|public\s+relations|finance|audit|legal|compliance|operation\w*|customer|support|admin\w*|office|designers?|graphic|ui\/ux|ux|product\s+design|data\s+entry)\b/i;
 export function isTechRole(title = '') {
   return TECH.test(title) && !NON_TECH.test(title);
 }
@@ -15,7 +21,9 @@ export function isTechRole(title = '') {
 // Task A, item 2: core-engineering branches beyond software/CS, so the allowlist can cover every
 // engineering student, not just SDE/ML/quant. Deliberately excludes "finance" (that's NON_TECH, kept
 // out of core too) and plain "research" (already covered by TECH).
-const CORE_WORDS = /\b(mechanical|electrical|electronics|ece|eee|civil|chemical|aerospace|aeronautical|automotive|manufacturing|materials|metallurg\w*|process\s+engineer|power|energy|structural|mechatronics|instrumentation|hardware\s+design|r\s?&\s?d|propulsion|thermal)\b/i;
+// Fix round 2, item 1: bare "power" matched "Power BI Analyst Intern" (business-intelligence tooling, not
+// core engineering) — qualified to the actual power-engineering senses only.
+const CORE_WORDS = /\b(mechanical|electrical|electronics|ece|eee|civil|chemical|aerospace|aeronautical|automotive|manufacturing|materials|metallurg\w*|process\s+engineer|power\s+(systems?|electronics|engineering|grid|plant|train)|energy|structural|mechatronics|instrumentation|hardware\s+design|r\s?&\s?d|propulsion|thermal)\b/i;
 const QUANT_WORDS = /\b(quant|quantitative|trading|trader)\b/i;
 
 export function isEngineeringRole(title = '') {

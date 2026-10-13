@@ -82,6 +82,52 @@ test('dedupeDeskRows: a desk row with no matching bot/submitted row is kept as-i
   assert.equal(r.rows.length, 0);
 });
 
+// --- Fix round 2, item 4: dedupe must also require the role titles to match (normalised), not just the
+// job key — several research orgs share one generic apply URL across distinct programmes/roles. ---
+
+test('Fix round 2, item 4: two Desk rows share one generic apply URL with a bot row matching only the first role — the first merges, the second (distinct role) is never dropped', () => {
+  const others = [
+    { id: 'b1', company: 'GenericOrg', company_slug: 'genericorg', role: 'Summer Research Internship', location: 'Remote', section: 'remote', url: 'https://genericorg.example/apply', posted: '2026-09-01', field: 'research' },
+  ];
+  const desk = [
+    { company: 'GenericOrg', role: 'Summer Research Internship Programme', deadline: '2026-11-01', url: 'https://genericorg.example/apply', who: '', field: 'research', verified: true },
+    { company: 'GenericOrg', role: 'Winter Fellowship Programme', deadline: '2026-12-01', url: 'https://genericorg.example/apply', who: '', field: 'research', verified: true },
+  ];
+  const r = dedupeDeskRows(desk, others);
+  // the first desk row (role matches the bot row's role) merges in and disappears from the kept desk list
+  assert.equal(r.desk.length, 1, 'the distinct second desk row must never be dropped');
+  assert.equal(r.desk[0].role, 'Winter Fellowship Programme');
+  assert.equal(r.rows.length, 1);
+  assert.equal(r.rows[0].deskConfirmed, true);
+  assert.equal(r.rows[0].deskDeadline, '2026-11-01');
+});
+
+test('Fix round 2, item 4: same job key but no role-title match at all — the bot row is left unconfirmed and the desk row is kept', () => {
+  const others = [{ id: 'b1', company: 'GenericOrg', company_slug: 'genericorg', role: 'Lab Assistant Role', location: 'Remote', section: 'remote', url: 'https://genericorg.example/apply', posted: '2026-09-01', field: 'research' }];
+  const desk = [{ company: 'GenericOrg', role: 'Totally Unrelated Fellowship', deadline: '2026-11-01', url: 'https://genericorg.example/apply', who: '', field: 'research', verified: true }];
+  const r = dedupeDeskRows(desk, others);
+  assert.equal(r.desk.length, 1);
+  assert.equal(r.rows[0].deskConfirmed, undefined);
+});
+
+test('Fix round 2, item 4: the three Fix-round-1 real examples still match after the stricter role check', () => {
+  const others = [
+    { id: 's1', company: 'Stripe', company_slug: 'stripe', role: 'Software Engineer, Intern', location: 'Bengaluru', section: 'india', url: 'https://stripe.com/jobs/search?gh_jid=8031833', posted: '2026-07-10', field: 'software-ai' },
+    { id: 't1', company: 'Tower Research Capital', company_slug: 'tower-research-capital', role: 'Intern - AI/ML', location: 'Gurgaon', section: 'india', url: 'https://www.tower-research.com/open-positions/?gh_jid=8143756', posted: '2026-08-20', field: 'quant' },
+    { id: 'f1', company: 'Flow Traders', company_slug: 'flow-traders', role: 'Trading Intern', location: 'Hong Kong', section: 'abroad', url: 'https://job-boards.greenhouse.io/flowtraders/jobs/8102618', posted: '2026-08-05', field: 'quant' },
+  ];
+  const desk = [
+    { company: 'Stripe', role: 'Software Engineer, Intern: Bengaluru', deadline: null, url: 'https://stripe.com/jobs/search?gh_jid=8031833', who: '', field: 'software-ai', verified: true },
+    { company: 'Tower Research Capital', role: 'Intern: AI/ML, Gurgaon (6 months from Jan 2027)', deadline: null, url: 'https://www.tower-research.com/open-positions/?gh_jid=8143756', who: '', field: 'software-ai', verified: true },
+    { company: 'Flow Traders', role: 'Trading Intern: Hong Kong', deadline: '2026-11-15', url: 'https://job-boards.greenhouse.io/flowtraders/jobs/8102618', who: '', field: 'quant', verified: true },
+  ];
+  const r = dedupeDeskRows(desk, others);
+  assert.equal(r.desk.length, 0);
+  assert.equal(r.rows.find((x) => x.id === 's1').deskConfirmed, true);
+  assert.equal(r.rows.find((x) => x.id === 't1').deskConfirmed, true);
+  assert.equal(r.rows.find((x) => x.id === 'f1').deskConfirmed, true);
+});
+
 test('renderReadme integration: the three real duplicate examples render exactly once each, in the bot row\'s field, with the ✓ marker and closing date folded into Role', () => {
   const others = [
     { id: 's1', company: 'Stripe', company_slug: 'stripe', role: 'Software Engineer, Intern', location: 'Bengaluru', section: 'india', url: 'https://stripe.com/jobs/search?gh_jid=8031833', posted: '2026-07-10', batch: 'Any', stipend: null, source: 'greenhouse', first_seen: '2026-07-10', field: 'software-ai' },

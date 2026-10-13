@@ -119,18 +119,41 @@ export function jobKeyOf(rawUrl) {
   return id ? `${host}${path}#${id}` : `${host}${path}`;
 }
 
-// Drops a Desk row whenever its job key matches a bot/submitted row's job key, and instead annotates that
-// matched row with `deskConfirmed`/`deskDeadline` (roleCell/ageOf above read those) — so the student sees
-// ONE row, carrying the bot row's own location/age/field (and therefore its own section placement; a Desk
-// row with a different `field` for the same job, like Tower Research Capital's ML/AI->software-ai vs the
-// bot row's company-level quant, must not also render a second copy in that other section).
+// Fix round 2, item 4: a shared job key alone is not enough — several research orgs (OIST, KAUST, ISTA...)
+// run multiple distinct programmes behind one generic "apply here" URL, so matching on URL alone would
+// collapse genuinely different opportunities into one. normalizeRole strips case/punctuation/whitespace
+// noise; rolesMatch additionally allows containment either direction (a bot-fetched title is often a
+// trimmed prefix of the Desk's fuller name, and vice versa — see the Stripe/Tower/Flow Traders examples).
+function normalizeRole(s = '') {
+  return String(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+}
+function rolesMatch(a, b) {
+  const na = normalizeRole(a), nb = normalizeRole(b);
+  if (!na || !nb) return false;
+  return na === nb || na.includes(nb) || nb.includes(na);
+}
+
+// Drops a Desk row only when BOTH its job key AND its (normalised) role title match a bot/submitted row,
+// and instead annotates that matched row with `deskConfirmed`/`deskDeadline` (roleCell/ageOf above read
+// those) — so the student sees ONE row, carrying the bot row's own location/age/field (and therefore its
+// own section placement; a Desk row with a different `field` for the same job, like Tower Research
+// Capital's ML/AI->software-ai vs the bot row's company-level quant, must not also render a second copy in
+// that other section). A Desk row sharing a job key but naming a genuinely different role/programme is
+// left in the kept list — distinct rows must never be dropped just because they share one apply URL.
 export function dedupeDeskRows(desk, others) {
   const rows = others.map((r) => ({ ...r }));
-  const rowsByKey = new Map(rows.map((r) => [jobKeyOf(r.url), r]));
+  const rowsByKey = new Map();
+  for (const r of rows) {
+    const k = jobKeyOf(r.url);
+    if (!k) continue;
+    if (!rowsByKey.has(k)) rowsByKey.set(k, []);
+    rowsByKey.get(k).push(r);
+  }
   const keptDesk = [];
   for (const d of desk) {
     const k = jobKeyOf(d.url);
-    const match = k ? rowsByKey.get(k) : undefined;
+    const candidates = k ? (rowsByKey.get(k) ?? []) : [];
+    const match = candidates.find((r) => rolesMatch(r.role, d.role));
     if (match) { match.deskConfirmed = true; match.deskDeadline = d.deadline ?? null; }
     else keptDesk.push(d);
   }

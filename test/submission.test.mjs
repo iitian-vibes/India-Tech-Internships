@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseIssueForm, validateSubmission, submissionRow, isSafePublicUrl, isDenyHost, RATE_LIMIT_MSG, isPrivateAddress, fetchPosting } from '../scripts/submission.mjs';
+import { parseIssueForm, validateSubmission, submissionRow, isSafePublicUrl, isDenyHost, RATE_LIMIT_MSG, isPrivateAddress, fetchPosting, safeCompanyLabel } from '../scripts/submission.mjs';
 
 const body = `### Company\n\nZepto\n\n### Role title (exactly as on the posting)\n\nSDE Intern\n\n### Link to the posting\n\nhttps://jobs.lever.co/zepto/abc\n\n### Location\n\nMumbai\n\n### Stipend (only if the posting says)\n\n_No response_\n\n### Graduation year it is for (optional)\n\n2027\n\n### Company careers site\n\nhttps://www.zeptonow.com/careers`;
 const fields = parseIssueForm(body);
@@ -216,4 +216,14 @@ test('fix round 1, finding 1: submissionRow stores the normalised URL.href (a no
   const r = submissionRow(fields, 'india', 42, 'student1', '2026-10-12');
   assert.equal(r.url, new URL(fields.url).href);
   assert.equal(r.url, 'https://jobs.lever.co/zepto/abc');
+});
+
+test('Fix round 2, item 5: safeCompanyLabel strips backticks and newlines (new-company note must not let a submitted company name break out of its markdown backtick-wrapping) and caps at 80 chars', () => {
+  assert.equal(safeCompanyLabel('Acme Corp'), 'Acme Corp');
+  assert.equal(safeCompanyLabel('Acme `rm -rf /`\nCorp'), 'Acme rm -rf /Corp');
+  assert.ok(!safeCompanyLabel('Evil`\n\n### New section injected\n\n`Co').includes('`'));
+  assert.ok(!safeCompanyLabel('Evil`\n\n### New section injected\n\n`Co').includes('\n'));
+  const long = safeCompanyLabel('A'.repeat(200));
+  assert.equal(long.length, 80);
+  assert.equal(long, 'A'.repeat(80));
 });

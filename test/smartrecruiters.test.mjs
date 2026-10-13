@@ -82,6 +82,31 @@ test('fetchSmartRecruiters caps at 1000 and warns', async (t) => {
   }
 });
 
+test('Fix round 2, item 3: fetchSmartRecruiters detail-fetches a core-engineering title too (isEngineeringRole, not isTechRole)', async (t) => {
+  const list = {
+    offset: 0, limit: 100, totalFound: 2,
+    content: [
+      { id: 'mech1', name: 'Mechanical Design Intern', location: { city: 'Pune', country: 'in' }, releasedDate: '2026-10-01T00:00:00Z' },
+      { id: 'sales1', name: 'Sales Manager I', location: { city: 'Goa', country: 'in' }, releasedDate: '2026-10-01T00:00:00Z' },
+    ],
+  };
+  const detailUrls = [];
+  const fetchMock = mock.method(globalThis, 'fetch', async (url) => {
+    const u = String(url);
+    if (u.includes('/postings/mech1')) { detailUrls.push(u); return { ok: true, json: async () => ({ jobAd: { sections: { jobDescription: { text: '<p>Design brackets. &amp; test rigs.</p>' } } } }) }; }
+    if (u.includes('/postings/sales1')) { detailUrls.push(u); return { ok: true, json: async () => ({ jobAd: { sections: { jobDescription: { text: 'should never be fetched' } } } }) }; }
+    return { ok: true, json: async () => list };
+  });
+  t.after(() => fetchMock.mock.restore());
+  const jobs = await fetchSmartRecruiters({ ...co, slug: 'test' });
+  assert.equal(detailUrls.length, 1, 'only the student+engineering role should trigger a detail fetch');
+  assert.ok(detailUrls[0].includes('mech1'));
+  const mech = jobs.find((j) => j.jobId === 'mech1');
+  const sales = jobs.find((j) => j.jobId === 'sales1');
+  assert.equal(mech.text, 'Design brackets. & test rigs.');
+  assert.equal(sales.text, '');
+});
+
 test('fetchSmartRecruiters only detail-fetches postings whose title passes isStudentRole AND isTechRole', async (t) => {
   const list = {
     offset: 0, limit: 100, totalFound: 2,

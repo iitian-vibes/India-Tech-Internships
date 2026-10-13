@@ -254,6 +254,16 @@ export function validateSubmission({ fields, openByAuthor, existing, page, compa
   return result;
 }
 
+// Fix round 2, item 5: the new-company note interpolates the submitter-controlled company name straight
+// into a GitHub comment body. Stripping backticks/newlines keeps it from breaking out of the backtick-
+// wrapping validate-submission.mjs puts around it (a literal backtick would close the code span early; a
+// newline could start injecting new markdown structure), and the 80-char cap keeps one submission from
+// blowing up the comment.
+export function safeCompanyLabel(name = '') {
+  const cleaned = String(name).replace(/[`\r\n]/g, '').trim();
+  return cleaned.length > 80 ? cleaned.slice(0, 80) : cleaned;
+}
+
 export function submissionRow(fields, section, issueNumber, author, today) {
   const slug = slugify(fields.company);
   // No matched company record exists for an ad-hoc submission (it may not even be on the allowlist yet —

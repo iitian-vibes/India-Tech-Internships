@@ -1,5 +1,5 @@
 import { fetchJson, htmlToText, iso } from './util.mjs';
-import { isStudentRole, isTechRole } from '../filter.mjs';
+import { isStudentRole, isEngineeringRole } from '../filter.mjs';
 
 export function parseSmartRecruiters(json, company) {
   return (json?.content ?? []).map((p) => {
@@ -32,7 +32,9 @@ export async function fetchSmartRecruiters(company) {
     console.warn(`smartrecruiters ${company.slug}: capped at 1000 results`);
   }
   for (const j of out) {
-    if (!(isStudentRole(j.title) && isTechRole(j.title))) continue;
+    // Fix round 2, item 3: was isTechRole, which skipped the detail fetch (body text + work-auth check)
+    // for every core-engineering title (mechanical, electrical, civil...) since they don't match isTechRole.
+    if (!(isStudentRole(j.title) && isEngineeringRole(j.title))) continue;
     try {
       const detail = await fetchJson(`${base}/${j.jobId}`);
       const sections = detail?.jobAd?.sections ?? {};

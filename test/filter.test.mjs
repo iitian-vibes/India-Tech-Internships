@@ -162,3 +162,40 @@ test('fieldOf: no matched company falls back to role-keyword classification', ()
   assert.equal(fieldOf({ role: 'Mechanical Design Intern' }, undefined), 'core');
   assert.equal(fieldOf({ role: 'SDE Intern' }, undefined), 'software-ai');
 });
+
+// --- Fix round 2 ---
+
+test('Fix round 2, item 1: CORE_WORDS "power" is qualified, not bare — no longer matches "Power BI"', () => {
+  assert.equal(isEngineeringRole('Power BI Analyst Intern'), false);
+  assert.equal(isEngineeringRole('Power Electronics Intern'), true);
+  assert.equal(isEngineeringRole('Power Systems Engineering Intern'), true);
+});
+
+test('Fix round 2, item 1: audit of the other CORE_WORDS bare words — these stay/become false', () => {
+  for (const t of ['Energy Sales Intern', 'Process Associate', 'R&D Marketing Intern', 'Data Entry Intern']) {
+    assert.equal(isEngineeringRole(t), false, t);
+  }
+});
+
+test('Fix round 2, item 2: NON_TECH recruit\\w* catches recruiter/recruiting across both the tech and core branches', () => {
+  for (const t of ['Structural Recruiting Intern', 'Mechanical Recruiter Intern', 'Software Recruiter']) {
+    assert.equal(isEngineeringRole(t), false, t);
+  }
+});
+
+test('Fix round 2, item 2: NON_TECH suffix audit — unsuffixed/plural variants of marketing/accounting/operations/editor/designer/admin/human-resources now vetoed too (title also carries a TECH or CORE word, so only the veto decides)', () => {
+  const cases = [
+    'Software Market Research Intern',       // "marketing" (old) missed bare "market"
+    'Mechanical Accountant Intern',          // "accounting" (old) missed "accountant"
+    'Civil Operation Analyst Intern',        // "operations" (old) missed singular "operation"
+    'Hardware Editorial Intern',             // "editor" (old) missed "editorial"
+    'Mechanical Product Designers Intern',   // "designer" (old) missed plural "designers"
+    'Electrical Administrator Intern',       // "admin" (old) missed "administrator"
+    'Chemical Human Resource Intern',        // "human resources" (old) missed singular "resource"
+  ];
+  for (const t of cases) assert.equal(isEngineeringRole(t), false, t);
+  // and the designer fix must NOT catch bare "design" (that would wrongly veto every hardware/mechanical design role)
+  for (const t of ['Hardware Design Intern', 'Mechanical Design Intern', 'ASIC Design Verification Intern']) {
+    assert.equal(isEngineeringRole(t), true, t);
+  }
+});

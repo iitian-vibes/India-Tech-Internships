@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { parseIssueForm, validateSubmission, fetchPosting, RATE_LIMIT_MSG } from './submission.mjs';
+import { parseIssueForm, validateSubmission, fetchPosting, RATE_LIMIT_MSG, safeCompanyLabel } from './submission.mjs';
 
 const { ISSUE_BODY = '', ISSUE_NUMBER, ISSUE_AUTHOR, GITHUB_REPOSITORY, GH_TOKEN } = process.env;
 const api = (path, init = {}) => fetch(`https://api.github.com/repos/${GITHUB_REPOSITORY}${path}`, { ...init, headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: 'application/vnd.github+json', ...(init.headers ?? {}) } });
@@ -26,7 +26,9 @@ const r = validateSubmission({ fields, openByAuthor, existing, page, companies }
 // data/companies.json runs every other check as normal (so the submitter still gets real feedback), but
 // the reply adds a note that the company itself needs a maintainer's call, and the issue gets a
 // `new-company` label alongside the usual pass/fail one — it's a flag for review, not an auto-add.
-const newCompanyNote = r.isNewCompany ? `\n\nWe list a hand-picked set of companies. A maintainer will decide whether to add ${fields.company}.` : '';
+// Fix round 2, item 5: wrap the (cleaned, length-capped) company name in backticks so it reads as a
+// literal label and can't inject markdown/structure into the comment.
+const newCompanyNote = r.isNewCompany ? `\n\nWe list a hand-picked set of companies. A maintainer will decide whether to add \`${safeCompanyLabel(fields.company)}\`.` : '';
 const body = (r.ok
   ? `✅ Automatic checks passed (section: ${r.section}). Next we verify the role on the company's page; you'll see a note here, then it goes on the list. Thanks @${ISSUE_AUTHOR}!`
   : `❌ This can't be added yet:\n\n${r.reasons.map((x) => `- ${x}`).join('\n')}\n\nEdit the issue to fix it and the checks run again.`) + newCompanyNote;
