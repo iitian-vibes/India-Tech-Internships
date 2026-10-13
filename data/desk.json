@@ -1,275 +1,407 @@
 [
   {
+    "company": "OIST, Okinawa (Japan)",
+    "role": "OIST Research Internship – Spring 2027",
+    "deadline": "2026-10-15",
+    "url": "https://graduateschool.oist.jp/apply/",
+    "who": "Third and fourth years, any master's year, or recent graduates; first and second years and PhD students cannot apply. Needs 4–6 free months between April and September 2027.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Max Planck CIS (MPI-SWS, MPI-INF, MPI-IS, MPI-SP)",
+    "role": "Max Planck CS Institutes Summer Internship 2027",
+    "deadline": "2026-11-01",
+    "url": "https://apply.cis.mpg.de/register/internship",
+    "who": "CS students with about three years of a bachelor's done by the start date, through master's and PhD; first and second years are too early.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "EPFL School of Engineering (Switzerland)",
+    "role": "EPFL Excellence in Engineering (E3) Summer 2027",
+    "deadline": "2026-11-01",
+    "url": "https://programs-recruiting.epfl.ch/position/49446916",
+    "who": "Third year and up in any engineering, science or tech branch, plus Master's students; first and second years cannot apply yet, PhD students are out",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Indian Academy of Sciences / INSA / NASI",
+    "role": "Science Academies' Summer Research Fellowship Programme (SRFP) 2027",
+    "deadline": "2026-11-30",
+    "url": "https://webjapps.ias.ac.in/fellowship2027/",
+    "who": "BTech second and third years, dual-degree second to fourth years, MTech/MSc first years, integrated PhD first and second years; final-year BTech students cannot apply. 65% in core subjects from Class X up.",
+    "field": "research",
+    "verified": true
+  },
+  {
     "company": "Jane Street",
     "role": "Quantitative Trader: Summer Internship 2027 (Hong Kong)",
     "deadline": null,
     "url": "https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002",
-    "who": "Students; no specific degree required; fluent English"
+    "who": "Students; no specific degree required; fluent English",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Jane Street",
     "role": "Software Engineer: Summer Internship 2027 (Hong Kong)",
     "deadline": null,
     "url": "https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002",
-    "who": "Students; 'a top-notch programmer'"
+    "who": "Students; 'a top-notch programmer'",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "IMC Trading",
     "role": "Quantitative Trader Intern 2027 (Hong Kong)",
     "deadline": null,
     "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4941205101",
-    "who": "Penultimate year; STEM/Finance/Econ with Distinction average"
+    "who": "Penultimate year; STEM/Finance/Econ with Distinction average",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Hudson River Trading",
     "role": "Algorithm Development (Quant Research & Trading) Internship: Summer 2027",
     "deadline": null,
     "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7964062",
-    "who": "Full-time UG or master's in a quantitative discipline; Python required"
+    "who": "Full-time UG or master's in a quantitative discipline; Python required",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Hudson River Trading",
     "role": "Software Engineering Internship: Summer 2027",
     "deadline": null,
     "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083",
-    "who": "Full-time undergraduate in CS or related"
+    "who": "Full-time undergraduate in CS or related",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Tower Research Capital",
     "role": "Quant Trader/Researcher Intern: Summer 2027 (NY/Chicago)",
     "deadline": null,
     "url": "https://www.tower-research.com/open-positions/?gh_jid=8024128",
-    "who": "Bachelor's/Master's/PhD in CS/maths/physics/EE"
+    "who": "Bachelor's/Master's/PhD in CS/maths/physics/EE",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Tower Research Capital",
     "role": "Intern: AI/ML, Gurgaon (6 months from Jan 2027)",
     "deadline": null,
     "url": "https://www.tower-research.com/open-positions/?gh_jid=8143756",
-    "who": "Bachelor's/Master's/PhD (ongoing or completed) from a top university; available 6 months from Jan 2027"
+    "who": "Bachelor's/Master's/PhD (ongoing or completed) from a top university; available 6 months from Jan 2027",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Jump Trading",
     "role": "Campus Quantitative Researcher Intern: Singapore",
     "deadline": null,
     "url": "https://www.jumptrading.com/hr/job?gh_jid=8027939",
-    "who": "Top UG/grad programs, any technical discipline; interested in Singapore full-time after graduation"
+    "who": "Top UG/grad programs, any technical discipline; interested in Singapore full-time after graduation",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Citadel",
     "role": "Software Engineer: Intern (Asia)",
     "deadline": null,
     "url": "https://www.citadel.com/careers/details/software-engineer-intern-asia/",
-    "who": "Bachelor's/Master's/PhD in CS/CE or related"
+    "who": "Bachelor's/Master's/PhD in CS/CE or related",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Two Sigma",
     "role": "Quantitative Researcher Intern: 2027 Summer, New York",
     "deadline": null,
     "url": "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Quantitative-Researcher-Internship-2027-Summer/13945",
-    "who": "Bachelors / Masters / PhD students"
+    "who": "Bachelors / Masters / PhD students",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Flow Traders",
     "role": "Trading Intern: Hong Kong",
     "deadline": null,
     "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8102618",
-    "who": "Graduating Aug 2027 – Dec 2028 in STEM/Finance/Econ"
+    "who": "Graduating Aug 2027 – Dec 2028 in STEM/Finance/Econ",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Da Vinci Derivatives",
     "role": "Quant Trading Intern: Amsterdam (2028 graduates)",
     "deadline": null,
     "url": "https://job-boards.eu.greenhouse.io/davinciderivatives/jobs/4196845101",
-    "who": "Graduating in 2028 from maths/physics/engineering or similar"
+    "who": "Graduating in 2028 from maths/physics/engineering or similar",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Graviton Research Capital",
     "role": "Quantitative Researcher: 2027 Graduate, Gurugram",
     "deadline": null,
     "url": "https://boards.greenhouse.io/gravitonresearchcapital/jobs/8768396002?gh_jid=8768396002",
-    "who": "Degree in Maths/CS/EE or another highly analytical field; 2027 graduates"
+    "who": "Degree in Maths/CS/EE or another highly analytical field; 2027 graduates",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Graviton Research Capital",
     "role": "Software Engineer: 2027 Graduate, Gurugram",
     "deadline": null,
     "url": "https://boards.greenhouse.io/gravitonresearchcapital/jobs/8764240002?gh_jid=8764240002",
-    "who": "Degree in CS/Maths/EE or similar; 2027 graduates"
+    "who": "Degree in CS/Maths/EE or similar; 2027 graduates",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Quadeye",
     "role": "Intern: Quant Researcher (Gurugram)",
     "deadline": null,
     "url": "https://www.quadeye.com/jobs/199893000002318371/intern-quant-strategist-2028-batch?source=CareerSite",
-    "who": "Pursuing an engineering degree in CS or a related quantitative discipline; DSA + OOP; C++/C preferred"
+    "who": "Pursuing an engineering degree in CS or a related quantitative discipline; DSA + OOP; C++/C preferred",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Microsoft",
     "role": "Software Engineering Intern: India",
     "deadline": null,
     "url": "https://apply.careers.microsoft.com/careers/job/1970393556911730",
-    "who": "Pursuing Bachelor's/Master's in CS/Engineering; ≥1 semester remaining after internship; 1 year OOP experience"
+    "who": "Pursuing Bachelor's/Master's in CS/Engineering; ≥1 semester remaining after internship; 1 year OOP experience",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Stripe",
     "role": "Software Engineer, Intern: Bengaluru",
     "deadline": null,
     "url": "https://stripe.com/jobs/search?gh_jid=8031833",
-    "who": "Pursuing Bachelor's/Master's in CS, math or related; ≥1 year of university"
+    "who": "Pursuing Bachelor's/Master's in CS, math or related; ≥1 year of university",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Goldman Sachs",
     "role": "2027 Summer Analyst: Global Investment Research, Mumbai",
     "deadline": null,
     "url": "https://higher.gs.com/roles/183942",
-    "who": "Students pursuing a bachelor's / graduate degree; up to 4 business/location applications per year"
+    "who": "Students pursuing a bachelor's / graduate degree; up to 4 business/location applications per year",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Google",
     "role": "Silicon Engineering Intern, PhD: Summer 2027",
     "deadline": "2027-04-30",
     "url": "https://www.google.com/about/careers/applications/jobs/results/109375266236572358-silicon-engineering-intern-phd-summer-2027",
-    "who": "PhD students only, in Computer Engineering, CS, ECE, EE or a related field; BTech/MTech students cannot apply. Bengaluru or Hyderabad."
+    "who": "PhD students only, in Computer Engineering, CS, ECE, EE or a related field; BTech/MTech students cannot apply. Bengaluru or Hyderabad.",
+    "field": "core",
+    "verified": true
   },
   {
     "company": "Google",
     "role": "Software Engineering PhD Intern: Summer 2027",
     "deadline": null,
     "url": "https://www.google.com/about/careers/applications/jobs/results/109976286780105414-software-engineering-phd-intern-summer-2027",
-    "who": "Pursuing a PhD in software development or a related technical field"
+    "who": "Pursuing a PhD in software development or a related technical field",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Qualcomm India",
     "role": "2027 Campus Hire: Engineer, Software",
     "deadline": null,
     "url": "https://careers.qualcomm.com/careers/job/446719783573",
-    "who": "2027 batch; Bachelor's or Master's in CSE, ECE or Communication Engineering"
+    "who": "2027 batch; Bachelor's or Master's in CSE, ECE or Communication Engineering",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Qualcomm India",
     "role": "2027 Campus Hire: Associate Engineer, Hardware",
     "deadline": null,
     "url": "https://careers.qualcomm.com/careers/job/446719783557",
-    "who": "2027 batch; EE / ECE / VLSI; Verilog/VHDL, C/C++, Tcl/Perl, RTL"
+    "who": "2027 batch; EE / ECE / VLSI; Verilog/VHDL, C/C++, Tcl/Perl, RTL",
+    "field": "core",
+    "verified": true
   },
   {
     "company": "Qualcomm India",
     "role": "Interim Engineering Intern 2027: Hardware",
     "deadline": null,
     "url": "https://careers.qualcomm.com/careers/job/446719784824",
-    "who": "Master's/Bachelor's in EE, VLSI, Embedded & VLSI, ECE; 2027 batch"
+    "who": "Master's/Bachelor's in EE, VLSI, Embedded & VLSI, ECE; 2027 batch",
+    "field": "core",
+    "verified": true
   },
   {
     "company": "Wadhwani AI",
     "role": "Associate ML Scientist I",
     "deadline": null,
     "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000005875356/Associate-ML-Scientist-I",
-    "who": "Bachelor's or Master's in CS / EE / Statistics / Applied Maths / Physics / Economics with 0–2 years of experience"
+    "who": "Bachelor's or Master's in CS / EE / Statistics / Applied Maths / Physics / Economics with 0–2 years of experience",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Wadhwani AI",
     "role": "Software Development Engineer I",
     "deadline": null,
     "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000005021055/Software-Development-Engineer-I",
-    "who": "Fresher; Bachelor's/Master's in CS, Physics or an engineering discipline"
+    "who": "Fresher; Bachelor's/Master's in CS, Physics or an engineering discipline",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Goldman Sachs",
     "role": "New Analyst Program: India (2027 batch)",
     "deadline": null,
     "url": "https://www.goldmansachs.com/careers/students/programs-and-internships/india/new-analyst-program",
-    "who": "Graduating from a Bachelor's or Master's in 2027"
+    "who": "Graduating from a Bachelor's or Master's in 2027",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "King Abdullah University of Science and Technology (Saudi Arabia)",
+    "role": "KAUST Visiting Student Research Program (VSRP)",
+    "deadline": null,
+    "url": "https://admissions.kaust.edu.sa/internship/search",
+    "who": "third-year-and-up BTech/BS students and master's students in STEM with a 3.5/4 GPA or equivalent; first and second years and PhD students cannot apply",
+    "field": "research",
+    "verified": true
   },
   {
     "company": "Graviton Research Capital",
     "role": "Graduate Central Execution Trader: Singapore",
     "deadline": null,
     "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002",
-    "who": "Bachelor's degree (CS/EE/Maths/Finance/Business Analytics preferred); strong Python; understands electronic/algorithmic trading"
+    "who": "Bachelor's degree (CS/EE/Maths/Finance/Business Analytics preferred); strong Python; understands electronic/algorithmic trading",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "IMC Trading",
     "role": "2027 Graduate Trader: Aarhus",
     "deadline": null,
     "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4966569101",
-    "who": "In your final year of maths, physics, econometrics or a related quantitative field; joining full-time August 2027; no prior markets knowledge needed"
+    "who": "In your final year of maths, physics, econometrics or a related quantitative field; joining full-time August 2027; no prior markets knowledge needed",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Da Vinci Derivatives",
     "role": "Graduate Quant: Amsterdam",
     "deadline": null,
     "url": "https://job-boards.eu.greenhouse.io/davinciderivatives/jobs/4046970101",
-    "who": "Technical background (maths, physics, engineering, econometrics, quant finance or similar); Python/MATLAB/R/C++"
+    "who": "Technical background (maths, physics, engineering, econometrics, quant finance or similar); Python/MATLAB/R/C++",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Rubrik",
     "role": "Software Engineer: Winter Intern, Bangalore (Jan–May 2027)",
     "deadline": null,
     "url": "https://www.rubrik.com/company/careers/departments/job.8166523?gh_jid=8166523",
-    "who": "2027 graduates of circuital branches only; CGPA 8 and above; Bachelor's/Master's in CS or related; available Jan–May 2027 onsite"
+    "who": "2027 graduates of circuital branches only; CGPA 8 and above; Bachelor's/Master's in CS or related; available Jan–May 2027 onsite",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Tower Research Capital",
     "role": "Quantitative Researcher Intern, Bachelor's or Master's: Singapore/HK/Shanghai/Sydney",
     "deadline": null,
     "url": "https://www.tower-research.com/open-positions/?gh_jid=8168750",
-    "who": "Bachelor's or Master's student in CS, maths, physics, ML or related; C++/Python; Linux; Olympiad participation preferred, not required"
+    "who": "Bachelor's or Master's student in CS, maths, physics, ML or related; C++/Python; Linux; Olympiad participation preferred, not required",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Microsoft",
     "role": "Applied Sciences PhD Intern: India",
     "deadline": null,
     "url": "https://apply.careers.microsoft.com/careers/job/1970393556997800",
-    "who": "Currently pursuing a PhD in CS / AI / ML / Statistics / Maths / EE or related, with at least one semester remaining after the internship"
+    "who": "Currently pursuing a PhD in CS / AI / ML / Statistics / Maths / EE or related, with at least one semester remaining after the internship",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Microsoft",
     "role": "Research Sciences Intern: AI for Azure SQL (India)",
     "deadline": null,
     "url": "https://apply.careers.microsoft.com/careers/job/1970393556641091",
-    "who": "Currently pursuing a Master's or Doctorate in a relevant field, with at least one more term remaining after the internship. Needs two reference letters plus a cover letter"
+    "who": "Currently pursuing a Master's or Doctorate in a relevant field, with at least one more term remaining after the internship. Needs two reference letters plus a cover letter",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Institute of Science and Technology Austria (ISTA)",
+    "role": "ISTA Scientific Internship (year-round)",
+    "deadline": null,
+    "url": "https://phd.ista.ac.at/scientific-internships/",
+    "who": "Students or recent graduates of a bachelor's or master's degree in the natural sciences, computer sciences, mathematics, or a related discipline; available for at least 2 months",
+    "field": "research",
+    "verified": true
   },
   {
     "company": "Hudson River Trading",
     "role": "Algorithm Developer (Quant Research & Trading): 2027 Grads",
     "deadline": null,
     "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050",
-    "who": "Full-time undergraduate or master's student in maths, physics, CS, statistics or related, eligible for full-time roles in 2027; Python and/or C++"
+    "who": "Full-time undergraduate or master's student in maths, physics, CS, statistics or related, eligible for full-time roles in 2027; Python and/or C++",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Tower Research Capital",
     "role": "Software Engineer, C++: Graduate Opportunity (Hong Kong / Singapore)",
     "deadline": null,
     "url": "https://www.tower-research.com/open-positions/?gh_jid=8245433",
-    "who": "Bachelor's in CS or related; prior C++ internship (trading preferred); strong DSA/OOP in C++; Linux and TCP/UDP networking a plus"
+    "who": "Bachelor's in CS or related; prior C++ internship (trading preferred); strong DSA/OOP in C++; Linux and TCP/UDP networking a plus",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Jump Trading",
     "role": "Campus Quantitative Researcher: Off-Cycle Winter/Spring 2027 Intern (Hong Kong/Shanghai)",
     "deadline": null,
     "url": "https://www.jumptrading.com/hr/job?gh_jid=8027898",
-    "who": "Students graduating in 2027 from top UG/grad programmes who want to work full-time in Hong Kong or Shanghai after graduating; strong programming and/or quant skills"
+    "who": "Students graduating in 2027 from top UG/grad programmes who want to work full-time in Hong Kong or Shanghai after graduating; strong programming and/or quant skills",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "Microsoft",
     "role": "Data Science Intern: India",
     "deadline": null,
     "url": "https://apply.careers.microsoft.com/careers/job/1970393556917520",
-    "who": "Currently pursuing a Bachelor's or Master's in Data Science, Mathematics, Statistics, Econometrics, Economics, Operations Research, Computer Science or related, with at least one more quarter/semester remaining after the internship; Master's preferred"
+    "who": "Currently pursuing a Bachelor's or Master's in Data Science, Mathematics, Statistics, Econometrics, Economics, Operations Research, Computer Science or related, with at least one more quarter/semester remaining after the internship; Master's preferred",
+    "field": "software-ai",
+    "verified": true
   },
   {
     "company": "Hudson River Trading",
     "role": "Data Scientist Intern: 2027",
     "deadline": null,
     "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8257369",
-    "who": "Any STEM branch, CS not required, as long as you are still a full-time student in summer 2027 (so third years and below for a four-year B.Tech); HRT takes one application across all its roles, so this replaces its other intern rows for you"
+    "who": "Any STEM branch, CS not required, as long as you are still a full-time student in summer 2027 (so third years and below for a four-year B.Tech); HRT takes one application across all its roles, so this replaces its other intern rows for you",
+    "field": "quant",
+    "verified": true
   },
   {
     "company": "IMC Trading",
     "role": "Machine Learning Engineer Intern: Summer 2027",
     "deadline": null,
     "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4962456101",
-    "who": "Students graduating between September 2027 and July 2028, which for a four-year B.Tech is the current third years (batch of 2028); final years graduating in 2027 and second years are outside the window"
+    "who": "Students graduating between September 2027 and July 2028, which for a four-year B.Tech is the current third years (batch of 2028); final years graduating in 2027 and second years are outside the window",
+    "field": "quant",
+    "verified": true
   }
 ]

@@ -1,19 +1,5 @@
 [
   {
-    "id": "fampay:lever:bbbbbfd2-1855-4991-82d5-84ef57607c24",
-    "company": "FamPay",
-    "company_slug": "fampay",
-    "role": "Security Engineer Intern",
-    "location": "Bengaluru",
-    "section": "india",
-    "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24",
-    "posted": "2026-09-23",
-    "batch": "Any",
-    "stipend": null,
-    "source": "lever",
-    "first_seen": "2026-10-12"
-  },
-  {
     "id": "tower-research-capital:greenhouse:8143756",
     "company": "Tower Research Capital",
     "company_slug": "tower-research-capital",
@@ -25,7 +11,23 @@
     "batch": "Any",
     "stipend": null,
     "source": "greenhouse",
-    "first_seen": "2026-10-12"
+    "first_seen": "2026-10-12",
+    "field": "quant"
+  },
+  {
+    "id": "flow-traders:greenhouse:8047166",
+    "company": "Flow Traders",
+    "company_slug": "flow-traders",
+    "role": "Quantitative Trading Intern Summer 2027",
+    "location": "New York",
+    "section": "abroad",
+    "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8047166",
+    "posted": "2026-07-08",
+    "batch": "2028",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-13",
+    "field": "quant"
   },
   {
     "id": "flow-traders:greenhouse:8102618",
@@ -39,7 +41,8 @@
     "batch": "2027",
     "stipend": null,
     "source": "greenhouse",
-    "first_seen": "2026-10-12"
+    "first_seen": "2026-10-12",
+    "field": "quant"
   },
   {
     "id": "stripe:greenhouse:8031833",
@@ -53,6 +56,7 @@
     "batch": "Any",
     "stipend": null,
     "source": "greenhouse",
-    "first_seen": "2026-10-12"
+    "first_seen": "2026-10-12",
+    "field": "software-ai"
   }
 ]

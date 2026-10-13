@@ -8,6 +8,9 @@ test('companies.json entries have the required fields', () => {
     assert.ok(['greenhouse', 'lever', 'ashby', 'workday', 'smartrecruiters'].includes(c.ats), `bad ats ${c.ats}`);
     assert.ok(c.ats === 'workday' ? c.workday?.host && c.workday?.tenant && c.workday?.site : c.board, `missing board for ${c.slug}`);
     assert.equal(typeof c.abroad_visa, 'boolean');
+    // Task A, item 1: every allowlisted company carries a `field` so it has somewhere to land in the
+    // by-field README (Software & AI / Quant / Core Engineering / Research).
+    assert.ok(['software-ai', 'quant', 'core', 'research'].includes(c.field), `missing/bad field for ${c.slug}: ${c.field}`);
   }
   assert.equal(new Set(cs.map((c) => c.slug)).size, cs.length, 'duplicate slug');
 });

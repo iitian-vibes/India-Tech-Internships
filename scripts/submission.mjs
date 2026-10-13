@@ -1,6 +1,6 @@
 import dns from 'node:dns';
 import net from 'node:net';
-import { isStudentRole, isTechRole, classifyLocation, hasWorkAuthBlock } from './filter.mjs';
+import { isStudentRole, isEngineeringRole, classifyLocation, hasWorkAuthBlock, fieldOf } from './filter.mjs';
 import { htmlToText } from './fetch/util.mjs';
 
 const LABELS = { 'Company': 'company', 'Role title (exactly as on the posting)': 'role', 'Link to the posting': 'url', 'Location': 'location', 'Stipend (only if the posting says)': 'stipend', 'Graduation year it is for (optional)': 'batch', 'Company careers site': 'careers_site' };
@@ -207,7 +207,7 @@ function atsPathMatch(url, slug) {
   return segments.some((seg) => seg.includes(slug));
 }
 
-export function validateSubmission({ fields, openByAuthor, existing, page }) {
+export function validateSubmission({ fields, openByAuthor, existing, page, companies }) {
   const reasons = [];
   const rawUrl = fields.url ?? '';
   const hasBadChars = RAW_BAD_CHARS.test(rawUrl);
@@ -232,7 +232,9 @@ export function validateSubmission({ fields, openByAuthor, existing, page }) {
   }
   if (!fields.company || !fields.role) reasons.push('Company and role are required.');
   if (!isStudentRole(fields.role, '')) reasons.push('This is not an internship or new-grad role.');
-  if (!isTechRole(fields.role)) reasons.push('This is not a tech role (software, ML, data, quant, hardware...).');
+  // Task A, item 5: isEngineeringRole also accepts core-engineering branches (mechanical, electrical,
+  // civil, aerospace...), not just software/ML/quant, so the prestige list covers every engineering student.
+  if (!isEngineeringRole(fields.role)) reasons.push('This is not an engineering role (software, ML, data, quant, mechanical, electrical, core engineering...).');
   if (!page || page.status !== 200) reasons.push('The link does not open a live posting.');
   const text = page?.text ?? '';
   if (hasWorkAuthBlock(text)) reasons.push('The posting requires existing work authorisation in another country.');
@@ -242,10 +244,21 @@ export function validateSubmission({ fields, openByAuthor, existing, page }) {
   if (existing.some((r) => r.url === fields.url || (norm(r.company ?? '') === norm(fields.company) && norm(r.role ?? '') === norm(fields.role)))) reasons.push('This role is already on the list.');
   if (openByAuthor == null) reasons.push(RATE_LIMIT_UNKNOWN_MSG);
   else if (openByAuthor > 5) reasons.push(RATE_LIMIT_MSG);
-  return { ok: reasons.length === 0, reasons, section: reasons.length ? null : section };
+  // Task A, item 5: the prestige list is a curated allowlist, so a submission for a company not already
+  // in data/companies.json still runs every other check normally, but is flagged separately — the checks
+  // passing doesn't mean it's auto-added; a maintainer decides whether the company itself belongs on the
+  // list. Only computed (and only present in the result) when a `companies` list is actually passed in,
+  // so every existing caller/test that doesn't pass one keeps the exact old result shape.
+  const result = { ok: reasons.length === 0, reasons, section: reasons.length ? null : section };
+  if (companies) result.isNewCompany = !companies.some((c) => c.slug === slugify(fields.company ?? ''));
+  return result;
 }
 
 export function submissionRow(fields, section, issueNumber, author, today) {
   const slug = slugify(fields.company);
-  return { id: `${slug}:submitted:${issueNumber}`, company: fields.company, company_slug: slug, role: fields.role, location: fields.location, section, url: new URL(fields.url).href, posted: today, batch: /^20\d\d$/.test(fields.batch) ? fields.batch : 'Any', stipend: fields.stipend || null, source: 'submitted', first_seen: today, submitted_by: author };
+  // No matched company record exists for an ad-hoc submission (it may not even be on the allowlist yet —
+  // see isNewCompany above), so `field` is classified from the role title alone via fieldOf's company-less
+  // fallback, same keyword logic used for bot rows with no allowlist match.
+  const field = fieldOf({ role: fields.role }, undefined);
+  return { id: `${slug}:submitted:${issueNumber}`, company: fields.company, company_slug: slug, role: fields.role, location: fields.location, section, url: new URL(fields.url).href, posted: today, batch: /^20\d\d$/.test(fields.batch) ? fields.batch : 'Any', stipend: fields.stipend || null, source: 'submitted', first_seen: today, submitted_by: author, field };
 }

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { runBuild, planWrites, chooseDesk } from '../scripts/build-core.mjs';
+import { runBuild, planWrites, chooseDesk, filterDeskRows } from '../scripts/build-core.mjs';
 
 const C = (slug, ats = 'lever') => ({ name: slug.toUpperCase(), slug, ats, board: slug, abroad_visa: false });
 const J = (id, title = 'SDE Intern') => ({ jobId: id, title, locations: ['Pune'], remote: false, url: `https://jobs/${id}`, posted: '2026-10-10T00:00:00Z', text: '', employmentType: '', stipendHint: null });
@@ -160,6 +160,51 @@ test('runBuild output order matches companies.json input order regardless of fet
   const fetchersConc = { lever: async (c) => { const n = Number(c.slug.slice(1)); await new Promise((r) => setTimeout(r, (9 - n) * 5)); return [J(`${c.slug}-1`)]; } };
   const r = await runBuild({ ...base, companies, prev: [], fetchers: fetchersConc });
   assert.deepEqual(r.rows.map((x) => x.id), companies.map((c) => `${c.slug}:lever:${c.slug}-1`));
+});
+
+// --- Task A, item 3: Desk rows now also pull lane A-research internships/fellowships, and every
+// desk row is tagged with a README field and carries `verified: true`. ---
+
+const opp = (o) => ({ id: 'x', name: 'Some Research Internship', org: 'Some Org', lane: 'B-industry', what: '', eligibility: '', pay: '', status: 'ROLLING', deadline: null, apply_url: 'https://x/apply', sub: 'Software', kind: 'Internship', who: 'students', ...o });
+
+test('filterDeskRows: B-industry Internship/Full-time + OPEN/ROLLING kept, as before', () => {
+  const all = [
+    opp({ id: 'a', kind: 'Internship', status: 'ROLLING' }),
+    opp({ id: 'b', kind: 'Full-time', status: 'OPEN', deadline: '2026-11-01' }),
+    opp({ id: 'c', kind: 'Scholarship', status: 'OPEN' }), // wrong kind
+    opp({ id: 'd', kind: 'Internship', status: 'EXPECTED' }), // wrong status
+  ];
+  const rows = filterDeskRows(all);
+  assert.deepEqual(rows.map((r) => r.url), ['https://x/apply', 'https://x/apply']);
+  assert.equal(rows.length, 2);
+});
+
+test('filterDeskRows: lane A-research Internship/Fellowship, research-titled, OPEN/ROLLING only', () => {
+  const all = [
+    opp({ id: 'a', lane: 'A-research', kind: 'Internship', status: 'OPEN', name: 'OIST Research Internship', sub: 'International', deadline: '2026-10-15' }),
+    opp({ id: 'b', lane: 'A-research', kind: 'Fellowship', status: 'ROLLING', name: 'ISTA Scientific Internship (year-round)', sub: 'International' }),
+    opp({ id: 'c', lane: 'A-research', kind: 'Internship', status: 'EXPECTED', name: 'Max Planck CS Institutes Summer Internship', sub: 'International' }), // wrong status
+    opp({ id: 'd', lane: 'A-research', kind: 'Internship', status: 'OPEN', name: 'Generic Fellowship Programme', what: 'A general leadership programme', sub: 'International' }), // no intern/internship/summer/research programme mention
+  ];
+  const rows = filterDeskRows(all);
+  assert.equal(rows.length, 2);
+  assert.ok(rows.every((r) => r.field === 'research'));
+});
+
+test('filterDeskRows: sub-to-field map for B-industry rows', () => {
+  const all = [
+    opp({ id: 'a', sub: 'Software' }), opp({ id: 'b', sub: 'ML/AI' }), opp({ id: 'c', sub: 'Quant' }),
+    opp({ id: 'd', sub: 'Finance' }), opp({ id: 'e', sub: 'Core/Hardware' }),
+  ];
+  const rows = filterDeskRows(all);
+  assert.deepEqual(rows.map((r) => r.field), ['software-ai', 'software-ai', 'quant', 'quant', 'core']);
+});
+
+test('filterDeskRows: every row carries verified:true and the OPEN-only deadline rule', () => {
+  const all = [opp({ id: 'a', status: 'OPEN', deadline: '2026-11-01' }), opp({ id: 'b', status: 'ROLLING', deadline: '2026-11-01' })];
+  const rows = filterDeskRows(all);
+  assert.deepEqual(rows.map((r) => r.verified), [true, true]);
+  assert.deepEqual(rows.map((r) => r.deadline), ['2026-11-01', null]);
 });
 
 test('planWrites bundles all five data files together on a successful, non-dry run', () => {

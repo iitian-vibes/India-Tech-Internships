@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { runBuild, planWrites, chooseDesk } from './build-core.mjs';
+import { runBuild, planWrites, chooseDesk, filterDeskRows } from './build-core.mjs';
 import { renderReadme } from './render.mjs';
 import { fetchGreenhouse } from './fetch/greenhouse.mjs';
 import { fetchLever } from './fetch/lever.mjs';
@@ -17,11 +17,11 @@ const today = new Date(now.getTime() + 5.5 * 3600e3).toISOString().slice(0, 10);
 async function deskRows() {
   try {
     const all = await fetchJson('https://raw.githubusercontent.com/iitian-vibes/deadline-desk/main/data/opportunities.json');
-    return all.filter((r) => r.lane === 'B-industry' && ['OPEN', 'ROLLING'].includes(r.status) && ['Internship', 'Full-time'].includes(r.kind))
-      .map((r) => ({ company: r.org, role: r.name, deadline: r.status === 'OPEN' ? r.deadline ?? null : null, url: r.apply_url, who: r.who ?? r.eligibility ?? '' }));
+    return filterDeskRows(all);
   } catch (e) { console.error(`desk fetch failed, keeping previous desk rows: ${e.message}`); return null; }
 }
 
+const companiesList = read('data/companies.json', []);
 const prev = read('data/internships.json', []);
 const prevClosed = read('data/closed.json', []);
 const prevMeta = read('data/meta.json', {});
@@ -29,7 +29,7 @@ const submitted = read('data/submitted.json', []);
 const prevDesk = read('data/desk.json', []);
 
 if (args.has('--render-only')) {
-  writeFileSync('README.md', renderReadme({ rows: [...prev.filter((r) => r.source !== 'submitted'), ...submitted], closed: prevClosed, desk: prevDesk, meta: prevMeta }));
+  writeFileSync('README.md', renderReadme({ rows: [...prev.filter((r) => r.source !== 'submitted'), ...submitted], closed: prevClosed, desk: prevDesk, meta: prevMeta, companies: companiesList }));
   process.exit(0);
 }
 
@@ -49,7 +49,7 @@ const liveSubmitted = submitted.filter((s) => !retired.includes(s));
 prevClosed.push(...retired.map(({ dead_count, ...s }) => ({ ...s, closed_at: today })));
 
 const r = await runBuild({
-  companies: read('data/companies.json', []), prev, prevClosed, prevMeta,
+  companies: companiesList, prev, prevClosed, prevMeta,
   fetchers: { greenhouse: fetchGreenhouse, lever: fetchLever, ashby: fetchAshby, workday: fetchWorkday, smartrecruiters: fetchSmartRecruiters },
   today, now, desk, submitted: liveSubmitted, force: args.has('--force'), deskWarning,
 });
@@ -64,4 +64,4 @@ console.log(`rows ${prev.length} -> ${r.rows.length} (+${[...after].filter((i) =
 const plan = planWrites(r, { liveSubmitted, desk, dryRun: args.has('--dry-run') });
 if (!plan) process.exit(0);
 for (const [path, value] of Object.entries(plan)) write(path, value);
-writeFileSync('README.md', renderReadme({ rows: r.rows, closed: r.closed, desk, meta: r.meta }));
+writeFileSync('README.md', renderReadme({ rows: r.rows, closed: r.closed, desk, meta: r.meta, companies: companiesList }));

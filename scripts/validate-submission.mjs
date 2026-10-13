@@ -19,14 +19,21 @@ try {
 } catch { /* openByAuthor stays null */ }
 
 const existing = [...JSON.parse(readFileSync('data/internships.json', 'utf8')), ...JSON.parse(readFileSync('data/submitted.json', 'utf8'))];
-const r = validateSubmission({ fields, openByAuthor, existing, page });
+const companies = JSON.parse(readFileSync('data/companies.json', 'utf8'));
+const r = validateSubmission({ fields, openByAuthor, existing, page, companies });
 
-const body = r.ok
+// Task A, item 5: the prestige list is a hand-picked allowlist. A submission for a company not already in
+// data/companies.json runs every other check as normal (so the submitter still gets real feedback), but
+// the reply adds a note that the company itself needs a maintainer's call, and the issue gets a
+// `new-company` label alongside the usual pass/fail one — it's a flag for review, not an auto-add.
+const newCompanyNote = r.isNewCompany ? `\n\nWe list a hand-picked set of companies. A maintainer will decide whether to add ${fields.company}.` : '';
+const body = (r.ok
   ? `✅ Automatic checks passed (section: ${r.section}). Next we verify the role on the company's page; you'll see a note here, then it goes on the list. Thanks @${ISSUE_AUTHOR}!`
-  : `❌ This can't be added yet:\n\n${r.reasons.map((x) => `- ${x}`).join('\n')}\n\nEdit the issue to fix it and the checks run again.`;
+  : `❌ This can't be added yet:\n\n${r.reasons.map((x) => `- ${x}`).join('\n')}\n\nEdit the issue to fix it and the checks run again.`) + newCompanyNote;
 
+const labels = ['submission', r.ok ? 'checks-passed' : 'needs-fix', ...(r.isNewCompany ? ['new-company'] : [])];
 await api(`/issues/${ISSUE_NUMBER}/comments`, { method: 'POST', body: JSON.stringify({ body }) });
-await api(`/issues/${ISSUE_NUMBER}/labels`, { method: 'PUT', body: JSON.stringify({ labels: ['submission', r.ok ? 'checks-passed' : 'needs-fix'] }) });
+await api(`/issues/${ISSUE_NUMBER}/labels`, { method: 'PUT', body: JSON.stringify({ labels }) });
 
 // Spam gate (spec 5.3): over 5 open submissions from one author closes the issue outright rather than leaving
 // it open for them to keep editing/retrying.

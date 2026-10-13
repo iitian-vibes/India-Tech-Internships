@@ -19,7 +19,7 @@ test('each bad case is rejected with a readable reason', () => {
   const cases = [
     [{ page: { status: 404, text: '' } }, /link does not open a live posting/],
     [{ fields: { ...fields, role: 'Senior SDE' } }, /not an internship or new-grad role/],
-    [{ fields: { ...fields, role: 'Marketing Intern' } }, /not a tech role/],
+    [{ fields: { ...fields, role: 'Marketing Intern' } }, /not an engineering role/],
     [{ page: { status: 200, text: 'SDE Intern. Must be authorized to work in the United States.' } }, /requires existing work authorisation/],
     [{ existing: [{ url: 'https://jobs.lever.co/zepto/abc' }] }, /already on the list/],
     [{ fields: { ...fields, url: 'https://unstop.com/x', careers_site: 'https://unstop.com' } }, /Aggregator and user-content links are not accepted/],
@@ -40,6 +40,26 @@ test('each bad case is rejected with a readable reason', () => {
     assert.equal(r.ok, false, String(re));
     assert.ok(r.reasons.some((x) => re.test(x)), `${re} not in ${JSON.stringify(r.reasons)}`);
   }
+});
+
+test('Task A, item 5: validateSubmission now uses isEngineeringRole — a core-engineering submission with no tech words passes', () => {
+  const coreFields = { ...fields, role: 'Mechanical Design Intern' };
+  const corePage = { status: 200, text: 'Mechanical Design Intern in Mumbai. Students graduating in 2027.' };
+  const r = validateSubmission({ fields: coreFields, openByAuthor: 1, existing: [], page: corePage });
+  assert.equal(r.ok, true, JSON.stringify(r.reasons));
+});
+
+test('Task A, item 5: isNewCompany is omitted when no `companies` list is given (back-compat)', () => {
+  const r = validateSubmission({ fields, openByAuthor: 1, existing: [], page: okPage });
+  assert.equal('isNewCompany' in r, false);
+});
+
+test('Task A, item 5: isNewCompany reflects whether the submitted company slug is on the allowlist', () => {
+  const companies = [{ name: 'Razorpay', slug: 'razorpay', ats: 'lever', board: 'razorpay', abroad_visa: false, field: 'software-ai' }];
+  const known = validateSubmission({ fields: { ...fields, company: 'Razorpay' }, openByAuthor: 1, existing: [], page: okPage, companies });
+  assert.equal(known.isNewCompany, false);
+  const unknown = validateSubmission({ fields, openByAuthor: 1, existing: [], page: okPage, companies }); // fields.company is 'Zepto'
+  assert.equal(unknown.isNewCompany, true);
 });
 
 test('a normal URL round-trips unchanged through the raw-character check', () => {
@@ -184,6 +204,12 @@ test('submissionRow credits the author and uses a stable id', () => {
   assert.equal(r.submitted_by, 'student1');
   assert.equal(r.source, 'submitted');
   assert.equal(r.stipend, null);
+});
+
+test('Task A, item 4/5: submissionRow sets `field` from the role (no company on an ad-hoc submission), so it has somewhere to land in the by-field README', () => {
+  assert.equal(submissionRow(fields, 'india', 42, 'student1', '2026-10-12').field, 'software-ai'); // SDE Intern
+  assert.equal(submissionRow({ ...fields, role: 'Quant Trading Intern' }, 'india', 42, 'student1', '2026-10-12').field, 'quant');
+  assert.equal(submissionRow({ ...fields, role: 'Mechanical Design Intern' }, 'india', 42, 'student1', '2026-10-12').field, 'core');
 });
 
 test('fix round 1, finding 1: submissionRow stores the normalised URL.href (a normal URL is unchanged)', () => {

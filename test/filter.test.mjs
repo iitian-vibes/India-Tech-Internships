@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { isStudentRole, isTechRole, classifyLocation, hasWorkAuthBlock, batchOf, stipendOf, toRow } from '../scripts/filter.mjs';
+import { isStudentRole, isTechRole, isEngineeringRole, classifyLocation, hasWorkAuthBlock, batchOf, stipendOf, fieldOf, toRow } from '../scripts/filter.mjs';
 
 const job = (o) => ({ jobId: '1', title: 'SDE Intern', locations: ['Bengaluru'], remote: false, url: 'https://x/1', posted: '2026-10-10T00:00:00.000Z', text: '', employmentType: '', stipendHint: null, ...o });
 const co = { name: 'Acme', slug: 'acme', ats: 'lever', abroad_visa: false };
@@ -116,9 +116,49 @@ test('stipend only when stated next to the word stipend, or from the board hint'
 
 test('toRow builds a Row or returns null', () => {
   const r = toRow(job({ text: 'Stipend: ₹50,000 per month. Graduating in 2027.' }), co, '2026-10-12');
-  assert.deepEqual(r, { id: 'acme:lever:1', company: 'Acme', company_slug: 'acme', role: 'SDE Intern', location: 'Bengaluru', section: 'india', url: 'https://x/1', posted: '2026-10-10', batch: '2027', stipend: '₹50,000 per month', source: 'lever', first_seen: '2026-10-12' });
+  assert.deepEqual(r, { id: 'acme:lever:1', company: 'Acme', company_slug: 'acme', role: 'SDE Intern', location: 'Bengaluru', section: 'india', url: 'https://x/1', posted: '2026-10-10', batch: '2027', stipend: '₹50,000 per month', source: 'lever', first_seen: '2026-10-12', field: 'software-ai' });
   assert.equal(toRow(job({ title: 'Senior Engineer' }), co, '2026-10-12'), null);
   assert.equal(toRow(job({ locations: ['Austin'] }), co, '2026-10-12'), null);
   assert.equal(toRow(job({ text: 'US citizens only.' }), co, '2026-10-12'), null);
   assert.equal(toRow(job({ url: '' }), co, '2026-10-12'), null);
+});
+
+test('toRow uses isEngineeringRole: a core-engineering title with no tech words still produces a row', () => {
+  const r = toRow(job({ title: 'Mechanical Design Intern' }), co, '2026-10-12');
+  assert.ok(r);
+  assert.equal(r.field, 'core');
+});
+
+test('engineering role classification: every new core-branch keyword, with the NON_TECH veto still holding', () => {
+  // Must return TRUE (core engineering, no tech words needed)
+  for (const t of [
+    'Mechanical Engineering Intern', 'Electrical Engineer Intern', 'Electronics Intern', 'ECE Intern', 'EEE Intern',
+    'Civil Engineering Intern', 'Chemical Engineer Intern', 'Aerospace Engineering Intern', 'Aeronautical Intern',
+    'Automotive Engineering Intern', 'Manufacturing Engineer Intern', 'Materials Science Intern', 'Metallurgy Intern',
+    'Process Engineer Intern', 'Power Systems Intern', 'Energy Intern', 'Structural Engineering Intern',
+    'Mechatronics Intern', 'Instrumentation Engineer Intern', 'Hardware Design Intern', 'R&D Intern', 'Propulsion Intern',
+    'Thermal Engineering Intern',
+  ]) assert.equal(isEngineeringRole(t), true, t);
+  // Tech titles still pass through isTechRole
+  for (const t of ['Software Engineering Intern', 'ASIC Design Verification Intern']) assert.equal(isEngineeringRole(t), true, t);
+  // NON_TECH veto still holds even when a core word is present incidentally
+  for (const t of ['Marketing Intern', 'HR Onboarding Intern', 'Finance Intern', 'Sales Intern']) assert.equal(isEngineeringRole(t), false, t);
+});
+
+test('fieldOf: company.field is used as-is for a non-software-ai company', () => {
+  assert.equal(fieldOf({ role: 'Quantitative Researcher Intern' }, { field: 'quant' }), 'quant');
+  assert.equal(fieldOf({ role: 'Any Title' }, { field: 'core' }), 'core');
+  assert.equal(fieldOf({ role: 'Any Title' }, { field: 'research' }), 'research');
+});
+
+test('fieldOf: a software-ai company\'s clearly core-engineering title maps to core', () => {
+  assert.equal(fieldOf({ role: 'Mechanical Design Intern' }, { field: 'software-ai' }), 'core');
+  assert.equal(fieldOf({ role: 'Hardware Design Intern' }, { field: 'software-ai' }), 'core');
+  assert.equal(fieldOf({ role: 'Software Engineer Intern' }, { field: 'software-ai' }), 'software-ai');
+});
+
+test('fieldOf: no matched company falls back to role-keyword classification', () => {
+  assert.equal(fieldOf({ role: 'Quant Trading Intern' }, undefined), 'quant');
+  assert.equal(fieldOf({ role: 'Mechanical Design Intern' }, undefined), 'core');
+  assert.equal(fieldOf({ role: 'SDE Intern' }, undefined), 'software-ai');
 });

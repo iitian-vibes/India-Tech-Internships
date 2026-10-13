@@ -12,6 +12,34 @@ export function isTechRole(title = '') {
   return TECH.test(title) && !NON_TECH.test(title);
 }
 
+// Task A, item 2: core-engineering branches beyond software/CS, so the allowlist can cover every
+// engineering student, not just SDE/ML/quant. Deliberately excludes "finance" (that's NON_TECH, kept
+// out of core too) and plain "research" (already covered by TECH).
+const CORE_WORDS = /\b(mechanical|electrical|electronics|ece|eee|civil|chemical|aerospace|aeronautical|automotive|manufacturing|materials|metallurg\w*|process\s+engineer|power|energy|structural|mechatronics|instrumentation|hardware\s+design|r\s?&\s?d|propulsion|thermal)\b/i;
+const QUANT_WORDS = /\b(quant|quantitative|trading|trader)\b/i;
+
+export function isEngineeringRole(title = '') {
+  if (isTechRole(title)) return true;
+  return CORE_WORDS.test(title) && !NON_TECH.test(title);
+}
+
+// fieldOf decides which README section (Software & AI / Quant / Core Engineering / Research) a row
+// belongs in. A known company's allowlisted `field` wins, except a software-ai company's clearly
+// core-engineering-titled posting (e.g. NVIDIA/Intel/Samsung/Cadence hiring a "Hardware Design Intern"
+// alongside their SDE interns) is reclassified to core per-row rather than per-company.
+// When there is no matched company (a brand-new submission not yet on the allowlist), the same
+// keyword test classifies the row from its title alone, defaulting to software-ai.
+export function fieldOf(row, company) {
+  const role = row.role ?? '';
+  if (company?.field) {
+    if (company.field === 'software-ai' && CORE_WORDS.test(role) && !QUANT_WORDS.test(role)) return 'core';
+    return company.field;
+  }
+  if (QUANT_WORDS.test(role)) return 'quant';
+  if (CORE_WORDS.test(role) && !NON_TECH.test(role)) return 'core';
+  return 'software-ai';
+}
+
 const INDIA = /\b(india|bengaluru|bangalore|hyderabad|pune|gurugram|gurgaon|noida|new delhi|delhi|mumbai|chennai|kolkata|ahmedabad|jaipur|kochi|thiruvananthapuram|trivandrum|coimbatore|indore|chandigarh|mohali|bhubaneswar|vadodara|surat|nagpur|lucknow|mysuru|mysore|goa)\b/i;
 const REGION_REMOTE = /\b(apac|asia|asia pacific|worldwide|anywhere|global)\b/i;
 export function classifyLocation(job, company) {
@@ -53,13 +81,15 @@ const ymd = (isoStr) => (isoStr ? isoStr.slice(0, 10) : null);
 export function toRow(job, company, today) {
   if (!job.url || !job.title) return null;
   if (!isStudentRole(job.title, job.employmentType)) return null;
-  if (!isTechRole(job.title)) return null;
+  if (!isEngineeringRole(job.title)) return null;
   const section = classifyLocation(job, company);
   if (!section) return null;
   if (hasWorkAuthBlock(job.text)) return null;
-  return {
+  const row = {
     id: `${company.slug}:${company.ats}:${job.jobId}`, company: company.name, company_slug: company.slug,
     role: job.title, location: job.locations.join(' / '), section, url: job.url, posted: ymd(job.posted),
     batch: batchOf(job.title, job.text), stipend: stipendOf(job.text, job.stipendHint), source: company.ats, first_seen: today,
   };
+  row.field = fieldOf(row, company);
+  return row;
 }

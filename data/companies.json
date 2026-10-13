@@ -4,49 +4,56 @@
     "slug": "razorpay",
     "ats": "greenhouse",
     "board": "razorpaysoftwareprivatelimited",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Groww",
     "slug": "groww",
     "ats": "greenhouse",
     "board": "groww",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "CRED",
     "slug": "cred",
     "ats": "lever",
     "board": "cred",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Meesho",
     "slug": "meesho",
     "ats": "lever",
     "board": "meesho",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Paytm",
     "slug": "paytm",
     "ats": "lever",
     "board": "paytm",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Sarvam AI",
     "slug": "sarvam",
     "ats": "ashby",
     "board": "sarvam",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Composio",
     "slug": "composio",
     "ats": "ashby",
     "board": "composio",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "NVIDIA",
@@ -57,7 +64,8 @@
       "tenant": "nvidia",
       "site": "NVIDIAExternalCareerSite"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Adobe",
@@ -68,7 +76,8 @@
       "tenant": "adobe",
       "site": "external_experienced"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Intel",
@@ -79,7 +88,8 @@
       "tenant": "intel",
       "site": "External"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Samsung R&D",
@@ -90,7 +100,8 @@
       "tenant": "sec",
       "site": "Samsung_Careers"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Arcesium",
@@ -98,7 +109,8 @@
     "ats": "greenhouse",
     "board": "arcesiumllc",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Barclays",
@@ -109,7 +121,8 @@
       "tenant": "barclays",
       "site": "External_Career_Site_Barclays"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Mastercard",
@@ -120,7 +133,8 @@
       "tenant": "mastercard",
       "site": "CorporateCareers"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Cadence",
@@ -131,21 +145,8 @@
       "tenant": "cadence",
       "site": "External_Careers"
     },
-    "abroad_visa": false
-  },
-  {
-    "name": "Fi Money",
-    "slug": "fi-money",
-    "ats": "lever",
-    "board": "epifi",
-    "abroad_visa": false
-  },
-  {
-    "name": "FamPay",
-    "slug": "fampay",
-    "ats": "lever",
-    "board": "fampay",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Zenoti",
@@ -153,7 +154,8 @@
     "ats": "greenhouse",
     "board": "zenoti",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Druva",
@@ -161,21 +163,16 @@
     "ats": "greenhouse",
     "board": "druva",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Mindtickle",
     "slug": "mindtickle",
     "ats": "lever",
     "board": "mindtickle",
-    "abroad_visa": false
-  },
-  {
-    "name": "Bounce",
-    "slug": "bounce",
-    "ats": "ashby",
-    "board": "bounce",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Jane Street",
@@ -183,7 +180,8 @@
     "ats": "greenhouse",
     "board": "janestreet",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Hudson River Trading",
@@ -191,7 +189,8 @@
     "ats": "greenhouse",
     "board": "hrttalentcommunity",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Jump Trading",
@@ -199,7 +198,8 @@
     "ats": "greenhouse",
     "board": "jumptrading",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Tower Research Capital",
@@ -207,7 +207,8 @@
     "ats": "greenhouse",
     "board": "towerresearchcapital",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "IMC Trading",
@@ -215,7 +216,8 @@
     "ats": "greenhouse",
     "board": "imc",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Optiver",
@@ -223,7 +225,8 @@
     "ats": "greenhouse",
     "board": "optiver",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Flow Traders",
@@ -232,7 +235,8 @@
     "board": "flowtraders",
     "eu": false,
     "abroad_visa": true,
-    "notes": "Hong Kong Trading Intern posting, evidence: https://job-boards.greenhouse.io/flowtraders/jobs/8102618 (also hand-verified in the Deadline Desk). Company has no US/UK/EU office in its current board, so abroad_visa cannot flood in non-APAC roles today."
+    "notes": "Hong Kong Trading Intern posting, evidence: https://job-boards.greenhouse.io/flowtraders/jobs/8102618 (also hand-verified in the Deadline Desk). Company has no US/UK/EU office in its current board, so abroad_visa cannot flood in non-APAC roles today.",
+    "field": "quant"
   },
   {
     "name": "Graviton Research Capital",
@@ -241,7 +245,8 @@
     "board": "gravitonresearchcapital",
     "eu": false,
     "abroad_visa": true,
-    "notes": "Direct Gurugram office (India) plus a Singapore Graduate Central Execution Trader program, evidence: https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002 (hand-verified in the Deadline Desk). Company has no US/UK/EU office in its current board."
+    "notes": "Direct Gurugram office (India) plus a Singapore Graduate Central Execution Trader program, evidence: https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002 (hand-verified in the Deadline Desk). Company has no US/UK/EU office in its current board.",
+    "field": "quant"
   },
   {
     "name": "Squarepoint Capital",
@@ -249,7 +254,8 @@
     "ats": "greenhouse",
     "board": "squarepointcapital",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "WorldQuant",
@@ -257,7 +263,8 @@
     "ats": "greenhouse",
     "board": "worldquant",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "AlphaGrep",
@@ -265,7 +272,8 @@
     "ats": "greenhouse",
     "board": "alphagrepsecurities",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "QRT (Qube Research & Technologies)",
@@ -273,7 +281,8 @@
     "ats": "greenhouse",
     "board": "quberesearchandtechnologies",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "Maven Securities",
@@ -281,7 +290,8 @@
     "ats": "greenhouse",
     "board": "mavensecuritiesholdingltd",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "NK Securities",
@@ -289,7 +299,8 @@
     "ats": "greenhouse",
     "board": "nksecuritiesresearch",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "quant"
   },
   {
     "name": "GitLab",
@@ -297,7 +308,8 @@
     "ats": "greenhouse",
     "board": "gitlab",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Remote.com",
@@ -305,7 +317,8 @@
     "ats": "greenhouse",
     "board": "remote",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Vercel",
@@ -313,7 +326,8 @@
     "ats": "greenhouse",
     "board": "vercel",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Grafana Labs",
@@ -321,7 +335,8 @@
     "ats": "greenhouse",
     "board": "grafanalabs",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Canonical",
@@ -329,7 +344,8 @@
     "ats": "greenhouse",
     "board": "canonical",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Elastic",
@@ -337,7 +353,8 @@
     "ats": "greenhouse",
     "board": "elastic",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Cloudflare",
@@ -345,7 +362,8 @@
     "ats": "greenhouse",
     "board": "cloudflare",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Stripe",
@@ -353,7 +371,8 @@
     "ats": "greenhouse",
     "board": "stripe",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Twilio",
@@ -361,7 +380,8 @@
     "ats": "greenhouse",
     "board": "twilio",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Figma",
@@ -369,7 +389,8 @@
     "ats": "greenhouse",
     "board": "figma",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "CircleCI",
@@ -377,7 +398,8 @@
     "ats": "greenhouse",
     "board": "circleci",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Netlify",
@@ -385,7 +407,8 @@
     "ats": "greenhouse",
     "board": "netlify",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Sourcegraph",
@@ -393,77 +416,80 @@
     "ats": "greenhouse",
     "board": "sourcegraph91",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Deel",
     "slug": "deel",
     "ats": "ashby",
     "board": "deel",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Zapier",
     "slug": "zapier",
     "ats": "ashby",
     "board": "zapier",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Supabase",
     "slug": "supabase",
     "ats": "ashby",
     "board": "supabase",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "PostHog",
     "slug": "posthog",
     "ats": "ashby",
     "board": "posthog",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Airbyte",
     "slug": "airbyte",
     "ats": "ashby",
     "board": "airbyte",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Notion",
     "slug": "notion",
     "ats": "ashby",
     "board": "notion",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Linear",
     "slug": "linear",
     "ats": "ashby",
     "board": "linear",
-    "abroad_visa": false
-  },
-  {
-    "name": "Buffer",
-    "slug": "buffer",
-    "ats": "ashby",
-    "board": "buffer",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "1Password",
     "slug": "1password",
     "ats": "ashby",
     "board": "1password",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Render",
     "slug": "render",
     "ats": "ashby",
     "board": "render",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Zendesk",
@@ -474,7 +500,8 @@
       "tenant": "zendesk",
       "site": "zendesk"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "InMobi",
@@ -482,7 +509,8 @@
     "ats": "greenhouse",
     "board": "inmobi",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Observe.AI",
@@ -490,15 +518,8 @@
     "ats": "greenhouse",
     "board": "observeai",
     "eu": false,
-    "abroad_visa": false
-  },
-  {
-    "name": "Sigmoid",
-    "slug": "sigmoid",
-    "ats": "greenhouse",
-    "board": "sigmoid",
-    "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Glean",
@@ -506,14 +527,16 @@
     "ats": "greenhouse",
     "board": "gleanwork",
     "eu": false,
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Freshworks",
     "slug": "freshworks",
     "ats": "lever",
     "board": "freshworks",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "BrowserStack",
@@ -524,7 +547,8 @@
       "tenant": "browserstack",
       "site": "External"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Sprinklr",
@@ -535,7 +559,8 @@
       "tenant": "sprinklr",
       "site": "careers"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Uniphore",
@@ -546,7 +571,8 @@
       "tenant": "uniphore",
       "site": "Uniphore"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Fractal Analytics",
@@ -557,7 +583,8 @@
       "tenant": "fractal",
       "site": "Careers"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Postman",
@@ -568,48 +595,47 @@
       "tenant": "postman",
       "site": "careers"
     },
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Swiggy",
     "slug": "swiggy",
     "ats": "smartrecruiters",
     "board": "Swiggy",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Myntra",
     "slug": "myntra",
     "ats": "smartrecruiters",
     "board": "Myntra",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Nykaa",
     "slug": "nykaa",
     "ats": "smartrecruiters",
     "board": "Nykaa",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Xpressbees",
     "slug": "xpressbees",
     "ats": "smartrecruiters",
     "board": "Xpressbees",
-    "abroad_visa": false
-  },
-  {
-    "name": "Ecom Express",
-    "slug": "ecom-express",
-    "ats": "smartrecruiters",
-    "board": "EcomExpress",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "software-ai"
   },
   {
     "name": "Western Digital",
     "slug": "western-digital",
     "ats": "smartrecruiters",
     "board": "WesternDigital",
-    "abroad_visa": false
+    "abroad_visa": false,
+    "field": "core"
   }
 ]

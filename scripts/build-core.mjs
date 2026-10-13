@@ -121,6 +121,35 @@ export function chooseDesk(fetched, prevDesk) {
   return { desk: fetched, warning: null };
 }
 
+// Task A, item 3: pure filter+map over the raw Deadline Desk `opportunities.json` feed, extracted out of
+// build.mjs's deskRows() so it's unit-testable without a network call. Keeps the existing B-industry
+// Internship/Full-time + OPEN/ROLLING rule, and adds lane A-research Internship/Fellowship rows that read
+// as a genuine research internship (title or `what` mentions intern/internship/summer/research programme),
+// also gated to OPEN/ROLLING so the Research section stays as uncluttered as the others (an EXPECTED/
+// OPENS_SOON 2027 placeholder isn't something a student can apply to yet).
+const RESEARCH_INTERN_RE = /\b(intern|internship|summer|research\s+programme|research\s+program)\b/i;
+const DESK_SUB_FIELD = { Software: 'software-ai', 'ML/AI': 'software-ai', Quant: 'quant', Finance: 'quant', 'Core/Hardware': 'core' };
+
+function isEligibleDeskRow(r) {
+  const openOrRolling = r.status === 'OPEN' || r.status === 'ROLLING';
+  if (!openOrRolling) return false;
+  if (r.lane === 'B-industry') return r.kind === 'Internship' || r.kind === 'Full-time';
+  if (r.lane === 'A-research') return (r.kind === 'Internship' || r.kind === 'Fellowship') && RESEARCH_INTERN_RE.test(`${r.name ?? ''} ${r.what ?? ''}`);
+  return false;
+}
+
+export function deskFieldOf(r) {
+  if (r.lane === 'A-research') return 'research';
+  return DESK_SUB_FIELD[r.sub] ?? 'software-ai';
+}
+
+export function filterDeskRows(all) {
+  return all.filter(isEligibleDeskRow).map((r) => ({
+    company: r.org, role: r.name, deadline: r.status === 'OPEN' ? r.deadline ?? null : null, url: r.apply_url,
+    who: r.who ?? r.eligibility ?? '', field: deskFieldOf(r), verified: true,
+  }));
+}
+
 // Decides what gets written to disk for a completed runBuild() result. Returns null when
 // there is nothing to write (a blocked run, or a --dry-run) so every data file either changes
 // together or not at all — a blocked/dry run must never leave submitted.json out of step with

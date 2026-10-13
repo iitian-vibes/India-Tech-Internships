@@ -206,7 +206,8 @@ async function prepare() {
     const prevMeta = JSON.parse(readFileSync('data/meta.json', 'utf8'));
     const prevClosed = JSON.parse(readFileSync('data/closed.json', 'utf8'));
     const prevDesk = JSON.parse(readFileSync('data/desk.json', 'utf8'));
-    writeFileSync('README.md', renderReadme({ rows: [...internships.filter((r) => r.source !== 'submitted'), ...merged.rows], closed: prevClosed, desk: prevDesk, meta: prevMeta }));
+    const companiesList = JSON.parse(readFileSync('data/companies.json', 'utf8'));
+    writeFileSync('README.md', renderReadme({ rows: [...internships.filter((r) => r.source !== 'submitted'), ...merged.rows], closed: prevClosed, desk: prevDesk, meta: prevMeta, companies: companiesList }));
   }
 
   for (const f of failures) await reportFailure(f.issueNumber, f.reasons);
