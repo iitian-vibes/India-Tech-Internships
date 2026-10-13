@@ -22,7 +22,7 @@ test('istStamp formats in IST', () => {
 
 test('README has header with updated phrase, sections, not stated stipend, age, and no em-dashes', () => {
   const md = renderReadme({ rows: [row({}), row({ id: 'b', company: 'Beta', section: 'remote', stipend: '₹40,000/month', url: 'https://jobs/2' })], closed: [{ ...row({ id: 'c', role: 'Old Intern' }), closed_at: '2026-10-11' }], desk: [{ company: 'Jane Street', role: 'SWE Intern', deadline: '2026-11-01', url: 'https://js/x', who: 'third years' }], meta });
-  assert.match(md, /^# 🇮🇳 India Tech Internships 2027/m);
+  assert.match(md, /^# 🇮🇳 India Tech Internships$/m);
   assert.match(md, /Last updated: 12 Oct 2026, 09:14 IST/);
   assert.match(md, /⭐ Star to get updates/);
   assert.match(md, /## 🇮🇳 India-based/);

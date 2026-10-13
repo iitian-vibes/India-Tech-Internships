@@ -11,7 +11,7 @@
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
-const R = process.env.TRAFFIC_REPO || 'repos/iitian-vibes/India-Tech-Internships-2027';
+const R = process.env.TRAFFIC_REPO || 'repos/iitian-vibes/India-Tech-Internships';
 const gh = (p) => JSON.parse(execFileSync('gh', ['api', p], { encoding: 'utf8' }));
 const date = new Date(Date.now() + 5.5 * 3600e3).toISOString().slice(0, 10);
 

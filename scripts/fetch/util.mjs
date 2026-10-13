@@ -12,7 +12,7 @@ export function htmlToText(html = '') {
 export async function fetchJson(url, { timeoutMs = 20000, method = 'GET', body } = {}) {
   const res = await fetch(url, {
     method,
-    headers: { 'User-Agent': 'india-tech-internships-bot (+https://github.com/iitian-vibes/India-Tech-Internships-2027)', ...(body ? { 'Content-Type': 'application/json' } : {}) },
+    headers: { 'User-Agent': 'india-tech-internships-bot (+https://github.com/iitian-vibes/India-Tech-Internships)', ...(body ? { 'Content-Type': 'application/json' } : {}) },
     body: body ? JSON.stringify(body) : undefined,
     signal: AbortSignal.timeout(timeoutMs),
   });

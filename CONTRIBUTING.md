@@ -23,7 +23,7 @@ Company: Zepto. Role: SDE Intern. Link: `https://unstop.com/internship/sde-inter
 
 ## How to submit
 
-Open an issue using the [submission form](https://github.com/iitian-vibes/India-Tech-Internships-2027/issues/new?template=submit-internship.yml). Fill in the company, the exact role title, the direct link to the posting, the location, and the company's careers site. Stipend and graduation year are optional, fill them in only if the posting states them.
+Open an issue using the [submission form](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml). Fill in the company, the exact role title, the direct link to the posting, the location, and the company's careers site. Stipend and graduation year are optional, fill them in only if the posting states them.
 
 ## What happens next
 

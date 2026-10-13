@@ -5,7 +5,7 @@
 #   ./scripts/setup-labels.sh
 #
 set -euo pipefail
-REPO="iitian-vibes/India-Tech-Internships-2027"
+REPO="iitian-vibes/India-Tech-Internships"
 
 gh label create submission     --repo "$REPO" --color 1D76DB --description "A student-submitted internship" --force
 gh label create checks-passed  --repo "$REPO" --color 0E8A16 --description "Automatic checks passed" --force

@@ -117,7 +117,7 @@ export function isPrivateAddress(ip) {
   return false;
 }
 
-const FETCH_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36 india-tech-internships-bot (+https://github.com/iitian-vibes/India-Tech-Internships-2027)';
+const FETCH_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36 india-tech-internships-bot (+https://github.com/iitian-vibes/India-Tech-Internships)';
 const MAX_BODY_BYTES = 2 * 1024 * 1024;
 const MAX_REDIRECTS = 5;
 

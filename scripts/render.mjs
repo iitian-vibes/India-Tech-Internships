@@ -1,4 +1,4 @@
-const REPO = 'https://github.com/iitian-vibes/India-Tech-Internships-2027';
+const REPO = 'https://github.com/iitian-vibes/India-Tech-Internships';
 const DESK = 'https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships';
 const GCAL = 'https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics';
 
@@ -39,9 +39,9 @@ export function renderReadme({ rows, closed, desk, meta }) {
   const closedList = closed.length
     ? closed.map((r) => `- ~~${cell(r.role)}~~ at ${cell(r.company)} (closed ${r.closed_at})`).join('\n') + '\n'
     : '_None in the last 7 days._\n';
-  return `# 🇮🇳 India Tech Internships 2027
+  return `# 🇮🇳 India Tech Internships
 
-Tech internships you can actually apply to as a student in India: SWE, ML, data, quant and new-grad roles, based in India, remote, or abroad with visa sponsorship. Pulled every day from companies' own job boards. Run by IITians, open to every student.
+Tech internships you can actually apply to as a student in India: SWE, ML, data, quant and new-grad roles, based in India, remote, or abroad with visa sponsorship. Pulled every day from companies' own job boards and checked by hand on the Deadline Desk. Run by IITians, open to every student. Now tracking the 2027 season.
 
 **${c.total} open** · Last updated: ${meta.updated_at ? istStamp(meta.updated_at) : 'not yet'} · ⭐ Star to get updates
 
