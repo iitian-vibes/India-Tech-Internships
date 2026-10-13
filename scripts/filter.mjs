@@ -40,7 +40,9 @@ export function fieldOf(row, company) {
   return 'software-ai';
 }
 
-const INDIA = /\b(india|bengaluru|bangalore|hyderabad|pune|gurugram|gurgaon|noida|new delhi|delhi|mumbai|chennai|kolkata|ahmedabad|jaipur|kochi|thiruvananthapuram|trivandrum|coimbatore|indore|chandigarh|mohali|bhubaneswar|vadodara|surat|nagpur|lucknow|mysuru|mysore|goa)\b/i;
+// Exported (Fix round 1) so render.mjs's Desk-row "Where" derivation can reuse the exact same India
+// city/country vocabulary instead of maintaining a second, drifting copy.
+export const INDIA = /\b(india|bengaluru|bangalore|hyderabad|pune|gurugram|gurgaon|noida|new delhi|delhi|mumbai|chennai|kolkata|ahmedabad|jaipur|kochi|thiruvananthapuram|trivandrum|coimbatore|indore|chandigarh|mohali|bhubaneswar|vadodara|surat|nagpur|lucknow|mysuru|mysore|goa)\b/i;
 const REGION_REMOTE = /\b(apac|asia|asia pacific|worldwide|anywhere|global)\b/i;
 export function classifyLocation(job, company) {
   const locs = job.locations.join(' | ');
