@@ -2,7 +2,7 @@
 
 Tech internships you can actually apply to as a student in India: SWE, ML, data, quant and new-grad roles, based in India, remote, or abroad with visa sponsorship. Pulled every day from companies' own job boards. Run by IITians, open to every student.
 
-**43 open** · Last updated: 13 Oct 2026, 01:44 IST · ⭐ Star to get updates
+**43 open** · Last updated: 13 Oct 2026, 16:19 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships-2027/issues/new?template=submit-internship.yml)
 
