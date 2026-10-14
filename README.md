@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.png" alt="India Tech Internships: the internships worth having, every engineering branch" width="100%"></p>
+
 # 🇮🇳 India Tech Internships
 
 Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked companies, checked daily.
