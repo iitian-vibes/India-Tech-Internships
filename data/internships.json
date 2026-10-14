@@ -30,6 +30,21 @@
     "field": "quant"
   },
   {
+    "id": "flow-traders:greenhouse:8260920",
+    "company": "Flow Traders",
+    "company_slug": "flow-traders",
+    "role": "Summer Trading Internship",
+    "location": "Amsterdam",
+    "section": "abroad",
+    "url": "https://job-boards.greenhouse.io/flowtraders/jobs/8260920",
+    "posted": "2026-10-07",
+    "batch": "2028",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-14",
+    "field": "quant"
+  },
+  {
     "id": "flow-traders:greenhouse:8102618",
     "company": "Flow Traders",
     "company_slug": "flow-traders",
