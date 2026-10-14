@@ -199,12 +199,15 @@ function table(rows, nowIso, companiesBySlug) {
 // README sections, in the fixed order the product rules specify: Software & AI, Quant, Core Engineering,
 // Research. Replaces the old by-location (india/remote/abroad) sections now that "field" is the grouping;
 // "Where" (location/remote/abroad) still shows per row, just as a column instead of a section.
+// The third element is the Deadline Desk topic key for that field (deadline-desk-ics.ts TOPICS) —
+// used to deep-link each section into that topic's calendar subscription feed.
 const FIELDS = [
-  ['software-ai', '💻 Software & AI'],
-  ['quant', '📈 Quant'],
-  ['core', '⚙️ Core Engineering'],
-  ['research', '🔬 Research'],
+  ['software-ai', '💻 Software & AI', 'software'],
+  ['quant', '📈 Quant', 'quant'],
+  ['core', '⚙️ Core Engineering', 'core'],
+  ['research', '🔬 Research', 'research'],
 ];
+const deskTopicLink = (topicKey) => `📅 [Get these deadlines in your calendar](https://iitianvibes.com/blog/deadline-desk/?topics=${topicKey}&utm_source=github&utm_medium=readme#calendar)`;
 
 export function renderReadme({ rows, closed, desk, meta, companies = [] }) {
   const c = meta.counts ?? { total: 0 };
@@ -215,9 +218,9 @@ export function renderReadme({ rows, closed, desk, meta, companies = [] }) {
   const { desk: dedupedDesk, rows: dedupedRows } = dedupeDeskRows(desk, rows);
   // Desk rows are merged straight into their field's table (marked with a ✓ desk-verified role suffix
   // and "closes D Mon"/"open" in Age) instead of living in their own separate section.
-  const sectionsMd = FIELDS.map(([key, heading]) => {
+  const sectionsMd = FIELDS.map(([key, heading, topicKey]) => {
     const merged = [...dedupedRows.filter((r) => r.field === key), ...dedupedDesk.filter((d) => d.field === key)];
-    return `## ${heading}\n\n${table(merged, meta.updated_at, companiesBySlug)}`;
+    return `## ${heading}\n\n${deskTopicLink(topicKey)}\n\n${table(merged, meta.updated_at, companiesBySlug)}`;
   }).join('\n');
   const closedList = closed.length
     ? closed.map((r) => `- ~~${cell(r.role)}~~ at ${cell(r.company)} (closed ${r.closed_at})`).join('\n') + '\n'

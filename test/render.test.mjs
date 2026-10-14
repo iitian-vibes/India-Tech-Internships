@@ -279,6 +279,22 @@ test('fix round 1, finding 1: Apply links also encode pipe, space, angle bracket
   assert.match(md, /\[Apply\]\(https:\/\/x\/a%7Cb%20c%3Cd%3Ee%22f%60g\)/);
 });
 
+test('each field section links to its own Deadline Desk topic calendar', () => {
+  const md = renderReadme({
+    rows: [row({ id: 'sw', field: 'software-ai' }), row({ id: 'q', field: 'quant' }), row({ id: 'c', field: 'core' }), row({ id: 'r', field: 'research' })],
+    closed: [], desk: [], meta,
+  });
+  const sectionLink = (heading, key) => {
+    const idx = md.indexOf(heading);
+    const slice = md.slice(idx, idx + 300);
+    assert.match(slice, new RegExp(`📅 \\[Get these deadlines in your calendar\\]\\(https://iitianvibes\\.com/blog/deadline-desk/\\?topics=${key}&utm_source=github&utm_medium=readme#calendar\\)`));
+  };
+  sectionLink('## 💻 Software & AI', 'software');
+  sectionLink('## 📈 Quant', 'quant');
+  sectionLink('## ⚙️ Core Engineering', 'core');
+  sectionLink('## 🔬 Research', 'research');
+});
+
 test('recently-closed list is kept, with the escape-safe rendering it already had', () => {
   const md = renderReadme({ rows: [row({})], closed: [{ ...row({ id: 'c', role: 'Old Intern' }), closed_at: '2026-10-11' }], desk: [], meta });
   assert.match(md, /~~Old Intern~~/);

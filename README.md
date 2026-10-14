@@ -10,6 +10,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 ## 💻 Software & AI
 
+📅 [Get these deadlines in your calendar](https://iitianvibes.com/blog/deadline-desk/?topics=software&utm_source=github&utm_medium=readme#calendar)
+
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
 | Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 96d |
@@ -29,6 +31,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 | Tower Research Capital | Software Engineer, C++: Graduate Opportunity \(Hong Kong / Singapore\) ✓ | Hong Kong | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8245433) | open |
 
 ## 📈 Quant
+
+📅 [Get these deadlines in your calendar](https://iitianvibes.com/blog/deadline-desk/?topics=quant&utm_source=github&utm_medium=readme#calendar)
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
@@ -58,6 +62,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 ## ⚙️ Core Engineering
 
+📅 [Get these deadlines in your calendar](https://iitianvibes.com/blog/deadline-desk/?topics=core&utm_source=github&utm_medium=readme#calendar)
+
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
 | Google | Silicon Engineering Intern, PhD: Summer 2027 ✓ | See posting | [Apply](https://www.google.com/about/careers/applications/jobs/results/109375266236572358-silicon-engineering-intern-phd-summer-2027) | closes 30 Apr |
@@ -65,6 +71,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 | Qualcomm India | Interim Engineering Intern 2027: Hardware ✓ | See posting | [Apply](https://careers.qualcomm.com/careers/job/446719784824) | open |
 
 ## 🔬 Research
+
+📅 [Get these deadlines in your calendar](https://iitianvibes.com/blog/deadline-desk/?topics=research&utm_source=github&utm_medium=readme#calendar)
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
