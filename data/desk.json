@@ -403,5 +403,50 @@
     "who": "Students graduating between September 2027 and July 2028, which for a four-year B.Tech is the current third years (batch of 2028); final years graduating in 2027 and second years are outside the window",
     "field": "quant",
     "verified": true
+  },
+  {
+    "company": "Cars24",
+    "role": "Backend Intern (finance middleware): Gurgaon",
+    "deadline": null,
+    "url": "https://careers.cars24.com/intern/?id=a6a560b13cacdd",
+    "who": "Students and fresh graduates with 0 to 1 years of experience who can work on site in Gurgaon; the posting names no batch or graduation-year cutoff",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Cars24",
+    "role": "Builder - Apprentice, Data Platform (intern): Gurgaon",
+    "deadline": null,
+    "url": "https://careers.cars24.com/builder-apprentice/?id=a6a63311c0e721",
+    "who": "Students and fresh graduates with 0 to 1 years of experience who can work on site in Gurgaon; the posting names no batch or graduation-year cutoff",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Cars24",
+    "role": "Cyber Security Engineer Intern: Gurugram",
+    "deadline": null,
+    "url": "https://careers.cars24.com/security-engineer/?id=a6a7454f0a938a",
+    "who": "Students and recent graduates (BCA, BTech, BSc) who can work five days a week from the Gurugram office; the posting lists CEH or an equivalent certification as required, so without one you start behind",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Cars24",
+    "role": "Forward Deployed Engineer, Builder - Apprentice (Deployment Inc): Gurgaon",
+    "deadline": null,
+    "url": "https://careers.cars24.com/builder-apprentice/?id=a6ac379704b4d3",
+    "who": "Students and fresh graduates with 0 to 1 years of experience who have already shipped an LLM-backed project real people used (notebook-only prototypes do not count, per the posting); on site in Gurgaon",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Cars24",
+    "role": "Analytics Intern (AI-native): Gurgaon",
+    "deadline": null,
+    "url": "https://careers.cars24.com/intern/?id=a6a69e43ac24e3",
+    "who": "Current students or recent graduates of any quantitative degree (engineering, maths, stats, economics, CS) who know SQL; the posting names no year cutoff; on site in Gurgaon",
+    "field": "software-ai",
+    "verified": true
   }
 ]
