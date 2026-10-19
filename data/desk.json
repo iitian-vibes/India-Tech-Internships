@@ -162,30 +162,12 @@
     "verified": true
   },
   {
-    "company": "Microsoft",
-    "role": "Software Engineering Intern: India",
-    "deadline": null,
-    "url": "https://apply.careers.microsoft.com/careers/job/1970393556911730",
-    "who": "Pursuing Bachelor's/Master's in CS/Engineering; ≥1 semester remaining after internship; 1 year OOP experience",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Stripe",
     "role": "Software Engineer, Intern: Bengaluru",
     "deadline": null,
     "url": "https://stripe.com/jobs/search?gh_jid=8031833",
     "who": "Pursuing Bachelor's/Master's in CS, math or related; ≥1 year of university",
     "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Goldman Sachs",
-    "role": "2027 Summer Analyst: Global Investment Research, Mumbai",
-    "deadline": null,
-    "url": "https://higher.gs.com/roles/183942",
-    "who": "Students pursuing a bachelor's / graduate degree; up to 4 business/location applications per year",
-    "field": "quant",
     "verified": true
   },
   {
@@ -298,9 +280,9 @@
   },
   {
     "company": "Rubrik",
-    "role": "Software Engineer: Winter Intern, Bangalore (Jan–May 2027)",
+    "role": "Software Engineer (CPD): Winter Intern, Bangalore (Jan–May 2027)",
     "deadline": null,
-    "url": "https://www.rubrik.com/company/careers/departments/job.8166523?gh_jid=8166523",
+    "url": "https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537",
     "who": "2027 graduates of circuital branches only; CGPA 8 and above; Bachelor's/Master's in CS or related; available Jan–May 2027 onsite",
     "field": "software-ai",
     "verified": true
@@ -312,15 +294,6 @@
     "url": "https://www.tower-research.com/open-positions/?gh_jid=8168750",
     "who": "Bachelor's or Master's student in CS, maths, physics, ML or related; C++/Python; Linux; Olympiad participation preferred, not required",
     "field": "quant",
-    "verified": true
-  },
-  {
-    "company": "Microsoft",
-    "role": "Applied Sciences PhD Intern: India",
-    "deadline": null,
-    "url": "https://apply.careers.microsoft.com/careers/job/1970393556997800",
-    "who": "Currently pursuing a PhD in CS / AI / ML / Statistics / Maths / EE or related, with at least one semester remaining after the internship",
-    "field": "software-ai",
     "verified": true
   },
   {
@@ -437,6 +410,42 @@
     "deadline": null,
     "url": "https://careers.cars24.com/intern/?id=a6a69e43ac24e3",
     "who": "Current students or recent graduates of any quantitative degree (engineering, maths, stats, economics, CS) who know SQL; the posting names no year cutoff; on site in Gurgaon",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Silicon Engineer, Platform and Devices: University Graduate 2026 (Bengaluru)",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/73379279982731974-silicon-engineer-platform-and-devices-university-graduate-2026",
+    "who": "Bachelor's degree in Electrical, Electronics and Communication Engineering, a relevant technical field, or equivalent practical experience; experience with design concepts and computer hardware architecture",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Software Engineer, PhD, Early Career 2026 (Bengaluru / Hyderabad)",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/107018346561446598-software-engineer-phd-early-career-2026",
+    "who": "PhD in Computer Science, Electrical Engineering or a related field, with software development experience; availability to start full time in 2026",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Apple",
+    "role": "PhD Intern, Apple Ads (Machine Learning): Hyderabad",
+    "deadline": null,
+    "url": "https://jobs.apple.com/en-in/details/200684719/phd-intern-apple-ads-machine-learning",
+    "who": "Currently pursuing a PhD in Computer Science, Software Engineering, Machine Learning, Data Science or a related technical field",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Apple",
+    "role": "PhD Intern, Machine Learning: MSI, Product Operations (Bengaluru)",
+    "deadline": null,
+    "url": "https://jobs.apple.com/en-in/details/200676908/phd-intern-machine-learning-msi-product-operations-team",
+    "who": "Pursuing a PhD in Computer Science or a related field, with a deep understanding of ML, probability and statistics and of computer vision / VLMs",
     "field": "software-ai",
     "verified": true
   }
