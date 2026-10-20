@@ -45,6 +45,21 @@
     "field": "quant"
   },
   {
+    "id": "graviton-research-capital:greenhouse:8899673002",
+    "company": "Graviton Research Capital",
+    "company_slug": "graviton-research-capital",
+    "role": "Quantitative Researcher - 2027 Summer Internship",
+    "location": "Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore",
+    "section": "abroad",
+    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002",
+    "posted": "2026-10-19",
+    "batch": "2028",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-20",
+    "field": "quant"
+  },
+  {
     "id": "stripe:greenhouse:8031833",
     "company": "Stripe",
     "company_slug": "stripe",

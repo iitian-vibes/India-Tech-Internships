@@ -448,5 +448,23 @@
     "who": "Pursuing a PhD in Computer Science or a related field, with a deep understanding of ML, probability and statistics and of computer vision / VLMs",
     "field": "software-ai",
     "verified": true
+  },
+  {
+    "company": "Qualcomm India",
+    "role": "Interim Engineering Intern 2027: Software",
+    "deadline": null,
+    "url": "https://careers.qualcomm.com/careers/job/446719785836",
+    "who": "2027-graduating B.Tech/M.Tech students in CSE, ECE or communication engineering; other branches and other batches are not listed",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Texas Instruments India",
+    "role": "Career Accelerator Program: Digital IC Design Engineer",
+    "deadline": null,
+    "url": "https://careers.ti.com/en/sites/CX/job/25017396/",
+    "who": "new college graduates and final-year B.Tech/BE students in EE or ECE with a 3.0/4.0 GPA or equivalent; experienced engineers apply to TI's lateral roles instead",
+    "field": "core",
+    "verified": true
   }
 ]
