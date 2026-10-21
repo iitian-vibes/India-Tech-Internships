@@ -466,5 +466,68 @@
     "who": "new college graduates and final-year B.Tech/BE students in EE or ECE with a 3.0/4.0 GPA or equivalent; experienced engineers apply to TI's lateral roles instead",
     "field": "core",
     "verified": true
+  },
+  {
+    "company": "Graviton Research Capital",
+    "role": "Quantitative Researcher: 2027 Summer Internship (Amsterdam / London / New York / Singapore)",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002",
+    "who": "students graduating in 2028 (today's third years on a 4-year B.Tech, or Master's/PhD students finishing in 2028), maths/physics/CS/stats or related; 2027 and 2029 graduates are outside this posting",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Graviton Research Capital",
+    "role": "Quantitative Researcher: 2027 Graduates (Amsterdam / London / New York / Singapore)",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002",
+    "who": "2027 graduates in maths, physics, CS, statistics, OR or ML with no active backlogs; for the Gurugram seat see the separate Gurugram posting",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Meta",
+    "role": "ASIC Engineer Intern, Implementation: Bangalore",
+    "deadline": null,
+    "url": "https://www.metacareers.com/profile/job_details/1046140895105013",
+    "who": "current students in EE, ECE, computer engineering or a related branch (bachelor's, master's or PhD) who will return to their degree after the internship; graduates are not eligible",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Meta",
+    "role": "ASIC Engineer Intern, Design Verification: Bangalore",
+    "deadline": null,
+    "url": "https://www.metacareers.com/profile/job_details/1123459746795309",
+    "who": "current students in EE, ECE, computer engineering or a related branch (bachelor's, master's or PhD) who will return to their degree after the internship; graduates are not eligible",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Meta",
+    "role": "ASIC Engineer Intern - Infra Silicon Enablement: Bangalore",
+    "deadline": null,
+    "url": "https://www.metacareers.com/profile/job_details/939474918844068",
+    "who": "current students in EE, ECE, computer engineering or a related branch (bachelor's, master's or PhD) who will return to their degree after the internship; graduates are not eligible",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Meta",
+    "role": "ASIC Engineer Intern, Design: Bangalore",
+    "deadline": null,
+    "url": "https://www.metacareers.com/profile/job_details/1631077978652493",
+    "who": "current students in EE, ECE, computer engineering or a related branch (bachelor's, master's or PhD) who will return to their degree after the internship; graduates are not eligible",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "American Express",
+    "role": "Apprentice - Enterprise Technology Services: Bengaluru / Gurugram / Chennai",
+    "deadline": null,
+    "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26009713",
+    "who": "people who have already finished a bachelor's or master's in CS, IT or another technical discipline (fresh 2026 graduates fit); current students are not eligible",
+    "field": "software-ai",
+    "verified": true
   }
 ]

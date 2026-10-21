@@ -14,20 +14,5 @@
     "first_seen": "2026-10-14",
     "field": "quant",
     "closed_at": "2026-10-16"
-  },
-  {
-    "id": "fampay:lever:bbbbbfd2-1855-4991-82d5-84ef57607c24",
-    "company": "FamPay",
-    "company_slug": "fampay",
-    "role": "Security Engineer Intern",
-    "location": "Bengaluru",
-    "section": "india",
-    "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24",
-    "posted": "2026-09-23",
-    "batch": "Any",
-    "stipend": null,
-    "source": "lever",
-    "first_seen": "2026-10-12",
-    "closed_at": "2026-10-13"
   }
 ]
