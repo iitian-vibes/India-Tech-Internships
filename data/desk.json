@@ -529,5 +529,14 @@
     "who": "people who have already finished a bachelor's or master's in CS, IT or another technical discipline (fresh 2026 graduates fit); current students are not eligible",
     "field": "software-ai",
     "verified": true
+  },
+  {
+    "company": "DRW",
+    "role": "Quantitative Research Intern (Singapore)",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/drweng/jobs/8014915",
+    "who": "students graduating between December 2027 and August 2028 (today's third years on a 4-year B.Tech, or Master's/PhD students finishing then) in a technical field; 2027-summer graduates and 2029 graduates are outside this posting",
+    "field": "quant",
+    "verified": true
   }
 ]
