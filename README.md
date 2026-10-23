@@ -4,7 +4,7 @@
 
 Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked companies, checked daily.
 
-**65 open** · Last updated: 22 Oct 2026, 14:16 IST · ⭐ Star to get updates
+**68 open** · Last updated: 23 Oct 2026, 14:12 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,7 +14,7 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 104d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 105d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -35,6 +35,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 | Apple | PhD Intern, Apple Ads \(Machine Learning\): Hyderabad ✓ | Hyderabad | [Apply](https://jobs.apple.com/en-in/details/200684719/phd-intern-apple-ads-machine-learning) | open |
 | Apple | PhD Intern, Machine Learning: MSI, Product Operations \(Bengaluru\) ✓ | Bengaluru | [Apply](https://jobs.apple.com/en-in/details/200676908/phd-intern-machine-learning-msi-product-operations-team) | open |
 | American Express | Apprentice - Enterprise Technology Services: Bengaluru / Gurugram / Chennai ✓ | Bengaluru | [Apply](https://careers.americanexpress.com/en/sites/CX_1/job/26009713) | open |
+| Honeywell | Intern Bachelors Software Eng: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160479/) | open |
+| Honeywell | Intern Bachelors AI: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160430/) | open |
 
 ## 📈 Quant
 
@@ -42,15 +44,16 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 3d |
+| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 4d |
 | Graviton Research Capital | Quantitative Researcher: 2027 Graduate, Gurugram ✓ | Gurugram | [Apply](https://boards.greenhouse.io/gravitonresearchcapital/jobs/8768396002?gh_jid=8768396002) | open |
 | Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
 | Graviton Research Capital | Quantitative Researcher: 2027 Graduates \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002) | open |
-| Tower Research Capital | Intern - AI/ML ✓ | Gurgaon | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8143756) | 63d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 16d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 80d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 107d |
+| Tower Research Capital | Intern - AI/ML ✓ | Gurgaon | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8143756) | 64d |
 | Tower Research Capital | Quant Trader/Researcher Intern: Summer 2027 \(NY/Chicago\) ✓ | Chicago | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8024128) | open |
 | Tower Research Capital | Quantitative Researcher Intern, Bachelor's or Master's: Singapore/HK/Shanghai/Sydney ✓ | Singapore | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8168750) | open |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 79d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 106d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | 2027 Graduate Trader: Aarhus ✓ | Aarhus | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4966569101) | open |
@@ -98,7 +101,7 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 ## 🔒 Recently closed
 
-- ~~Summer Trading Internship~~ at Flow Traders (closed 2026-10-16)
+_None in the last 7 days._
 
 ---
 

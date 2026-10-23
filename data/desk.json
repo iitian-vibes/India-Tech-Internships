@@ -538,5 +538,23 @@
     "who": "students graduating between December 2027 and August 2028 (today's third years on a 4-year B.Tech, or Master's/PhD students finishing then) in a technical field; 2027-summer graduates and 2029 graduates are outside this posting",
     "field": "quant",
     "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Bachelors Software Eng: Bengaluru",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160479/",
+    "who": "students currently enrolled in a bachelor's in software engineering, CS or a related branch; graduates who have finished their degree do not meet the enrolment requirement",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Bachelors AI: Bengaluru",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160430/",
+    "who": "students in a bachelor's programme with AI/ML interest; the role is pitched at undergraduates, not master's or PhD students",
+    "field": "software-ai",
+    "verified": true
   }
 ]
