@@ -226,7 +226,7 @@
   },
   {
     "company": "Wadhwani AI",
-    "role": "Associate ML Scientist I",
+    "role": "Associate ML Scientist I / Machine Learning Analyst",
     "deadline": null,
     "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000005875356/Associate-ML-Scientist-I",
     "who": "Bachelor's or Master's in CS / EE / Statistics / Applied Maths / Physics / Economics with 0–2 years of experience",
@@ -285,15 +285,6 @@
     "url": "https://job-boards.eu.greenhouse.io/davinciderivatives/jobs/4046970101",
     "who": "Technical background (maths, physics, engineering, econometrics, quant finance or similar); Python/MATLAB/R/C++",
     "field": "quant",
-    "verified": true
-  },
-  {
-    "company": "Rubrik",
-    "role": "Software Engineer (CPD): Winter Intern, Bangalore (Jan–May 2027)",
-    "deadline": null,
-    "url": "https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537",
-    "who": "2027 graduates of circuital branches only; CGPA 8 and above; Bachelor's/Master's in CS or related; available Jan–May 2027 onsite",
-    "field": "software-ai",
     "verified": true
   },
   {
@@ -564,6 +555,105 @@
     "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160430/",
     "who": "students in a bachelor's programme with AI/ML interest; the role is pitched at undergraduates, not master's or PhD students",
     "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "EPFL School of Life Sciences (Switzerland)",
+    "role": "EPFL Life Sciences Summer Research Program (SRP) 2027",
+    "deadline": "2026-11-15",
+    "url": "https://programs-recruiting.epfl.ch/position/49446925",
+    "who": "Life-science, chemistry, bioengineering and bioinformatics students who will have finished at least two years of a bachelor's by July 2027 (so current second, third and fourth years, and first-year master's); needs GPA 3.75/4 or top 5%. Pure CS/EE/mech students outside a bio-related programme, and anyone past first-year master's, cannot apply.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Hudson River Trading",
+    "role": "PhD Winter Internship: 2027 (New York)",
+    "deadline": "2026-10-30",
+    "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8212741",
+    "who": "PhD students only, graduating between fall 2027 and summer 2029; B.Tech and master's students cannot apply",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Qube Research & Technologies",
+    "role": "2027 Internship or Graduate, Quantitative Research and Trading (Hong Kong / Singapore / Shanghai / Beijing)",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/quberesearchandtechnologies/jobs/8581570002",
+    "who": "penultimate- or final-year bachelor's, master's or PhD students (today's third and fourth years on a B.Tech); first and second years are out",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Squarepoint Capital",
+    "role": "Junior Quant Researcher (incl. Bangalore)",
+    "deadline": null,
+    "url": "https://www.squarepoint-capital.com/open-opportunities?id=239376&gh_jid=239376",
+    "who": "graduates with a quantitative degree; no batch year stated",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Graviton Research Capital",
+    "role": "Quantitative Researcher PhD: 2027 Internship (Amsterdam / London / Singapore)",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899671002",
+    "who": "PhD students graduating in 2028 only",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "IMC Trading",
+    "role": "Quantitative Research Intern 2027 (Hong Kong)",
+    "deadline": null,
+    "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4941208101",
+    "who": "students who have started their penultimate year (third years on a 4-year B.Tech, first-year master's) and can start May/June 2027",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Jump Trading",
+    "role": "Campus Quantitative Trader (Intern): Singapore",
+    "deadline": null,
+    "url": "https://www.jumptrading.com/hr/job?gh_jid=8027941",
+    "who": "students at top UG/grad programmes who want a full-time job in Singapore after graduating; batch year not stated",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Texas Instruments India",
+    "role": "Career Accelerator Program: Test Engineer (Bengaluru)",
+    "deadline": null,
+    "url": "https://careers.ti.com/en/sites/CX/job/25019234/",
+    "who": "New college graduates with a bachelor's in Electrical Engineering; ATE/analog test experience preferred, not required",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Qualcomm India",
+    "role": "2027 Campus Hire: Engineer, Hardware",
+    "deadline": null,
+    "url": "https://careers.qualcomm.com/careers/job/446719783487",
+    "who": "2027 graduates with a bachelor's or master's in EE / ECE / VLSI / Embedded",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Qualcomm India",
+    "role": "2027 Campus Hire: Associate Engineer, Software",
+    "deadline": null,
+    "url": "https://careers.qualcomm.com/careers/job/446719784235",
+    "who": "2027 graduates with a bachelor's or master's in CSE / Communication / ECE",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Qualcomm India",
+    "role": "2027 Campus Hire: System Engineer",
+    "deadline": null,
+    "url": "https://careers.qualcomm.com/careers/job/446721334828",
+    "who": "2027 graduates with a bachelor's in engineering, CS or information systems",
+    "field": "core",
     "verified": true
   }
 ]
