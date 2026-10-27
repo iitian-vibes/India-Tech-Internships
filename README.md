@@ -4,7 +4,7 @@
 
 Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked companies, checked daily.
 
-**80 open** · Last updated: 26 Oct 2026, 14:40 IST · ⭐ Star to get updates
+**80 open** · Last updated: 27 Oct 2026, 14:41 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,7 +14,7 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 108d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 109d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -45,14 +45,14 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 7d |
+| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 8d |
 | Graviton Research Capital | Quantitative Researcher: 2027 Graduate, Gurugram ✓ | Gurugram | [Apply](https://boards.greenhouse.io/gravitonresearchcapital/jobs/8768396002?gh_jid=8768396002) | open |
 | Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
 | Graviton Research Capital | +2 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital) |  |
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 19d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 83d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 110d |
-| Tower Research Capital | Intern - AI/ML ✓ | Gurgaon | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8143756) | 67d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 20d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 84d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 111d |
+| Tower Research Capital | Intern - AI/ML ✓ | Gurgaon | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8143756) | 68d |
 | Tower Research Capital | Quant Trader/Researcher Intern: Summer 2027 \(NY/Chicago\) ✓ | Chicago | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8024128) | open |
 | Tower Research Capital | Quantitative Researcher Intern, Bachelor's or Master's: Singapore/HK/Shanghai/Sydney ✓ | Singapore | [Apply](https://www.tower-research.com/open-positions/?gh_jid=8168750) | open |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
