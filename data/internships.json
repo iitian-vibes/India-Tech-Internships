@@ -88,5 +88,20 @@
     "source": "greenhouse",
     "first_seen": "2026-10-12",
     "field": "software-ai"
+  },
+  {
+    "id": "stripe:greenhouse:8130876",
+    "company": "Stripe",
+    "company_slug": "stripe",
+    "role": "Software Engineer, New Grad",
+    "location": "Bangalore",
+    "section": "india",
+    "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+    "posted": "2026-10-28",
+    "batch": "Any",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-28",
+    "field": "software-ai"
   }
 ]

@@ -664,5 +664,23 @@
     "who": "2027 graduates with a bachelor's in engineering, CS or information systems",
     "field": "core",
     "verified": true
+  },
+  {
+    "company": "Microsoft",
+    "role": "Security Research Intern: India",
+    "deadline": null,
+    "url": "https://apply.careers.microsoft.com/careers/job/1970393557043380",
+    "who": "Bachelor's students in CS, maths, statistics or a related branch with at least one semester left after the internship; final-year students cannot apply",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Microsoft",
+    "role": "Applied Sciences Intern: India",
+    "deadline": null,
+    "url": "https://apply.careers.microsoft.com/careers/job/1970393556917519",
+    "who": "Bachelor's students in CS, EE/ECE, statistics, econometrics or a related branch with at least one semester left after the internship; final-year students cannot apply",
+    "field": "software-ai",
+    "verified": true
   }
 ]
