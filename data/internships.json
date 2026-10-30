@@ -1,20 +1,5 @@
 [
   {
-    "id": "tower-research-capital:greenhouse:8143756",
-    "company": "Tower Research Capital",
-    "company_slug": "tower-research-capital",
-    "role": "Intern - AI/ML",
-    "location": "Gurgaon",
-    "section": "india",
-    "url": "https://www.tower-research.com/open-positions/?gh_jid=8143756",
-    "posted": "2026-08-20",
-    "batch": "Any",
-    "stipend": null,
-    "source": "greenhouse",
-    "first_seen": "2026-10-12",
-    "field": "quant"
-  },
-  {
     "id": "flow-traders:greenhouse:8047166",
     "company": "Flow Traders",
     "company_slug": "flow-traders",
