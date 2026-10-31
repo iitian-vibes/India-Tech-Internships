@@ -81,15 +81,6 @@
     "verified": true
   },
   {
-    "company": "Tower Research Capital",
-    "role": "Intern: AI/ML, Gurgaon (6 months from Jan 2027)",
-    "deadline": null,
-    "url": "https://www.tower-research.com/open-positions/?gh_jid=8143756",
-    "who": "Bachelor's/Master's/PhD (ongoing or completed) from a top university; available 6 months from Jan 2027",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Jump Trading",
     "role": "Campus Quantitative Researcher Intern: Singapore",
     "deadline": null,
@@ -165,7 +156,7 @@
     "company": "Quadeye",
     "role": "Intern: Quant Researcher (Gurugram)",
     "deadline": null,
-    "url": "https://www.quadeye.com/jobs/199893000002318371/intern-quant-strategist-2028-batch?source=CareerSite",
+    "url": "https://www.quadeye.com/jobs/199893000002318371/intern-quant-researcher?source=CareerSite",
     "who": "Pursuing an engineering degree in CS or a related quantitative discipline; DSA + OOP; C++/C preferred",
     "field": "quant",
     "verified": true
@@ -226,10 +217,10 @@
   },
   {
     "company": "Wadhwani AI",
-    "role": "Associate ML Scientist I / Machine Learning Analyst",
+    "role": "Machine Learning Analyst / AMLS: Delhi",
     "deadline": null,
     "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000005875356/Associate-ML-Scientist-I",
-    "who": "Bachelor's or Master's in CS / EE / Statistics / Applied Maths / Physics / Economics with 0–2 years of experience",
+    "who": "Fresh graduates and early-career people with a quantitative bachelor's or master's (engineering, CS, EE, stats, maths, physics, economics) and 0 to 1 years of experience; current students cannot take a permanent role; based in Delhi",
     "field": "software-ai",
     "verified": true
   },
@@ -468,15 +459,6 @@
     "verified": true
   },
   {
-    "company": "Texas Instruments India",
-    "role": "Career Accelerator Program: Digital IC Design Engineer",
-    "deadline": null,
-    "url": "https://careers.ti.com/en/sites/CX/job/25017396/",
-    "who": "new college graduates and final-year B.Tech/BE students in EE or ECE with a 3.0/4.0 GPA or equivalent; experienced engineers apply to TI's lateral roles instead",
-    "field": "core",
-    "verified": true
-  },
-  {
     "company": "Graviton Research Capital",
     "role": "Quantitative Researcher: 2027 Summer Internship (Amsterdam / London / New York / Singapore)",
     "deadline": null,
@@ -578,7 +560,7 @@
   {
     "company": "Hudson River Trading",
     "role": "PhD Winter Internship: 2027 (New York)",
-    "deadline": "2026-10-30",
+    "deadline": "2026-11-06",
     "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8212741",
     "who": "PhD students only, graduating between fall 2027 and summer 2029; B.Tech and master's students cannot apply",
     "field": "quant",
@@ -630,15 +612,6 @@
     "verified": true
   },
   {
-    "company": "Texas Instruments India",
-    "role": "Career Accelerator Program: Test Engineer (Bengaluru)",
-    "deadline": null,
-    "url": "https://careers.ti.com/en/sites/CX/job/25019234/",
-    "who": "New college graduates with a bachelor's in Electrical Engineering; ATE/analog test experience preferred, not required",
-    "field": "core",
-    "verified": true
-  },
-  {
     "company": "Qualcomm India",
     "role": "2027 Campus Hire: Engineer, Hardware",
     "deadline": null,
@@ -684,12 +657,147 @@
     "verified": true
   },
   {
-    "company": "Synopsys",
-    "role": "Formal Verification Internship: Bengaluru",
+    "company": "Max Planck Institutes for Biological Cybernetics and Intelligent Systems + Tübingen AI Center (Germany)",
+    "role": "CaCTüS Computation and Cognition Summer Internship 2027",
+    "deadline": "2026-11-16",
+    "url": "https://www.projects.tuebingen.mpg.de/apply",
+    "who": "Bachelor's and master's students in any year, plus graduates who have not started a PhD, from ML, EE, neuroscience, cognitive science or data backgrounds; once you start a PhD you are out. India counts as a low/middle-income country the programme encourages.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Indian Academy of Sciences / INSA / NASI",
+    "role": "Focus Area Science Technology Summer Fellowship (FAST-SF) 2027",
+    "deadline": "2026-11-30",
+    "url": "https://webjapps.ias.ac.in/fastsf2027/application_instructions.jsp",
+    "who": "BTech second and third years, BSc second years, MSc/MTech first years and dual-degree second to fourth years, but only if your college is in the North-East, Andaman, Bihar, Chhattisgarh, HP, Jharkhand, Lakshadweep, MP, J&K, Ladakh or Uttarakhand; students elsewhere should apply to SRFP instead; final-year BTech and PhD students cannot apply.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Okinawa Institute of Science and Technology (Japan)",
+    "role": "OIST Research Internship, Fall 2027 round",
+    "deadline": "2027-04-15",
+    "url": "https://www.oist.jp/admissions/research-internship/apply-research-internship",
+    "who": "Third- and fourth-year BTech/BS students (anyone in the final two years of a bachelor's by the start date), all master's students, and bachelor's/master's graduates; first and second years too early, PhD students and PhD holders are out.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "WorldQuant",
+    "role": "Quantitative Researcher (Mumbai)",
     "deadline": null,
-    "url": "https://careers.synopsys.com/job/bengaluru/formal-verification-internship/44408/102236641120",
-    "who": "B.E./B.Tech/M.Tech students in ECE, EE, instrumentation or a related branch, 2027 graduates preferred; it runs 12 months full-time in Bengaluru from Oct/Nov 2026, so only students free for a year-long in-office stint can take it",
+    "url": "https://job-boards.greenhouse.io/worldquant/jobs/4673030006",
+    "who": "graduates (bachelor's, master's or PhD) in a quantitative field, including freshers: 'prior finance experience is not required'; no batch year stated, so current students should check they can join on graduation",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Quadeye",
+    "role": "Graduate: Trading Technology & Quant Research Engineer (Gurugram)",
+    "deadline": null,
+    "url": "https://www.quadeye.com/jobs/199893000000707783/graduate-trading-technology-quant-research-engineer?source=CareerSite",
+    "who": "freshers with up to one year's experience (final-year B.Tech students and recent graduates); batch year not stated",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Tower Research Capital",
+    "role": "Quantitative Trader/Researcher Graduate Programme 2027 (London)",
+    "deadline": null,
+    "url": "https://www.tower-research.com/open-positions/?gh_jid=8037824",
+    "who": "Master's and PhD students graduating in 2027 only; B.Tech-only graduates are outside this posting",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Jump Trading",
+    "role": "Campus Quantitative Trader (Intern): Hong Kong / Shanghai",
+    "deadline": null,
+    "url": "https://www.jumptrading.com/hr/job?gh_jid=8027922",
+    "who": "students at top UG/grad programmes who want to work full-time in Hong Kong or Shanghai after graduating; batch year not stated",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Squarepoint Capital",
+    "role": "Intern Quant Researcher (London / Paris / New York / Singapore / Hong Kong)",
+    "deadline": null,
+    "url": "https://www.squarepoint-capital.com/open-opportunities?id=243853&gh_jid=243853",
+    "who": "students in a quantitative degree; no batch year or term stated; Bangalore is not one of the listed offices",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Stripe",
+    "role": "Software Engineer, New Grad (Bengaluru)",
+    "deadline": null,
+    "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+    "who": "final-year BTech/MTech/MS CS (or directly related) students graduating by summer 2027, plus recent grads with under 18 months' work experience (internships don't count); more experienced engineers are out",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Associate Product Manager, University Graduate, 2027 Start",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/101007950268506822-associate-product-manager-university-graduate-2027-start",
+    "who": "final-year students (and recent grads) in CS, engineering, data science, maths or stats starting full-time in 2027, with at least one PM/software internship or TA stint; no internship or TA experience means you don't meet the minimum",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Design Verification Engineer, PhD, Early Career",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/111711283144729286-design-verification-engineer-phd-early-career",
+    "who": "PhD holders (or finishing PhDs) in ECE/EE/CompE with Verilog and EDA-tool experience; BTech/MTech-only candidates are out",
     "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Software Engineer, PhD, Early Career, Networking, 2026 Start",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/126485952255140550-software-engineer-phd-early-career-networking-2026-start",
+    "who": "CS/EE PhD graduates (or finishing PhDs) with distributed-systems/networking work; no PhD means you're out",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Qualcomm India",
+    "role": "2027 Campus Hire_ Sr. System Engineer",
+    "deadline": null,
+    "url": "https://careers.qualcomm.com/careers/job/446721334825",
+    "who": "PhD graduates of 2027 in engineering/CS (no experience needed), or master's holders with 1+ year / bachelor's with 2+ years of systems work; fresh BTech/MTech without experience should use the Engineer / Associate Engineer campus rows instead",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Research Scientist PhD Intern, Summer 2027: Hyderabad",
+    "deadline": "2026-11-06",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/87534302853505734-research-scientist-phd-intern-summer-2027",
+    "who": "PhD students currently enrolled in CS, AI, data science or a related field who are returning to their programme after the internship; bachelor's and master's students cannot apply",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Adobe",
+    "role": "2027 Intern: Research PhD Intern (Adobe Research, Bangalore)",
+    "deadline": null,
+    "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Bangalore/XMLNAME-2027-Intern---Research-PhD-Intern_R173016",
+    "who": "Current PhD students in CS or a related field; bachelor's and master's students are not eligible for this posting",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "IBM",
+    "role": "IBM Research / Software Innovation Lab India Summer Internship 2027",
+    "deadline": null,
+    "url": "https://careers.ibm.com/careers/JobDetail?jobId=137471",
+    "who": "B.Tech/BE, M.Tech/ME, dual-degree and PhD students with 7.0 CGPA (70%) or more in their current degree who can intern May to August 2027; below 7.0 CGPA cannot apply; senior PhDs preferred for the quantum track",
+    "field": "software-ai",
     "verified": true
   }
 ]
