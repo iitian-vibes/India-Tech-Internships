@@ -18,6 +18,15 @@
     "verified": true
   },
   {
+    "company": "Caltech Student-Faculty Programs (USA)",
+    "role": "Caltech SURF 2027",
+    "deadline": "2027-02-22",
+    "url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+    "who": "Undergraduates in any branch who have finished their second semester and will still be enrolled in autumn 2027 (so second, third and pre-final years); final-years graduating before autumn 2027 cannot apply, and you need a Caltech mentor's approval first.",
+    "field": "research",
+    "verified": true
+  },
+  {
     "company": "Indian Academy of Sciences / INSA / NASI",
     "role": "Science Academies' Summer Research Fellowship Programme (SRFP) 2027",
     "deadline": "2026-11-30",
@@ -797,6 +806,42 @@
     "deadline": null,
     "url": "https://careers.ibm.com/careers/JobDetail?jobId=137471",
     "who": "B.Tech/BE, M.Tech/ME, dual-degree and PhD students with 7.0 CGPA (70%) or more in their current degree who can intern May to August 2027; below 7.0 CGPA cannot apply; senior PhDs preferred for the quantum track",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern (Bach) Data Engineering: Bengaluru",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160488/",
+    "who": "bachelor's students in CS, IT or a related branch who can code in Python, Java or Scala; the title pitches it at undergraduates, master's study is listed only as a plus",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Bachelors Systems Eng: Chennai",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160859/",
+    "who": "students currently enrolled in a bachelor's in systems, electrical, electronics, mechanical or a related engineering branch; graduates who have finished their degree do not meet the enrolment requirement",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Bachelors App Eng: Bengaluru",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160861/",
+    "who": "students currently enrolled in an engineering degree, with EE and ME the best fit; graduates who have finished their degree do not meet the enrolment requirement",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Airbus India",
+    "role": "AI for Systems Engineering Intern: Bangalore",
+    "deadline": null,
+    "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Artificial-Intelligence-For-Systems-Engineering-Intern_JR10449573",
+    "who": "master's and PhD students in AI/ML with some formal-methods or verification exposure, free for six months from January 2027; bachelor's students are not eligible",
     "field": "software-ai",
     "verified": true
   }

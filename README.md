@@ -4,7 +4,7 @@
 
 Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked companies, checked daily.
 
-**95 open** · Last updated: 1 Nov 2026, 16:09 IST · ⭐ Star to get updates
+**100 open** · Last updated: 2 Nov 2026, 16:58 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,8 +14,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Stripe | Software Engineer, New Grad ✓ | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 4d |
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 114d |
+| Stripe | Software Engineer, New Grad ✓ | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 5d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 115d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -43,8 +43,10 @@ Prestigious internships for engineering students in India, every branch: softwar
 | American Express | Apprentice - Enterprise Technology Services: Bengaluru / Gurugram / Chennai ✓ | Bengaluru | [Apply](https://careers.americanexpress.com/en/sites/CX_1/job/26009713) | open |
 | Honeywell | Intern Bachelors Software Eng: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160479/) | open |
 | Honeywell | Intern Bachelors AI: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160430/) | open |
+| Honeywell | Intern \(Bach\) Data Engineering: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160488/) | open |
 | Adobe | 2027 Intern: Research PhD Intern \(Adobe Research, Bangalore\) ✓ | Bangalore | [Apply](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Bangalore/XMLNAME-2027-Intern---Research-PhD-Intern_R173016) | open |
 | IBM | IBM Research / Software Innovation Lab India Summer Internship 2027 ✓ | India | [Apply](https://careers.ibm.com/careers/JobDetail?jobId=137471) | open |
+| Airbus India | AI for Systems Engineering Intern: Bangalore ✓ | Bangalore | [Apply](https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Artificial-Intelligence-For-Systems-Engineering-Intern_JR10449573) | open |
 
 ## 📈 Quant
 
@@ -52,13 +54,13 @@ Prestigious internships for engineering students in India, every branch: softwar
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 13d |
+| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 14d |
 | Graviton Research Capital | Quantitative Researcher: 2027 Graduate, Gurugram ✓ | Gurugram | [Apply](https://boards.greenhouse.io/gravitonresearchcapital/jobs/8768396002?gh_jid=8768396002) | open |
 | Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
 | Graviton Research Capital | +2 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital) |  |
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 25d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 89d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 116d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 26d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 90d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 117d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | 2027 Graduate Trader: Aarhus ✓ | Aarhus | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4966569101) | open |
@@ -104,6 +106,8 @@ Prestigious internships for engineering students in India, every branch: softwar
 | Meta | ASIC Engineer Intern, Design Verification: Bangalore ✓ | Bangalore | [Apply](https://www.metacareers.com/profile/job_details/1123459746795309) | open |
 | Meta | ASIC Engineer Intern - Infra Silicon Enablement: Bangalore ✓ | Bangalore | [Apply](https://www.metacareers.com/profile/job_details/939474918844068) | open |
 | Meta | ASIC Engineer Intern, Design: Bangalore ✓ | Bangalore | [Apply](https://www.metacareers.com/profile/job_details/1631077978652493) | open |
+| Honeywell | Intern Bachelors Systems Eng: Chennai ✓ | Chennai | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160859/) | open |
+| Honeywell | Intern Bachelors App Eng: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160861/) | open |
 
 ## 🔬 Research
 
@@ -113,6 +117,7 @@ Prestigious internships for engineering students in India, every branch: softwar
 |---|---|---|---|---|
 | Max Planck CIS \(MPI-SWS, MPI-INF, MPI-IS, MPI-SP\) | Max Planck CS Institutes Summer Internship 2027 ✓ | See posting | [Apply](https://apply.cis.mpg.de/register/internship) | closes 1 Nov |
 | EPFL School of Engineering \(Switzerland\) | EPFL Excellence in Engineering \(E3\) Summer 2027 ✓ | See posting | [Apply](https://programs-recruiting.epfl.ch/position/49446916) | closes 1 Nov |
+| Caltech Student-Faculty Programs \(USA\) | Caltech SURF 2027 ✓ | See posting | [Apply](https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information) | closes 22 Feb |
 | Indian Academy of Sciences / INSA / NASI | Science Academies' Summer Research Fellowship Programme \(SRFP\) 2027 ✓ | See posting | [Apply](https://webjapps.ias.ac.in/fellowship2027/) | closes 30 Nov |
 | Indian Academy of Sciences / INSA / NASI | Focus Area Science Technology Summer Fellowship \(FAST-SF\) 2027 ✓ | See posting | [Apply](https://webjapps.ias.ac.in/fastsf2027/application_instructions.jsp) | closes 30 Nov |
 | King Abdullah University of Science and Technology \(Saudi Arabia\) | KAUST Visiting Student Research Program \(VSRP\) ✓ | See posting | [Apply](https://admissions.kaust.edu.sa/internship/search) | open |
