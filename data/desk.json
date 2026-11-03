@@ -1,23 +1,5 @@
 [
   {
-    "company": "Max Planck CIS (MPI-SWS, MPI-INF, MPI-IS, MPI-SP)",
-    "role": "Max Planck CS Institutes Summer Internship 2027",
-    "deadline": "2026-11-01",
-    "url": "https://apply.cis.mpg.de/register/internship",
-    "who": "CS students with about three years of a bachelor's done by the start date, through master's and PhD; first and second years are too early.",
-    "field": "research",
-    "verified": true
-  },
-  {
-    "company": "EPFL School of Engineering (Switzerland)",
-    "role": "EPFL Excellence in Engineering (E3) Summer 2027",
-    "deadline": "2026-11-01",
-    "url": "https://programs-recruiting.epfl.ch/position/49446916",
-    "who": "Third year and up in any engineering, science or tech branch, plus Master's students; first and second years cannot apply yet, PhD students are out",
-    "field": "research",
-    "verified": true
-  },
-  {
     "company": "Caltech Student-Faculty Programs (USA)",
     "role": "Caltech SURF 2027",
     "deadline": "2027-02-22",
@@ -141,24 +123,6 @@
     "url": "https://job-boards.eu.greenhouse.io/davinciderivatives/jobs/4196845101",
     "who": "Graduating in 2028 from maths/physics/engineering or similar",
     "field": "quant",
-    "verified": true
-  },
-  {
-    "company": "Graviton Research Capital",
-    "role": "Quantitative Researcher: 2027 Graduate, Gurugram",
-    "deadline": null,
-    "url": "https://boards.greenhouse.io/gravitonresearchcapital/jobs/8768396002?gh_jid=8768396002",
-    "who": "Degree in Maths/CS/EE or another highly analytical field; 2027 graduates",
-    "field": "quant",
-    "verified": true
-  },
-  {
-    "company": "Graviton Research Capital",
-    "role": "Software Engineer: 2027 Graduate, Gurugram",
-    "deadline": null,
-    "url": "https://boards.greenhouse.io/gravitonresearchcapital/jobs/8764240002?gh_jid=8764240002",
-    "who": "Degree in CS/Maths/EE or similar; 2027 graduates",
-    "field": "software-ai",
     "verified": true
   },
   {
