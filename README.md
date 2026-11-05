@@ -1,6 +1,9 @@
 <p align="center"><img src="assets/banner.png" alt="India Tech Internships: the internships worth having, every engineering branch" width="100%"></p>
 
 # 🇮🇳 India Tech Internships
+<!-- freshness -->
+> ⚠️ **update delayed.** This list was last refreshed 3 Nov 2026, 16:36 IST. Links may have closed since; check the posting before applying.
+<!-- /freshness -->
 
 Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked companies, checked daily.
 
