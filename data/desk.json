@@ -198,15 +198,6 @@
     "verified": true
   },
   {
-    "company": "Wadhwani AI",
-    "role": "Software Development Engineer I",
-    "deadline": null,
-    "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000005021055/Software-Development-Engineer-I",
-    "who": "Fresher; Bachelor's/Master's in CS, Physics or an engineering discipline",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Goldman Sachs",
     "role": "New Analyst Program: India (2027 batch)",
     "deadline": null,
@@ -234,15 +225,6 @@
     "verified": true
   },
   {
-    "company": "IMC Trading",
-    "role": "2027 Graduate Trader: Aarhus",
-    "deadline": null,
-    "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4966569101",
-    "who": "In your final year of maths, physics, econometrics or a related quantitative field; joining full-time August 2027; no prior markets knowledge needed",
-    "field": "quant",
-    "verified": true
-  },
-  {
     "company": "Da Vinci Derivatives",
     "role": "Graduate Quant: Amsterdam",
     "deadline": null,
@@ -261,20 +243,20 @@
     "verified": true
   },
   {
-    "company": "Microsoft",
-    "role": "Research Sciences Intern: AI for Azure SQL (India)",
-    "deadline": null,
-    "url": "https://apply.careers.microsoft.com/careers/job/1970393556641091",
-    "who": "Currently pursuing a Master's or Doctorate in a relevant field, with at least one more term remaining after the internship. Needs two reference letters plus a cover letter",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Institute of Science and Technology Austria (ISTA)",
     "role": "ISTA Scientific Internship (year-round)",
     "deadline": null,
     "url": "https://phd.ista.ac.at/scientific-internships/",
     "who": "Students or recent graduates of a bachelor's or master's degree in the natural sciences, computer sciences, mathematics, or a related discipline; available for at least 2 months",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Carnegie Mellon University Robotics Institute (USA)",
+    "role": "CMU Robotics Institute Summer Scholars (RISS) 2027",
+    "deadline": "2027-01-20",
+    "url": "https://riss.ri.cmu.edu/apply/",
+    "who": "Undergraduates in any year, Indian students included, who will still be undergrads in summer 2027; graduates and master's students cannot apply.",
     "field": "research",
     "verified": true
   },
@@ -306,15 +288,6 @@
     "verified": true
   },
   {
-    "company": "Microsoft",
-    "role": "Data Science Intern: India",
-    "deadline": null,
-    "url": "https://apply.careers.microsoft.com/careers/job/1970393556917520",
-    "who": "Currently pursuing a Bachelor's or Master's in Data Science, Mathematics, Statistics, Econometrics, Economics, Operations Research, Computer Science or related, with at least one more quarter/semester remaining after the internship; Master's preferred",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Hudson River Trading",
     "role": "Data Scientist Intern: 2027",
     "deadline": null,
@@ -337,15 +310,6 @@
     "role": "Backend Intern (finance middleware): Gurgaon",
     "deadline": null,
     "url": "https://careers.cars24.com/intern/?id=a6a560b13cacdd",
-    "who": "Students and fresh graduates with 0 to 1 years of experience who can work on site in Gurgaon; the posting names no batch or graduation-year cutoff",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Cars24",
-    "role": "Builder - Apprentice, Data Platform (intern): Gurgaon",
-    "deadline": null,
-    "url": "https://careers.cars24.com/builder-apprentice/?id=a6a63311c0e721",
     "who": "Students and fresh graduates with 0 to 1 years of experience who can work on site in Gurgaon; the posting names no batch or graduation-year cutoff",
     "field": "software-ai",
     "verified": true
@@ -505,15 +469,6 @@
   },
   {
     "company": "Honeywell",
-    "role": "Intern Bachelors Software Eng: Bengaluru",
-    "deadline": null,
-    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160479/",
-    "who": "students currently enrolled in a bachelor's in software engineering, CS or a related branch; graduates who have finished their degree do not meet the enrolment requirement",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Honeywell",
     "role": "Intern Bachelors AI: Bengaluru",
     "deadline": null,
     "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160430/",
@@ -528,15 +483,6 @@
     "url": "https://programs-recruiting.epfl.ch/position/49446925",
     "who": "Life-science, chemistry, bioengineering and bioinformatics students who will have finished at least two years of a bachelor's by July 2027 (so current second, third and fourth years, and first-year master's); needs GPA 3.75/4 or top 5%. Pure CS/EE/mech students outside a bio-related programme, and anyone past first-year master's, cannot apply.",
     "field": "research",
-    "verified": true
-  },
-  {
-    "company": "Hudson River Trading",
-    "role": "PhD Winter Internship: 2027 (New York)",
-    "deadline": "2026-11-06",
-    "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8212741",
-    "who": "PhD students only, graduating between fall 2027 and summer 2029; B.Tech and master's students cannot apply",
-    "field": "quant",
     "verified": true
   },
   {
@@ -713,7 +659,7 @@
   {
     "company": "Google",
     "role": "Associate Product Manager, University Graduate, 2027 Start",
-    "deadline": null,
+    "deadline": "2026-11-24",
     "url": "https://www.google.com/about/careers/applications/jobs/results/101007950268506822-associate-product-manager-university-graduate-2027-start",
     "who": "final-year students (and recent grads) in CS, engineering, data science, maths or stats starting full-time in 2027, with at least one PM/software internship or TA stint; no internship or TA experience means you don't meet the minimum",
     "field": "software-ai",
@@ -749,7 +695,7 @@
   {
     "company": "Google",
     "role": "Research Scientist PhD Intern, Summer 2027: Hyderabad",
-    "deadline": "2026-11-06",
+    "deadline": "2026-11-30",
     "url": "https://www.google.com/about/careers/applications/jobs/results/87534302853505734-research-scientist-phd-intern-summer-2027",
     "who": "PhD students currently enrolled in CS, AI, data science or a related field who are returning to their programme after the internship; bachelor's and master's students cannot apply",
     "field": "software-ai",
@@ -774,33 +720,6 @@
     "verified": true
   },
   {
-    "company": "Honeywell",
-    "role": "Intern (Bach) Data Engineering: Bengaluru",
-    "deadline": null,
-    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160488/",
-    "who": "bachelor's students in CS, IT or a related branch who can code in Python, Java or Scala; the title pitches it at undergraduates, master's study is listed only as a plus",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Honeywell",
-    "role": "Intern Bachelors Systems Eng: Chennai",
-    "deadline": null,
-    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160859/",
-    "who": "students currently enrolled in a bachelor's in systems, electrical, electronics, mechanical or a related engineering branch; graduates who have finished their degree do not meet the enrolment requirement",
-    "field": "core",
-    "verified": true
-  },
-  {
-    "company": "Honeywell",
-    "role": "Intern Bachelors App Eng: Bengaluru",
-    "deadline": null,
-    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160861/",
-    "who": "students currently enrolled in an engineering degree, with EE and ME the best fit; graduates who have finished their degree do not meet the enrolment requirement",
-    "field": "core",
-    "verified": true
-  },
-  {
     "company": "Airbus India",
     "role": "AI for Systems Engineering Intern: Bangalore",
     "deadline": null,
@@ -815,6 +734,42 @@
     "deadline": null,
     "url": "https://careers.cars24.com/builder-apprentice/?id=a6ae3662338adf",
     "who": "Students currently in a CS, engineering or related degree, and recent graduates with 0 to 1 years of experience, who can work from the Gurugram office for 3 to 6 months; more than a year of experience is outside the posted range",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Student Researcher, 2027",
+    "deadline": "2026-12-04",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/125423735539671750-student-researcher-2027",
+    "who": "Bachelor's, Master's and PhD students in CS, stats, maths, OR, economics, linguistics or natural sciences who already have some research or project experience in a CS area; you must be enrolled and based in India for the whole project. Graduates who have left their degree cannot apply.",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Rubrik",
+    "role": "Software Engineer (CPD) - Winter Intern",
+    "deadline": null,
+    "url": "https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537",
+    "who": "final-year students graduating in 2027 from circuital branches (CS, ECE, EE and similar) with CGPA 8+, free for Jan-May 2027 onsite in Bangalore; non-circuital branches and other batch years are excluded",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Bachelors Software Eng (Bengaluru)",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160484/",
+    "who": "students currently enrolled in a bachelor's in software engineering, CS or a related branch; graduates who have finished their degree do not meet the enrolment requirement",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern (Bach) Data Engineering (Bengaluru)",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160486/",
+    "who": "bachelor's-level students with basic data engineering knowledge and Python, Java or Scala; no stated year restriction; Bengaluru",
     "field": "software-ai",
     "verified": true
   }
