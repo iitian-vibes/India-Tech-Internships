@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T10:29:31.376Z",
+  "updated_at": "2026-11-08T10:36:45.184Z",
   "counts": {
     "india": 2,
     "remote": 0,
@@ -12,7 +12,7 @@
   "jobs_by_company": {
     "razorpay": 22,
     "groww": 9,
-    "cred": 13,
+    "cred": 14,
     "meesho": 53,
     "paytm": 201,
     "sarvam": 47,
@@ -47,9 +47,9 @@
     "vercel": 87,
     "grafana-labs": 134,
     "canonical": 316,
-    "elastic": 423,
+    "elastic": 425,
     "cloudflare": 464,
-    "stripe": 765,
+    "stripe": 766,
     "twilio": 128,
     "figma": 145,
     "circleci": 16,
@@ -78,6 +78,6 @@
     "myntra": 0,
     "nykaa": 0,
     "xpressbees": 0,
-    "western-digital": 341
+    "western-digital": 338
   }
 }
