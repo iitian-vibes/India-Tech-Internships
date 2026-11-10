@@ -772,5 +772,32 @@
     "who": "bachelor's-level students with basic data engineering knowledge and Python, Java or Scala; no stated year restriction; Bengaluru",
     "field": "software-ai",
     "verified": true
+  },
+  {
+    "company": "Quadeye",
+    "role": "Intern: Software Developer (Product) (Gurugram)",
+    "deadline": null,
+    "url": "https://www.quadeye.com/jobs/199893000002318440/intern-software-developer-product?source=CareerSite",
+    "who": "current engineering students in CS or a related technical branch who can build web apps in Python (Django) and React or Angular; the posting names no year, so any year can apply, but graduates and non-engineering degrees are outside it",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Quadeye",
+    "role": "Intern: Systems Engineer (Gurugram)",
+    "deadline": null,
+    "url": "https://www.quadeye.com/jobs/199893000002318430/intern-systems-engineer?source=CareerSite",
+    "who": "current CS or computer engineering students (or a close technical branch) with strong C++ or C and operating-systems basics; the posting names no year, so any year can apply, but it asks for a leading institution and graduates are outside it",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Synopsys",
+    "role": "Apprentice (Technical-Engineer), Digital Library Characterization (Bengaluru)",
+    "deadline": null,
+    "url": "https://careers.synopsys.com/job/bengaluru/apprentice-technical-engineer/44408/102584673248",
+    "who": "ECE (or related) B.E/B.Tech graduates of 2025 or 2026 who are not working full-time and have no M.Tech; current students, M.Tech holders and older batches are excluded",
+    "field": "core",
+    "verified": true
   }
 ]
