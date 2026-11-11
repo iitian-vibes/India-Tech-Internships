@@ -799,5 +799,14 @@
     "who": "ECE (or related) B.E/B.Tech graduates of 2025 or 2026 who are not working full-time and have no M.Tech; current students, M.Tech holders and older batches are excluded",
     "field": "core",
     "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Masters Data Science (Bengaluru)",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/161958/",
+    "who": "master's students in data science, CS or a related field with Python or R, machine learning and Tableau or Power BI; Honeywell's bachelor's interns have separate postings; Bengaluru",
+    "field": "software-ai",
+    "verified": true
   }
 ]
