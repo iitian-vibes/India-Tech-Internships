@@ -180,6 +180,42 @@
     "verified": true
   },
   {
+    "company": "Hult Prize Foundation",
+    "role": "Hult Prize 2027",
+    "deadline": null,
+    "url": "https://www.hultprize.org/register",
+    "who": "Teams of 2–4 enrolled students, 18+ by 28 Feb 2027",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Major League Hacking",
+    "role": "MLH Fellowship",
+    "deadline": null,
+    "url": "https://fellowship.mlh.io/",
+    "who": "Students and early-career worldwide; rolling per batch",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Tata Consultancy Services",
+    "role": "TCS CodeVita Season 14",
+    "deadline": null,
+    "url": "https://codevita.tcsapps.com/",
+    "who": "science or engineering UG/PG students graduating 2027 to 2030, so first year through final year now; 2026 graduates are out",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Microsoft",
+    "role": "Microsoft Imagine Cup 2027",
+    "deadline": "2027-02-28",
+    "url": "https://imaginecup.microsoft.com/en-us",
+    "who": "founders aged 18+ in any year of study, recent graduates or working: the startup must be a registered company founded on or after 2 Nov 2024; an idea without a registered company cannot enter",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
     "company": "Google",
     "role": "Silicon Engineering Intern, PhD: Summer 2027",
     "deadline": "2027-04-30",
@@ -279,6 +315,24 @@
     "verified": true
   },
   {
+    "company": "Google / Kaggle",
+    "role": "Kaggle: Google: The Gemma 4 Developer Agent Competition",
+    "deadline": "2026-11-25",
+    "url": "https://www.kaggle.com/competitions/gemma-4-developer-agent",
+    "who": "any year, anywhere, solo or in a team, no degree or affiliation required; you need enough GPU to fine-tune a small model",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Enveda / Kaggle",
+    "role": "Kaggle: Enveda CASMI 2026: Molecule ID From Mass Spectra",
+    "deadline": "2026-12-07",
+    "url": "https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra",
+    "who": "any year, anywhere, solo or in a team, no degree or affiliation required; chemistry/ML crossover suits chem, ChemE and bio-tech students",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
     "company": "Institute of Science and Technology Austria (ISTA)",
     "role": "ISTA Scientific Internship (year-round)",
     "deadline": null,
@@ -321,6 +375,15 @@
     "url": "https://www.jumptrading.com/hr/job?gh_jid=8027898",
     "who": "Students graduating in 2027 from top UG/grad programmes who want to work full-time in Hong Kong or Shanghai after graduating; strong programming and/or quant skills",
     "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "National Football League / Kaggle",
+    "role": "Kaggle: NFL Big Data Bowl 2027",
+    "deadline": "2027-01-06",
+    "url": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027",
+    "who": "anyone 18+ with a Kaggle account, any year, solo or teams up to five; students can enter the University Track; under-18s can take part but cannot win prizes",
+    "field": "hackathons",
     "verified": true
   },
   {
@@ -576,6 +639,33 @@
     "verified": true
   },
   {
+    "company": "Google Quantum AI (on Kaggle)",
+    "role": "Kaggle: Google Quantum AI – Verifiable Quantum Circuit Compilation",
+    "deadline": "2027-01-13",
+    "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation",
+    "who": "Anyone with a Kaggle account, solo or team, any year or branch; no quantum background needed. Ends where Kaggle's standard rules stop (age of majority / sanctioned countries).",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Kaggle",
+    "role": "Kaggle: Name That LLM",
+    "deadline": "2027-01-06",
+    "url": "https://www.kaggle.com/competitions/name-that-llm",
+    "who": "Anyone with a Kaggle account, solo or team, any year or branch; a good first NLP competition since ten places pay equally. Ends where Kaggle's standard rules stop (age of majority / sanctioned countries).",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Kaggle",
+    "role": "Kaggle: Squares in Squares",
+    "deadline": "2027-07-11",
+    "url": "https://www.kaggle.com/competitions/squares-in-squares",
+    "who": "Anyone with a Kaggle account, solo or team, any year or branch; maths/optimisation skills matter more than ML. Ends where Kaggle's standard rules stop (age of majority / sanctioned countries).",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
     "company": "Microsoft",
     "role": "Security Research Intern: India",
     "deadline": null,
@@ -720,6 +810,24 @@
     "verified": true
   },
   {
+    "company": "NASA (Earth Science Division / Science Mission Directorate)",
+    "role": "NASA Space Apps Challenge 2026",
+    "deadline": "2026-11-15",
+    "url": "https://www.spaceappschallenge.org/2026/",
+    "who": "anyone, any year, any branch, school or college, solo or in a team; join an Indian local event or a virtual one; you must register to be eligible for Global Judging",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Kiro (Amazon Web Services)",
+    "role": "Kiroween 2026",
+    "deadline": "2026-12-04",
+    "url": "https://kiroween.devpost.com/",
+    "who": "anyone 18+ in India, solo or a team of up to three; all-student teams can also win the student prizes; only projects started on or after 30 October count",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
     "company": "Airbus India",
     "role": "AI for Systems Engineering Intern: Bangalore",
     "deadline": null,
@@ -852,6 +960,15 @@
     "url": "https://careers.honeywell.com/en/sites/Honeywell/job/161548/",
     "who": "students currently enrolled in a bachelor's in electrical engineering or a related branch; graduates who have finished the degree do not meet the enrolment requirement",
     "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Google (Google Cloud AI Research) / Kaggle",
+    "role": "Kaggle: Google: Agent Harness on Physical-Engineering's Last Exam",
+    "deadline": "2027-01-05",
+    "url": "https://www.kaggle.com/competitions/physical-engineerings-last-exam",
+    "who": "anyone 18 or over with a Kaggle account, in any year or branch, solo or in a team of up to five; India is eligible (the rules bar only sanctioned regions); engineering and CS students suit it best; needs coding-agent and LLM skills, no licensed-engineer background required",
+    "field": "hackathons",
     "verified": true
   }
 ]
