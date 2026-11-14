@@ -1,10 +1,46 @@
 [
   {
+    "company": "ETH Zurich, Dept of Computer Science",
+    "role": "ETH Zurich Student Summer Research Fellowship 2027",
+    "deadline": "2026-12-16",
+    "url": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html",
+    "who": "Bachelor's or Master's students in CS or a closely related field (EE, maths, physics) who will have completed two years of study by July 2027 and whose expected graduation is 2028 or later; final-year students graduating 2027 cannot apply",
+    "field": "research",
+    "verified": true
+  },
+  {
     "company": "Caltech Student-Faculty Programs (USA)",
     "role": "Caltech SURF 2027",
     "deadline": "2027-02-22",
     "url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
     "who": "Undergraduates in any branch who have finished their second semester and will still be enrolled in autumn 2027 (so second, third and pre-final years); final-years graduating before autumn 2027 cannot apply, and you need a Caltech mentor's approval first.",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Amgen Foundation (hosts: Kyoto, UTokyo, NUS, Tsinghua, IIIT Hyderabad)",
+    "role": "Amgen Scholars Asia 2027",
+    "deadline": "2027-02-01",
+    "url": "https://amgenscholars.com/asia-program/",
+    "who": "Undergraduates at a university in Asia (Indian colleges count) who will have completed at least their first year by the time the programme starts and are not graduating before it begins; final-years graduating in 2027 cannot apply; TOEFL 72 / IELTS 5.5 if English is not your first language",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "University of Tokyo Graduate School of Science",
+    "role": "UTokyo UTRIP 2027",
+    "deadline": "2026-12-25",
+    "url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+    "who": "Undergraduates (BTech/BSc, natural science or related) who have finished at least one full year and will return to a bachelor's programme after; priority to third-years of a four-year degree, other years encouraged to apply; final-years who will graduate before the programme cannot apply",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "CERN",
+    "role": "CERN Summer Student Programme 2027",
+    "deadline": "2027-01-21",
+    "url": "https://careers.cern/jobs/cern-summer-student-programme-2026-member-and-non-member-state/",
+    "who": "Bachelor's or Master's students (not PhD) in physics, engineering, computer science or a related field who will have completed at least 6 semesters (3 academic years) of full-time study by the start of the summer 2027; first and second years cannot apply; must not have done the programme before",
     "field": "research",
     "verified": true
   },
@@ -387,15 +423,6 @@
     "verified": true
   },
   {
-    "company": "Qualcomm India",
-    "role": "Interim Engineering Intern 2027: Software",
-    "deadline": null,
-    "url": "https://careers.qualcomm.com/careers/job/446719785836",
-    "who": "2027-graduating B.Tech/M.Tech students in CSE, ECE or communication engineering; other branches and other batches are not listed",
-    "field": "core",
-    "verified": true
-  },
-  {
     "company": "Graviton Research Capital",
     "role": "Quantitative Researcher: 2027 Summer Internship (Amsterdam / London / New York / Singapore)",
     "deadline": null,
@@ -447,15 +474,6 @@
     "url": "https://www.metacareers.com/profile/job_details/1631077978652493",
     "who": "current students in EE, ECE, computer engineering or a related branch (bachelor's, master's or PhD) who will return to their degree after the internship; graduates are not eligible",
     "field": "core",
-    "verified": true
-  },
-  {
-    "company": "American Express",
-    "role": "Apprentice - Enterprise Technology Services: Bengaluru / Gurugram / Chennai",
-    "deadline": null,
-    "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26009713",
-    "who": "people who have already finished a bachelor's or master's in CS, IT or another technical discipline (fresh 2026 graduates fit); current students are not eligible",
-    "field": "software-ai",
     "verified": true
   },
   {
@@ -648,15 +666,6 @@
     "verified": true
   },
   {
-    "company": "Stripe",
-    "role": "Software Engineer, New Grad (Bengaluru)",
-    "deadline": null,
-    "url": "https://stripe.com/jobs/search?gh_jid=8130876",
-    "who": "final-year BTech/MTech/MS CS (or directly related) students graduating by summer 2027, plus recent grads with under 18 months' work experience (internships don't count); more experienced engineers are out",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Google",
     "role": "Associate Product Manager, University Graduate, 2027 Start",
     "deadline": "2026-11-24",
@@ -693,19 +702,10 @@
     "verified": true
   },
   {
-    "company": "Google",
-    "role": "Research Scientist PhD Intern, Summer 2027: Hyderabad",
-    "deadline": "2026-11-30",
-    "url": "https://www.google.com/about/careers/applications/jobs/results/87534302853505734-research-scientist-phd-intern-summer-2027",
-    "who": "PhD students currently enrolled in CS, AI, data science or a related field who are returning to their programme after the internship; bachelor's and master's students cannot apply",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Adobe",
     "role": "2027 Intern: Research PhD Intern (Adobe Research, Bangalore)",
     "deadline": null,
-    "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Bangalore/XMLNAME-2027-Intern---Research-PhD-Intern_R173016",
+    "url": "https://careers.adobe.com/us/en/job/R173016",
     "who": "Current PhD students in CS or a related field; bachelor's and master's students are not eligible for this posting",
     "field": "software-ai",
     "verified": true
@@ -807,6 +807,51 @@
     "url": "https://careers.honeywell.com/en/sites/Honeywell/job/161958/",
     "who": "master's students in data science, CS or a related field with Python or R, machine learning and Tableau or Power BI; Honeywell's bachelor's interns have separate postings; Bengaluru",
     "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "International Centre for Theoretical Sciences (ICTS-TIFR), Bengaluru",
+    "role": "ICTS-TIFR S. N. Bhatt Memorial Excellence Fellowship Program 2027",
+    "deadline": "2026-12-15",
+    "url": "https://www.icts.res.in/academic/summer-research-program",
+    "who": "Science, maths and engineering undergraduates in third or fourth year (finishing year 3 or 4 by May 2027); exceptional second-years may apply; master's students not in their final year; final-year master's students cannot apply",
+    "field": "research",
+    "verified": true
+  },
+  {
+    "company": "Graviton Research Capital",
+    "role": "Quantitative Researcher: Gurugram",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/4004918002",
+    "who": "Graduates (and final-year students) from IITs / top-tier institutes in engineering, maths or CS; no finance knowledge needed",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Graviton Research Capital",
+    "role": "Quantitative Analyst: Gurugram",
+    "deadline": null,
+    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/6947471002",
+    "who": "Graduates (and final-year students) in engineering, maths or CS from top-tier global institutes; foundational C/C++ and scripting skills",
+    "field": "quant",
+    "verified": true
+  },
+  {
+    "company": "Qualcomm India",
+    "role": "GPU Architecture & AI/ML Engineer | IIT or NIT Freshers | 0–3 Years",
+    "deadline": null,
+    "url": "https://careers.qualcomm.com/careers/job/446720933788",
+    "who": "2027 graduates and fresh/early-career engineers (0–3 years) with a B.Tech or M.Tech in CS, ECE, EE or computer engineering from a Tier 1 or Tier 2 institute; not for first-to-third-years",
+    "field": "core",
+    "verified": true
+  },
+  {
+    "company": "Honeywell",
+    "role": "Intern Bachelors Hardware Eng (Hyderabad)",
+    "deadline": null,
+    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/161548/",
+    "who": "students currently enrolled in a bachelor's in electrical engineering or a related branch; graduates who have finished the degree do not meet the enrolment requirement",
+    "field": "core",
     "verified": true
   }
 ]
