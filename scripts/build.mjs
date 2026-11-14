@@ -16,7 +16,11 @@ const today = new Date(now.getTime() + 5.5 * 3600e3).toISOString().slice(0, 10);
 
 async function deskRows() {
   try {
-    const all = await fetchJson('https://raw.githubusercontent.com/iitian-vibes/deadline-desk/main/data/opportunities.json');
+    // deadline-desk is private since 2026-11-15: the daily workflow clones it with a read-only deploy key
+    // and points DESK_FILE at the dataset. The raw URL stays as a fallback for local runs.
+    const all = process.env.DESK_FILE
+      ? JSON.parse(readFileSync(process.env.DESK_FILE, 'utf8'))
+      : await fetchJson('https://raw.githubusercontent.com/iitian-vibes/deadline-desk/main/data/opportunities.json');
     return filterDeskRows(all);
   } catch (e) { console.error(`desk fetch failed, keeping previous desk rows: ${e.message}`); return null; }
 }

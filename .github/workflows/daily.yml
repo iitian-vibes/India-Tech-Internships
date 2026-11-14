@@ -18,6 +18,15 @@ jobs:
         with: { ssh-key: '${{ secrets.BOT_DEPLOY_KEY }}' }
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      # deadline-desk is private since 2026-11-15; read its dataset with a read-only deploy key.
+      # If this step fails, build.mjs falls back to the raw URL and then to yesterday's desk rows.
+      - name: Read the Deadline Desk dataset
+        continue-on-error: true
+        env: { KEY: '${{ secrets.DESK_READ_KEY }}' }
+        run: |
+          mkdir -p ~/.ssh && printf '%s\n' "$KEY" > ~/.ssh/desk && chmod 600 ~/.ssh/desk
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/desk -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new" git clone -q --depth 1 git@github.com:iitian-vibes/deadline-desk.git /tmp/desk
+          echo "DESK_FILE=/tmp/desk/data/opportunities.json" >> "$GITHUB_ENV"
       - run: npm test
       # Fix round 1, findings 4 & 5: a cancelled/missed approve.yml run (concurrency group collision, runner
       # outage) is picked up here within a day. The sweep is idempotent: issues already applied in a prior

@@ -217,3 +217,13 @@ test('planWrites bundles all five data files together on a successful, non-dry r
   assert.deepEqual(plan['data/meta.json'], ok.meta);
   assert.deepEqual(plan['data/desk.json'], [{ company: 'Jane Street' }]);
 });
+
+test('desk competition rows (OPEN/ROLLING) land in the hackathons field; EXPECTED ones are dropped', () => {
+  const rows = filterDeskRows([
+    opp({ id: 'h1', lane: 'C-competition', kind: 'Competition', status: 'OPEN', name: 'Kiroween 2026', deadline: '2026-12-04' }),
+    opp({ id: 'h2', lane: 'C-competition', kind: 'Competition', status: 'ROLLING', name: 'TCS CodeVita Season 14' }),
+    opp({ id: 'h3', lane: 'C-competition', kind: 'Competition', status: 'EXPECTED', name: 'SIH 2027' }),
+  ]);
+  assert.equal(rows.length, 2);
+  assert.ok(rows.every((r) => r.field === 'hackathons'));
+});

@@ -206,6 +206,7 @@ const FIELDS = [
   ['quant', '📈 Quant', 'quant'],
   ['core', '⚙️ Core Engineering', 'core'],
   ['research', '🔬 Research', 'research'],
+  ['hackathons', '🏆 Hackathons & competitions', 'competitions'],
 ];
 const deskTopicLink = (topicKey) => `📅 [Get these deadlines in your calendar](https://iitianvibes.com/blog/deadline-desk/?topics=${topicKey}&utm_source=github&utm_medium=readme#calendar)`;
 
@@ -225,11 +226,11 @@ export function renderReadme({ rows, closed, desk, meta, companies = [] }) {
   const closedList = closed.length
     ? closed.map((r) => `- ~~${cell(r.role)}~~ at ${cell(r.company)} (closed ${r.closed_at})`).join('\n') + '\n'
     : '_None in the last 7 days._\n';
-  return `<p align="center"><img src="assets/banner.png" alt="India Tech Internships: the internships worth having, every engineering branch" width="100%"></p>
+  return `<p align="center"><img src="assets/banner.png" alt="India Tech Internships: the internships and hackathons worth your time, every engineering branch" width="100%"></p>
 
 # 🇮🇳 India Tech Internships
 
-Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked companies, checked daily.
+Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
 **${c.total} open** · Last updated: ${meta.updated_at ? istStamp(meta.updated_at) : 'not yet'} · ⭐ Star to get updates
 

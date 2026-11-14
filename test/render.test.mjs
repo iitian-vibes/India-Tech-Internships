@@ -157,7 +157,7 @@ test('renderReadme integration: the three real duplicate examples render exactly
 test('README has header with updated intro, title, star line, and no em-dashes', () => {
   const md = renderReadme({ rows: [row({})], closed: [], desk: [], meta });
   assert.match(md, /^# 🇮🇳 India Tech Internships$/m);
-  assert.match(md, /Prestigious internships for engineering students in India, every branch: software and AI, quant, core engineering and research\. Hand-picked companies, checked daily\./);
+  assert.match(md, /Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research\. Hand-picked, checked daily\./);
   assert.match(md, /Last updated: 12 Oct 2026, 09:14 IST/);
   assert.match(md, /⭐ Star to get updates/);
   assert.doesNotMatch(md, /—/);

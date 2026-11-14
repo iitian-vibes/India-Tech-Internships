@@ -135,11 +135,14 @@ function isEligibleDeskRow(r) {
   if (!openOrRolling) return false;
   if (r.lane === 'B-industry') return r.kind === 'Internship' || r.kind === 'Full-time';
   if (r.lane === 'A-research') return (r.kind === 'Internship' || r.kind === 'Fellowship') && RESEARCH_INTERN_RE.test(`${r.name ?? ''} ${r.what ?? ''}`);
+  // 2026-11-15: one public repo. Hackathons and competitions from the Desk get their own section.
+  if (r.lane === 'C-competition') return true;
   return false;
 }
 
 export function deskFieldOf(r) {
   if (r.lane === 'A-research') return 'research';
+  if (r.lane === 'C-competition') return 'hackathons';
   return DESK_SUB_FIELD[r.sub] ?? 'software-ai';
 }
 
