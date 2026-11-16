@@ -4,7 +4,7 @@
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
-**113 open** · Last updated: 15 Nov 2026, 16:47 IST · ⭐ Star to get updates
+**116 open** · Last updated: 16 Nov 2026, 17:18 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,7 +14,7 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 128d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 129d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -22,7 +22,7 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Google | Software Engineering PhD Intern: Summer 2027 ✓ | See posting | [Apply](https://www.google.com/about/careers/applications/jobs/results/109976286780105414-software-engineering-phd-intern-summer-2027) | open |
 | Google | Software Engineer, PhD, Early Career 2026 \(Bengaluru / Hyderabad\) ✓ | Bengaluru | [Apply](https://www.google.com/about/careers/applications/jobs/results/107018346561446598-software-engineer-phd-early-career-2026) | open |
 | Google | Associate Product Manager, University Graduate, 2027 Start ✓ | See posting | [Apply](https://www.google.com/about/careers/applications/jobs/results/101007950268506822-associate-product-manager-university-graduate-2027-start) | closes 24 Nov |
-| Google | +2 more at Google |  | [Careers](https://www.google.com/about/careers/applications/jobs/results/109976286780105414-software-engineering-phd-intern-summer-2027) |  |
+| Google | +5 more at Google |  | [Careers](https://www.google.com/about/careers/applications/jobs/results/109976286780105414-software-engineering-phd-intern-summer-2027) |  |
 | Qualcomm India | 2027 Campus Hire: Engineer, Software ✓ | See posting | [Apply](https://careers.qualcomm.com/careers/job/446719783573) | open |
 | Qualcomm India | 2027 Campus Hire: Associate Engineer, Software ✓ | See posting | [Apply](https://careers.qualcomm.com/careers/job/446719784235) | open |
 | Wadhwani AI | Machine Learning Analyst / AMLS: Delhi ✓ | Delhi | [Apply](https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000005875356/Associate-ML-Scientist-I) | open |
@@ -52,13 +52,13 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 27d |
+| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 28d |
 | Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
 | Graviton Research Capital | Quantitative Researcher: 2027 Graduates \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002) | open |
 | Graviton Research Capital | +3 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital) |  |
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 39d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 103d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 130d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 40d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 104d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 131d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | Machine Learning Engineer Intern: Summer 2027 ✓ | See posting | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4962456101) | open |

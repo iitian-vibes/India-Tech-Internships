@@ -970,5 +970,32 @@
     "who": "anyone 18 or over with a Kaggle account, in any year or branch, solo or in a team of up to five; India is eligible (the rules bar only sanctioned regions); engineering and CS students suit it best; needs coding-agent and LLM skills, no licensed-engineer background required",
     "field": "hackathons",
     "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Software Engineer, AI/ML, PhD, Early Career, 2026",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/127602843300307654-software-engineer-aiml-phd-early-career-2026",
+    "who": "CS/EE PhD graduates (or finishing PhDs) with a year of ML work, such as speech, RL or ML infrastructure; no PhD means you're out",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Software Engineer, Fleet Analytics, PhD, Early Career, 2026",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/141496697866855110-software-engineer-fleet-analytics-phd-early-career-2026",
+    "who": "PhD graduates (or finishing PhDs) in CS, EE, statistics, applied maths or operations research who do optimisation (LP/MIP) research; Google also accepts equivalent practical experience",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Google",
+    "role": "Software Engineer, Persistent Disk, PhD, Early Career, 2026",
+    "deadline": null,
+    "url": "https://www.google.com/about/careers/applications/jobs/results/95785531123606214-software-engineer-persistent-disk-phd-early-career-2026",
+    "who": "CS/EE PhD graduates (or finishing PhDs) who have published on storage or distributed systems; no PhD means you're out",
+    "field": "software-ai",
+    "verified": true
   }
 ]
