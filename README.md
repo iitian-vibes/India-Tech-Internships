@@ -1,6 +1,9 @@
 <p align="center"><img src="assets/banner.png" alt="India Tech Internships: the internships and hackathons worth your time, every engineering branch" width="100%"></p>
 
 # 🇮🇳 India Tech Internships
+<!-- freshness -->
+> ⚠️ **update delayed.** This list was last refreshed 16 Nov 2026, 17:18 IST. Links may have closed since; check the posting before applying.
+<!-- /freshness -->
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
