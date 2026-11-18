@@ -1,13 +1,10 @@
 <p align="center"><img src="assets/banner.png" alt="India Tech Internships: the internships and hackathons worth your time, every engineering branch" width="100%"></p>
 
 # 🇮🇳 India Tech Internships
-<!-- freshness -->
-> ⚠️ **update delayed.** This list was last refreshed 16 Nov 2026, 17:18 IST. Links may have closed since; check the posting before applying.
-<!-- /freshness -->
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
-**116 open** · Last updated: 16 Nov 2026, 17:18 IST · ⭐ Star to get updates
+**115 open** · Last updated: 18 Nov 2026, 17:28 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -17,7 +14,7 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 129d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 131d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -55,13 +52,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Graviton Research Capital | Quantitative Researcher - 2027 Summer Internship ✓ | Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | 28d |
-| Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
-| Graviton Research Capital | Quantitative Researcher: 2027 Graduates \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002) | open |
-| Graviton Research Capital | +3 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital) |  |
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 40d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 104d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 131d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 42d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 106d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 133d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | Machine Learning Engineer Intern: Summer 2027 ✓ | See posting | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4962456101) | open |
@@ -82,6 +75,10 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Quadeye | Intern: Quant Researcher \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000002318371/intern-quant-researcher?source=CareerSite) | open |
 | Quadeye | Graduate: Trading Technology & Quant Research Engineer \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000000707783/graduate-trading-technology-quant-research-engineer?source=CareerSite) | open |
 | Goldman Sachs | New Analyst Program: India \(2027 batch\) ✓ | India | [Apply](https://www.goldmansachs.com/careers/students/programs-and-internships/india/new-analyst-program) | open |
+| Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
+| Graviton Research Capital | Quantitative Researcher: 2027 Summer Internship \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | open |
+| Graviton Research Capital | Quantitative Researcher: 2027 Graduates \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002) | open |
+| Graviton Research Capital | +3 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) |  |
 | DRW | Quantitative Research Intern \(Singapore\) ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/drweng/jobs/8014915) | open |
 | Qube Research & Technologies | 2027 Internship or Graduate, Quantitative Research and Trading \(Hong Kong / Singapore / Shanghai / Beijing\) ✓ | Hong Kong | [Apply](https://job-boards.greenhouse.io/quberesearchandtechnologies/jobs/8581570002) | open |
 | Squarepoint Capital | Junior Quant Researcher \(incl. Bangalore\) ✓ | Bangalore | [Apply](https://www.squarepoint-capital.com/open-opportunities?id=239376&gh_jid=239376) | open |
@@ -124,8 +121,6 @@ Prestigious internships, hackathons and competitions for engineering students in
 | King Abdullah University of Science and Technology \(Saudi Arabia\) | KAUST Visiting Student Research Program \(VSRP\) ✓ | See posting | [Apply](https://admissions.kaust.edu.sa/internship/search) | open |
 | Institute of Science and Technology Austria \(ISTA\) | ISTA Scientific Internship \(year-round\) ✓ | See posting | [Apply](https://phd.ista.ac.at/scientific-internships/) | open |
 | Carnegie Mellon University Robotics Institute \(USA\) | CMU Robotics Institute Summer Scholars \(RISS\) 2027 ✓ | See posting | [Apply](https://riss.ri.cmu.edu/apply/) | closes 20 Jan |
-| EPFL School of Life Sciences \(Switzerland\) | EPFL Life Sciences Summer Research Program \(SRP\) 2027 ✓ | See posting | [Apply](https://programs-recruiting.epfl.ch/position/49446925) | closes 15 Nov |
-| Max Planck Institutes for Biological Cybernetics and Intelligent Systems + Tübingen AI Center \(Germany\) | CaCTüS Computation and Cognition Summer Internship 2027 ✓ | See posting | [Apply](https://www.projects.tuebingen.mpg.de/apply) | closes 16 Nov |
 | Okinawa Institute of Science and Technology \(Japan\) | OIST Research Internship, Fall 2027 round ✓ | See posting | [Apply](https://www.oist.jp/admissions/research-internship/apply-research-internship) | closes 15 Apr |
 | International Centre for Theoretical Sciences \(ICTS-TIFR\), Bengaluru | ICTS-TIFR S. N. Bhatt Memorial Excellence Fellowship Program 2027 ✓ | See posting | [Apply](https://www.icts.res.in/academic/summer-research-program) | closes 15 Dec |
 
@@ -145,12 +140,15 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Google Quantum AI \(on Kaggle\) | Kaggle: Google Quantum AI – Verifiable Quantum Circuit Compilation ✓ | See posting | [Apply](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation) | closes 13 Jan |
 | Kaggle | Kaggle: Name That LLM ✓ | See posting | [Apply](https://www.kaggle.com/competitions/name-that-llm) | closes 6 Jan |
 | Kaggle | Kaggle: Squares in Squares ✓ | See posting | [Apply](https://www.kaggle.com/competitions/squares-in-squares) | closes 11 Jul |
-| NASA \(Earth Science Division / Science Mission Directorate\) | NASA Space Apps Challenge 2026 ✓ | See posting | [Apply](https://www.spaceappschallenge.org/2026/) | closes 15 Nov |
 | Kiro \(Amazon Web Services\) | Kiroween 2026 ✓ | See posting | [Apply](https://kiroween.devpost.com/) | closes 4 Dec |
 | Google \(Google Cloud AI Research\) / Kaggle | Kaggle: Google: Agent Harness on Physical-Engineering's Last Exam ✓ | See posting | [Apply](https://www.kaggle.com/competitions/physical-engineerings-last-exam) | closes 5 Jan |
+| Atlassian | Codegeist 2026 ✓ | See posting | [Apply](https://codegeist2026.devpost.com/) | closes 22 Dec |
+| Reddit | Reddit's Game of the Day Hackathon ✓ | See posting | [Apply](https://redditgameofday2026.devpost.com/) | closes 8 Dec |
+| Perfios with Techfest, IIT Bombay | Agentic AI in BFSI: Hackathon 2026 ✓ | See posting | [Apply](https://techfest.org/competitions/Agentic-AI) | closes 25 Nov |
 
 ## 🔒 Recently closed
 
+- ~~Quantitative Researcher - 2027 Summer Internship~~ at Graviton Research Capital (closed 2026-11-18)
 - ~~Software Engineer, New Grad~~ at Stripe (closed 2026-11-14)
 
 ---

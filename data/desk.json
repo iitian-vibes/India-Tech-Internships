@@ -558,15 +558,6 @@
     "verified": true
   },
   {
-    "company": "EPFL School of Life Sciences (Switzerland)",
-    "role": "EPFL Life Sciences Summer Research Program (SRP) 2027",
-    "deadline": "2026-11-15",
-    "url": "https://programs-recruiting.epfl.ch/position/49446925",
-    "who": "Life-science, chemistry, bioengineering and bioinformatics students who will have finished at least two years of a bachelor's by July 2027 (so current second, third and fourth years, and first-year master's); needs GPA 3.75/4 or top 5%. Pure CS/EE/mech students outside a bio-related programme, and anyone past first-year master's, cannot apply.",
-    "field": "research",
-    "verified": true
-  },
-  {
     "company": "Qube Research & Technologies",
     "role": "2027 Internship or Graduate, Quantitative Research and Trading (Hong Kong / Singapore / Shanghai / Beijing)",
     "deadline": null,
@@ -684,15 +675,6 @@
     "verified": true
   },
   {
-    "company": "Max Planck Institutes for Biological Cybernetics and Intelligent Systems + Tübingen AI Center (Germany)",
-    "role": "CaCTüS Computation and Cognition Summer Internship 2027",
-    "deadline": "2026-11-16",
-    "url": "https://www.projects.tuebingen.mpg.de/apply",
-    "who": "Bachelor's and master's students in any year, plus graduates who have not started a PhD, from ML, EE, neuroscience, cognitive science or data backgrounds; once you start a PhD you are out. India counts as a low/middle-income country the programme encourages.",
-    "field": "research",
-    "verified": true
-  },
-  {
     "company": "Indian Academy of Sciences / INSA / NASI",
     "role": "Focus Area Science Technology Summer Fellowship (FAST-SF) 2027",
     "deadline": "2026-11-30",
@@ -807,15 +789,6 @@
     "url": "https://careers.ibm.com/careers/JobDetail?jobId=137471",
     "who": "B.Tech/BE, M.Tech/ME, dual-degree and PhD students with 7.0 CGPA (70%) or more in their current degree who can intern May to August 2027; below 7.0 CGPA cannot apply; senior PhDs preferred for the quantum track",
     "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "NASA (Earth Science Division / Science Mission Directorate)",
-    "role": "NASA Space Apps Challenge 2026",
-    "deadline": "2026-11-15",
-    "url": "https://www.spaceappschallenge.org/2026/",
-    "who": "anyone, any year, any branch, school or college, solo or in a team; join an Indian local event or a virtual one; you must register to be eligible for Global Judging",
-    "field": "hackathons",
     "verified": true
   },
   {
@@ -996,6 +969,33 @@
     "url": "https://www.google.com/about/careers/applications/jobs/results/95785531123606214-software-engineer-persistent-disk-phd-early-career-2026",
     "who": "CS/EE PhD graduates (or finishing PhDs) who have published on storage or distributed systems; no PhD means you're out",
     "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Atlassian",
+    "role": "Codegeist 2026",
+    "deadline": "2026-12-22",
+    "url": "https://codegeist2026.devpost.com/",
+    "who": "anyone 18+ in India, any year or branch, solo or in a team; graduates and working developers enter too, so students compete with everyone",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Reddit",
+    "role": "Reddit's Game of the Day Hackathon",
+    "deadline": "2026-12-08",
+    "url": "https://redditgameofday2026.devpost.com/",
+    "who": "anyone 18+ in India, any year or branch, solo or in a team; open to graduates and professionals as well",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Perfios with Techfest, IIT Bombay",
+    "role": "Agentic AI in BFSI: Hackathon 2026",
+    "deadline": "2026-11-25",
+    "url": "https://techfest.org/competitions/Agentic-AI",
+    "who": "any college student with a valid institute ID, any year or branch, teams of up to four (cross-college allowed); graduates who are no longer students cannot enter",
+    "field": "hackathons",
     "verified": true
   }
 ]
