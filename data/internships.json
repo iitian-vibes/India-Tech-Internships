@@ -1,5 +1,20 @@
 [
   {
+    "id": "paytm:lever:0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
+    "company": "Paytm",
+    "company_slug": "paytm",
+    "role": "Backend - Intern ( SEA & Europe)",
+    "location": "Noida, Uttar Pradesh",
+    "section": "remote",
+    "url": "https://jobs.lever.co/paytm/0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
+    "posted": "2026-11-19",
+    "batch": "Any",
+    "stipend": null,
+    "source": "lever",
+    "first_seen": "2026-11-19",
+    "field": "software-ai"
+  },
+  {
     "id": "flow-traders:greenhouse:8047166",
     "company": "Flow Traders",
     "company_slug": "flow-traders",
@@ -57,6 +72,21 @@
     "stipend": null,
     "source": "greenhouse",
     "first_seen": "2026-10-12",
+    "field": "software-ai"
+  },
+  {
+    "id": "stripe:greenhouse:8130876",
+    "company": "Stripe",
+    "company_slug": "stripe",
+    "role": "Software Engineer, New Grad",
+    "location": "Bangalore",
+    "section": "india",
+    "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+    "posted": "2026-10-28",
+    "batch": "Any",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-11-19",
     "field": "software-ai"
   }
 ]
