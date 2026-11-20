@@ -997,5 +997,32 @@
     "who": "any college student with a valid institute ID, any year or branch, teams of up to four (cross-college allowed); graduates who are no longer students cannot enter",
     "field": "hackathons",
     "verified": true
+  },
+  {
+    "company": "Cloud9 Esports (with JetBrains)",
+    "role": "Cloud9 x JetBrains: Sky's The Limit Hackathon 2026",
+    "deadline": "2027-01-12",
+    "url": "https://cloud9.devpost.com/",
+    "who": "anyone 18+ in India, any year or branch, solo or in a team; graduates and working developers enter too, so students compete with everyone",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "American Express",
+    "role": "Technology Apprentice, 12 months (Bengaluru)",
+    "deadline": null,
+    "url": "https://careers.americanexpress.com/en/sites/CX_1/job/26016647",
+    "who": "fresh graduates who have finished a bachelor's or master's in CS, IT or another technical branch; current students cannot apply yet",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Siemens (Brightly Software India)",
+    "role": "QA Intern, Test Engineering Automation (Noida)",
+    "deadline": null,
+    "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/530022",
+    "who": "students currently in a bachelor's in CS, IT or a related branch; full-time and office-only in Noida; graduates do not qualify",
+    "field": "software-ai",
+    "verified": true
   }
 ]

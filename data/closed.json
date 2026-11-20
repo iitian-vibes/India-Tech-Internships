@@ -1,5 +1,21 @@
 [
   {
+    "id": "paytm:lever:0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
+    "company": "Paytm",
+    "company_slug": "paytm",
+    "role": "Backend - Intern ( SEA & Europe)",
+    "location": "Noida, Uttar Pradesh",
+    "section": "remote",
+    "url": "https://jobs.lever.co/paytm/0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
+    "posted": "2026-11-19",
+    "batch": "Any",
+    "stipend": null,
+    "source": "lever",
+    "first_seen": "2026-11-19",
+    "field": "software-ai",
+    "closed_at": "2026-11-20"
+  },
+  {
     "id": "graviton-research-capital:greenhouse:8899673002",
     "company": "Graviton Research Capital",
     "company_slug": "graviton-research-capital",

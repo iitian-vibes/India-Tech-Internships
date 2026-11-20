@@ -4,7 +4,7 @@
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
-**117 open** · Last updated: 19 Nov 2026, 17:25 IST · ⭐ Star to get updates
+**120 open** · Last updated: 20 Nov 2026, 17:26 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,9 +14,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Paytm | Backend - Intern \( SEA & Europe\) | Noida, Uttar Pradesh \(remote\) | [Apply](https://jobs.lever.co/paytm/0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8) | 0d |
-| Stripe | Software Engineer, New Grad | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 22d |
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 132d |
+| Sarvam AI | Product User Research, Intern | Bengaluru | [Apply](https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72) | 0d |
+| Stripe | Software Engineer, New Grad | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 23d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 133d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -47,6 +47,8 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Rubrik | Software Engineer \(CPD\) - Winter Intern ✓ | See posting | [Apply](https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537) | open |
 | Quadeye | Intern: Software Developer \(Product\) \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000002318440/intern-software-developer-product?source=CareerSite) | open |
 | Quadeye | Intern: Systems Engineer \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000002318430/intern-systems-engineer?source=CareerSite) | open |
+| American Express | Technology Apprentice, 12 months \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.americanexpress.com/en/sites/CX_1/job/26016647) | open |
+| Siemens \(Brightly Software India\) | QA Intern, Test Engineering Automation \(Noida\) ✓ | Noida | [Apply](https://jobs.siemens.com/en_US/externaljobs/JobDetail/530022) | open |
 
 ## 📈 Quant
 
@@ -54,9 +56,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 43d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 107d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 134d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 44d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 108d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 135d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | Machine Learning Engineer Intern: Summer 2027 ✓ | See posting | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4962456101) | open |
@@ -147,9 +149,11 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Atlassian | Codegeist 2026 ✓ | See posting | [Apply](https://codegeist2026.devpost.com/) | closes 22 Dec |
 | Reddit | Reddit's Game of the Day Hackathon ✓ | See posting | [Apply](https://redditgameofday2026.devpost.com/) | closes 8 Dec |
 | Perfios with Techfest, IIT Bombay | Agentic AI in BFSI: Hackathon 2026 ✓ | See posting | [Apply](https://techfest.org/competitions/Agentic-AI) | closes 25 Nov |
+| Cloud9 Esports \(with JetBrains\) | Cloud9 x JetBrains: Sky's The Limit Hackathon 2026 ✓ | See posting | [Apply](https://cloud9.devpost.com/) | closes 12 Jan |
 
 ## 🔒 Recently closed
 
+- ~~Backend - Intern \( SEA & Europe\)~~ at Paytm (closed 2026-11-20)
 - ~~Quantitative Researcher - 2027 Summer Internship~~ at Graviton Research Capital (closed 2026-11-18)
 
 ---
