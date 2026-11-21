@@ -4,7 +4,7 @@
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
-**120 open** · Last updated: 20 Nov 2026, 17:26 IST · ⭐ Star to get updates
+**114 open** · Last updated: 21 Nov 2026, 16:58 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,9 +14,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Sarvam AI | Product User Research, Intern | Bengaluru | [Apply](https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72) | 0d |
-| Stripe | Software Engineer, New Grad | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 23d |
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 133d |
+| Sarvam AI | Product User Research, Intern | Bengaluru | [Apply](https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72) | 1d |
+| Stripe | Software Engineer, New Grad | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 24d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 134d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -33,22 +33,16 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Cars24 | Cyber Security Engineer Intern: Gurugram ✓ | Gurugram | [Apply](https://careers.cars24.com/security-engineer/?id=a6a7454f0a938a) | open |
 | Cars24 | Forward Deployed Engineer, Builder - Apprentice \(Deployment Inc\): Gurgaon ✓ | Gurgaon | [Apply](https://careers.cars24.com/builder-apprentice/?id=a6ac379704b4d3) | open |
 | Cars24 | +3 more at Cars24 |  | [Careers](https://careers.cars24.com/intern/?id=a6a560b13cacdd) |  |
-| Apple | PhD Intern, Apple Ads \(Machine Learning\): Hyderabad ✓ | Hyderabad | [Apply](https://jobs.apple.com/en-in/details/200684719/phd-intern-apple-ads-machine-learning) | open |
-| Apple | PhD Intern, Machine Learning: MSI, Product Operations \(Bengaluru\) ✓ | Bengaluru | [Apply](https://jobs.apple.com/en-in/details/200676908/phd-intern-machine-learning-msi-product-operations-team) | open |
-| Honeywell | Intern Bachelors AI: Bengaluru ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160430/) | open |
-| Honeywell | Intern Bachelors Software Eng \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160484/) | open |
-| Honeywell | Intern \(Bach\) Data Engineering \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160486/) | open |
-| Honeywell | Intern Masters Data Science \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/161958/) | open |
 | Microsoft | Security Research Intern: India ✓ | India | [Apply](https://apply.careers.microsoft.com/careers/job/1970393557043380) | open |
 | Microsoft | Applied Sciences Intern: India ✓ | India | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556917519) | open |
-| Adobe | 2027 Intern: Research PhD Intern \(Adobe Research, Bangalore\) ✓ | Bangalore | [Apply](https://careers.adobe.com/us/en/job/R173016) | open |
 | IBM | IBM Research / Software Innovation Lab India Summer Internship 2027 ✓ | India | [Apply](https://careers.ibm.com/careers/JobDetail?jobId=137471) | open |
-| Airbus India | AI for Systems Engineering Intern: Bangalore ✓ | Bangalore | [Apply](https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Artificial-Intelligence-For-Systems-Engineering-Intern_JR10449573) | open |
 | Rubrik | Software Engineer \(CPD\) - Winter Intern ✓ | See posting | [Apply](https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537) | open |
-| Quadeye | Intern: Software Developer \(Product\) \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000002318440/intern-software-developer-product?source=CareerSite) | open |
+| Rubrik | Software Engineer: Winter Intern \(Bangalore\) ✓ | Bangalore | [Apply](https://www.rubrik.com/company/careers/departments/job.8166523?gh_jid=8166523) | open |
+| Honeywell | Intern Bachelors Software Eng \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160484/) | open |
+| Honeywell | Intern \(Bach\) Data Engineering \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160486/) | open |
 | Quadeye | Intern: Systems Engineer \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000002318430/intern-systems-engineer?source=CareerSite) | open |
 | American Express | Technology Apprentice, 12 months \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.americanexpress.com/en/sites/CX_1/job/26016647) | open |
-| Siemens \(Brightly Software India\) | QA Intern, Test Engineering Automation \(Noida\) ✓ | Noida | [Apply](https://jobs.siemens.com/en_US/externaljobs/JobDetail/530022) | open |
+| Siemens \(Brightly Software India\) | Intern \(Agentic QA\): Noida ✓ | Noida | [Apply](https://jobs.siemens.com/en_US/externaljobs/JobDetail/530022) | open |
 
 ## 📈 Quant
 
@@ -56,9 +50,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 44d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 108d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 135d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 45d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 109d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 136d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | Machine Learning Engineer Intern: Summer 2027 ✓ | See posting | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4962456101) | open |
@@ -80,9 +74,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Quadeye | Graduate: Trading Technology & Quant Research Engineer \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000000707783/graduate-trading-technology-quant-research-engineer?source=CareerSite) | open |
 | Goldman Sachs | New Analyst Program: India \(2027 batch\) ✓ | India | [Apply](https://www.goldmansachs.com/careers/students/programs-and-internships/india/new-analyst-program) | open |
 | Graviton Research Capital | Graduate Central Execution Trader: Singapore ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) | open |
-| Graviton Research Capital | Quantitative Researcher: 2027 Summer Internship \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002) | open |
 | Graviton Research Capital | Quantitative Researcher: 2027 Graduates \(Amsterdam / London / New York / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899670002) | open |
-| Graviton Research Capital | +3 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) |  |
+| Graviton Research Capital | Quantitative Researcher PhD: 2027 Internship \(Amsterdam / London / Singapore\) ✓ | Amsterdam | [Apply](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899671002) | open |
+| Graviton Research Capital | +2 more at Graviton Research Capital |  | [Careers](https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8862376002) |  |
 | DRW | Quantitative Research Intern \(Singapore\) ✓ | Singapore | [Apply](https://job-boards.greenhouse.io/drweng/jobs/8014915) | open |
 | Qube Research & Technologies | 2027 Internship or Graduate, Quantitative Research and Trading \(Hong Kong / Singapore / Shanghai / Beijing\) ✓ | Hong Kong | [Apply](https://job-boards.greenhouse.io/quberesearchandtechnologies/jobs/8581570002) | open |
 | Squarepoint Capital | Junior Quant Researcher \(incl. Bangalore\) ✓ | Bangalore | [Apply](https://www.squarepoint-capital.com/open-opportunities?id=239376&gh_jid=239376) | open |
@@ -96,7 +90,6 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
 | Google | Silicon Engineering Intern, PhD: Summer 2027 ✓ | See posting | [Apply](https://www.google.com/about/careers/applications/jobs/results/109375266236572358-silicon-engineering-intern-phd-summer-2027) | closes 30 Apr |
-| Google | Silicon Engineer, Platform and Devices: University Graduate 2026 \(Bengaluru\) ✓ | Bengaluru | [Apply](https://www.google.com/about/careers/applications/jobs/results/73379279982731974-silicon-engineer-platform-and-devices-university-graduate-2026) | open |
 | Google | Design Verification Engineer, PhD, Early Career ✓ | See posting | [Apply](https://www.google.com/about/careers/applications/jobs/results/111711283144729286-design-verification-engineer-phd-early-career) | open |
 | Qualcomm India | 2027 Campus Hire: Associate Engineer, Hardware ✓ | See posting | [Apply](https://careers.qualcomm.com/careers/job/446719783557) | open |
 | Qualcomm India | Interim Engineering Intern 2027: Hardware ✓ | See posting | [Apply](https://careers.qualcomm.com/careers/job/446719784824) | open |
@@ -115,6 +108,7 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
+| EPFL School of Computer & Communication Sciences | Summer@EPFL \(IC\) 2027 ✓ | See posting | [Apply](https://summer.epfl.ch/) | closes 29 Nov |
 | ETH Zurich, Dept of Computer Science | ETH Zurich Student Summer Research Fellowship 2027 ✓ | Zurich | [Apply](https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html) | closes 16 Dec |
 | Caltech Student-Faculty Programs \(USA\) | Caltech SURF 2027 ✓ | See posting | [Apply](https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information) | closes 22 Feb |
 | Amgen Foundation \(hosts: Kyoto, UTokyo, NUS, Tsinghua, IIIT Hyderabad\) | Amgen Scholars Asia 2027 ✓ | See posting | [Apply](https://amgenscholars.com/asia-program/) | closes 1 Feb |
@@ -144,6 +138,7 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Google Quantum AI \(on Kaggle\) | Kaggle: Google Quantum AI – Verifiable Quantum Circuit Compilation ✓ | See posting | [Apply](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation) | closes 13 Jan |
 | Kaggle | Kaggle: Name That LLM ✓ | See posting | [Apply](https://www.kaggle.com/competitions/name-that-llm) | closes 6 Jan |
 | Kaggle | Kaggle: Squares in Squares ✓ | See posting | [Apply](https://www.kaggle.com/competitions/squares-in-squares) | closes 11 Jul |
+| Kaggle | Kaggle: Santa 2026 - The Elf Calculator ✓ | See posting | [Apply](https://www.kaggle.com/competitions/santa-2026) | closes 21 Jan |
 | Kiro \(Amazon Web Services\) | Kiroween 2026 ✓ | See posting | [Apply](https://kiroween.devpost.com/) | closes 4 Dec |
 | Google \(Google Cloud AI Research\) / Kaggle | Kaggle: Google: Agent Harness on Physical-Engineering's Last Exam ✓ | See posting | [Apply](https://www.kaggle.com/competitions/physical-engineerings-last-exam) | closes 5 Jan |
 | Atlassian | Codegeist 2026 ✓ | See posting | [Apply](https://codegeist2026.devpost.com/) | closes 22 Dec |

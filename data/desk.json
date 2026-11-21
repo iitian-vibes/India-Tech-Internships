@@ -1,5 +1,14 @@
 [
   {
+    "company": "EPFL School of Computer & Communication Sciences",
+    "role": "Summer@EPFL (IC) 2027",
+    "deadline": "2026-11-29",
+    "url": "https://summer.epfl.ch/",
+    "who": "Bachelor's and master's students in computer science, computer engineering, telecommunications or electrical engineering; international students (outside EPFL) only. Second year and up in practice; first years have too little coursework to be competitive",
+    "field": "research",
+    "verified": true
+  },
+  {
     "company": "ETH Zurich, Dept of Computer Science",
     "role": "ETH Zurich Student Summer Research Fellowship 2027",
     "deadline": "2026-12-16",
@@ -451,47 +460,11 @@
   },
   {
     "company": "Google",
-    "role": "Silicon Engineer, Platform and Devices: University Graduate 2026 (Bengaluru)",
-    "deadline": null,
-    "url": "https://www.google.com/about/careers/applications/jobs/results/73379279982731974-silicon-engineer-platform-and-devices-university-graduate-2026",
-    "who": "Bachelor's degree in Electrical, Electronics and Communication Engineering, a relevant technical field, or equivalent practical experience; experience with design concepts and computer hardware architecture",
-    "field": "core",
-    "verified": true
-  },
-  {
-    "company": "Google",
     "role": "Software Engineer, PhD, Early Career 2026 (Bengaluru / Hyderabad)",
     "deadline": null,
     "url": "https://www.google.com/about/careers/applications/jobs/results/107018346561446598-software-engineer-phd-early-career-2026",
     "who": "PhD in Computer Science, Electrical Engineering or a related field, with software development experience; availability to start full time in 2026",
     "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Apple",
-    "role": "PhD Intern, Apple Ads (Machine Learning): Hyderabad",
-    "deadline": null,
-    "url": "https://jobs.apple.com/en-in/details/200684719/phd-intern-apple-ads-machine-learning",
-    "who": "Currently pursuing a PhD in Computer Science, Software Engineering, Machine Learning, Data Science or a related technical field",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Apple",
-    "role": "PhD Intern, Machine Learning: MSI, Product Operations (Bengaluru)",
-    "deadline": null,
-    "url": "https://jobs.apple.com/en-in/details/200676908/phd-intern-machine-learning-msi-product-operations-team",
-    "who": "Pursuing a PhD in Computer Science or a related field, with a deep understanding of ML, probability and statistics and of computer vision / VLMs",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Graviton Research Capital",
-    "role": "Quantitative Researcher: 2027 Summer Internship (Amsterdam / London / New York / Singapore)",
-    "deadline": null,
-    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002",
-    "who": "students graduating in 2028 (today's third years on a 4-year B.Tech, or Master's/PhD students finishing in 2028), maths/physics/CS/stats or related; 2027 and 2029 graduates are outside this posting",
-    "field": "quant",
     "verified": true
   },
   {
@@ -546,15 +519,6 @@
     "url": "https://job-boards.greenhouse.io/drweng/jobs/8014915",
     "who": "students graduating between December 2027 and August 2028 (today's third years on a 4-year B.Tech, or Master's/PhD students finishing then) in a technical field; 2027-summer graduates and 2029 graduates are outside this posting",
     "field": "quant",
-    "verified": true
-  },
-  {
-    "company": "Honeywell",
-    "role": "Intern Bachelors AI: Bengaluru",
-    "deadline": null,
-    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/160430/",
-    "who": "students in a bachelor's programme with AI/ML interest; the role is pitched at undergraduates, not master's or PhD students",
-    "field": "software-ai",
     "verified": true
   },
   {
@@ -774,15 +738,6 @@
     "verified": true
   },
   {
-    "company": "Adobe",
-    "role": "2027 Intern: Research PhD Intern (Adobe Research, Bangalore)",
-    "deadline": null,
-    "url": "https://careers.adobe.com/us/en/job/R173016",
-    "who": "Current PhD students in CS or a related field; bachelor's and master's students are not eligible for this posting",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "IBM",
     "role": "IBM Research / Software Innovation Lab India Summer Internship 2027",
     "deadline": null,
@@ -798,15 +753,6 @@
     "url": "https://kiroween.devpost.com/",
     "who": "anyone 18+ in India, solo or a team of up to three; all-student teams can also win the student prizes; only projects started on or after 30 October count",
     "field": "hackathons",
-    "verified": true
-  },
-  {
-    "company": "Airbus India",
-    "role": "AI for Systems Engineering Intern: Bangalore",
-    "deadline": null,
-    "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Artificial-Intelligence-For-Systems-Engineering-Intern_JR10449573",
-    "who": "master's and PhD students in AI/ML with some formal-methods or verification exposure, free for six months from January 2027; bachelor's students are not eligible",
-    "field": "software-ai",
     "verified": true
   },
   {
@@ -856,15 +802,6 @@
   },
   {
     "company": "Quadeye",
-    "role": "Intern: Software Developer (Product) (Gurugram)",
-    "deadline": null,
-    "url": "https://www.quadeye.com/jobs/199893000002318440/intern-software-developer-product?source=CareerSite",
-    "who": "current engineering students in CS or a related technical branch who can build web apps in Python (Django) and React or Angular; the posting names no year, so any year can apply, but graduates and non-engineering degrees are outside it",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Quadeye",
     "role": "Intern: Systems Engineer (Gurugram)",
     "deadline": null,
     "url": "https://www.quadeye.com/jobs/199893000002318430/intern-systems-engineer?source=CareerSite",
@@ -879,15 +816,6 @@
     "url": "https://careers.synopsys.com/job/bengaluru/apprentice-technical-engineer/44408/102584673248",
     "who": "ECE (or related) B.E/B.Tech graduates of 2025 or 2026 who are not working full-time and have no M.Tech; current students, M.Tech holders and older batches are excluded",
     "field": "core",
-    "verified": true
-  },
-  {
-    "company": "Honeywell",
-    "role": "Intern Masters Data Science (Bengaluru)",
-    "deadline": null,
-    "url": "https://careers.honeywell.com/en/sites/Honeywell/job/161958/",
-    "who": "master's students in data science, CS or a related field with Python or R, machine learning and Tableau or Power BI; Honeywell's bachelor's interns have separate postings; Bengaluru",
-    "field": "software-ai",
     "verified": true
   },
   {
@@ -1018,11 +946,29 @@
   },
   {
     "company": "Siemens (Brightly Software India)",
-    "role": "QA Intern, Test Engineering Automation (Noida)",
+    "role": "Intern (Agentic QA): Noida",
     "deadline": null,
     "url": "https://jobs.siemens.com/en_US/externaljobs/JobDetail/530022",
     "who": "students currently in a bachelor's in CS, IT or a related branch; full-time and office-only in Noida; graduates do not qualify",
     "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Rubrik",
+    "role": "Software Engineer: Winter Intern (Bangalore)",
+    "deadline": null,
+    "url": "https://www.rubrik.com/company/careers/departments/job.8166523?gh_jid=8166523",
+    "who": "Final-year students graduating 2027 in circuital branches (CS, ECE and similar) with CGPA 8 or above; younger years and non-circuital branches are out",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "Kaggle",
+    "role": "Kaggle: Santa 2026 - The Elf Calculator",
+    "deadline": "2027-01-21",
+    "url": "https://www.kaggle.com/competitions/santa-2026",
+    "who": "Any student or coder comfortable with algorithms or optimisation; no ML or domain experience needed, first years included; you must have a Kaggle account and accept the rules by the entry date.",
+    "field": "hackathons",
     "verified": true
   }
 ]
