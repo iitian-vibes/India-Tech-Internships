@@ -4,7 +4,7 @@
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
-**114 open** · Last updated: 21 Nov 2026, 16:58 IST · ⭐ Star to get updates
+**114 open** · Last updated: 22 Nov 2026, 17:13 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,9 +14,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Sarvam AI | Product User Research, Intern | Bengaluru | [Apply](https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72) | 1d |
-| Stripe | Software Engineer, New Grad | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 24d |
-| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 134d |
+| Sarvam AI | Product User Research, Intern | Bengaluru | [Apply](https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72) | 2d |
+| Stripe | Software Engineer, New Grad | Bangalore | [Apply](https://stripe.com/jobs/search?gh_jid=8130876) | 25d |
+| Stripe | Software Engineer, Intern ✓ | Bengaluru | [Apply](https://stripe.com/jobs/search?gh_jid=8031833) | 135d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -50,9 +50,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 45d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 109d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 136d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 46d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 110d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 137d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | Machine Learning Engineer Intern: Summer 2027 ✓ | See posting | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4962456101) | open |

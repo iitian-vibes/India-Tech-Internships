@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T11:28:36.284Z",
+  "updated_at": "2026-11-22T11:43:38.318Z",
   "counts": {
     "india": 3,
     "remote": 0,
@@ -7,7 +7,7 @@
     "desk": 108,
     "total": 114
   },
-  "companies_ok": 57,
+  "companies_ok": 56,
   "companies_failed": [
     "adobe",
     "barclays",
@@ -20,13 +20,14 @@
     "postman",
     "samsung",
     "sprinklr",
+    "uniphore",
     "zendesk"
   ],
   "jobs_by_company": {
     "razorpay": 29,
-    "groww": 9,
+    "groww": 8,
     "cred": 11,
-    "meesho": 48,
+    "meesho": 47,
     "paytm": 199,
     "sarvam": 42,
     "composio": 30,
@@ -38,7 +39,7 @@
     "barclays": 200,
     "mastercard": 200,
     "cadence": 195,
-    "zenoti": 56,
+    "zenoti": 55,
     "druva": 29,
     "mindtickle": 19,
     "jane-street": 216,
@@ -61,8 +62,8 @@
     "grafana-labs": 140,
     "canonical": 318,
     "elastic": 382,
-    "cloudflare": 503,
-    "stripe": 778,
+    "cloudflare": 504,
+    "stripe": 777,
     "twilio": 109,
     "figma": 147,
     "circleci": 14,
@@ -87,7 +88,7 @@
     "uniphore": 16,
     "fractal-analytics": 28,
     "postman": 15,
-    "swiggy": 173,
+    "swiggy": 175,
     "myntra": 0,
     "nykaa": 0,
     "xpressbees": 0,
