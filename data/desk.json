@@ -54,6 +54,15 @@
     "verified": true
   },
   {
+    "company": "CERN",
+    "role": "CERN openlab Summer Student Programme 2027",
+    "deadline": "2027-01-21",
+    "url": "https://careers.cern/jobs/cern-openlab-summer-student-programme-2026/",
+    "who": "Bachelor's or Master's students (not PhD), in computer science, IT or a related field, who will have completed at least 6 semesters (3 academic years) of full-time study by summer 2027 and stay enrolled through it; first and second years cannot apply; anyone who has already done a CERN summer programme cannot",
+    "field": "research",
+    "verified": true
+  },
+  {
     "company": "Indian Academy of Sciences / INSA / NASI",
     "role": "Science Academies' Summer Research Fellowship Programme (SRFP) 2027",
     "deadline": "2026-11-30",
@@ -923,6 +932,42 @@
     "deadline": "2026-11-25",
     "url": "https://techfest.org/competitions/Agentic-AI",
     "who": "any college student with a valid institute ID, any year or branch, teams of up to four (cross-college allowed); graduates who are no longer students cannot enter",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Techfest, IIT Bombay",
+    "role": "Anveshak: Open-World Object Detection for Remote Sensing",
+    "deadline": "2026-11-30",
+    "url": "https://techfest.org/competitions/Anveshak",
+    "who": "any student with a valid institute ID, any year or branch, teams of up to four, cross-college allowed; graduates who are no longer students cannot enter",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Techfest, IIT Bombay (with Rezolve Labs)",
+    "role": "AgentX: The Agentic Commerce Challenge",
+    "deadline": "2026-11-30",
+    "url": "https://techfest.org/competitions/agentx",
+    "who": "students aged 18 or over at any Indian college or university, any year or branch, solo or teams of up to four; under-18s and students outside India cannot enter",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Techfest, IIT Bombay",
+    "role": "OptiGuard: Smart Fiber Sensing Challenge",
+    "deadline": "2026-12-03",
+    "url": "https://techfest.org/competitions/OptiGuard",
+    "who": "undergraduate and postgraduate students (and researchers) with a valid institutional ID, any year, teams of three to five with a team lead; solo entries and school students cannot enter",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Techfest, IIT Bombay with Voltas",
+    "role": "The Future-Cool Challenge",
+    "deadline": "2026-11-30",
+    "url": "https://techfest.org/competitions/future-cool-challenge",
+    "who": "undergraduate and postgraduate students currently enrolled anywhere, any year; best fit for mechanical, chemical and energy branches; solo or teams of up to four, inter-college allowed; graduates cannot enter",
     "field": "hackathons",
     "verified": true
   },
