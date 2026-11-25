@@ -712,15 +712,6 @@
   },
   {
     "company": "Google",
-    "role": "Associate Product Manager, University Graduate, 2027 Start",
-    "deadline": "2026-11-24",
-    "url": "https://www.google.com/about/careers/applications/jobs/results/101007950268506822-associate-product-manager-university-graduate-2027-start",
-    "who": "final-year students (and recent grads) in CS, engineering, data science, maths or stats starting full-time in 2027, with at least one PM/software internship or TA stint; no internship or TA experience means you don't meet the minimum",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
-    "company": "Google",
     "role": "Design Verification Engineer, PhD, Early Career",
     "deadline": null,
     "url": "https://www.google.com/about/careers/applications/jobs/results/111711283144729286-design-verification-engineer-phd-early-career",
@@ -999,21 +990,21 @@
     "verified": true
   },
   {
-    "company": "Rubrik",
-    "role": "Software Engineer: Winter Intern (Bangalore)",
-    "deadline": null,
-    "url": "https://www.rubrik.com/company/careers/departments/job.8166523?gh_jid=8166523",
-    "who": "Final-year students graduating 2027 in circuital branches (CS, ECE and similar) with CGPA 8 or above; younger years and non-circuital branches are out",
-    "field": "software-ai",
-    "verified": true
-  },
-  {
     "company": "Kaggle",
     "role": "Kaggle: Santa 2026 - The Elf Calculator",
     "deadline": "2027-01-21",
     "url": "https://www.kaggle.com/competitions/santa-2026",
     "who": "Any student or coder comfortable with algorithms or optimisation; no ML or domain experience needed, first years included; you must have a Kaggle account and accept the rules by the entry date.",
     "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Amazon",
+    "role": "Data Scientist I: 6-month Intern (Chennai)",
+    "deadline": null,
+    "url": "https://www.amazon.jobs/en/jobs/10443572/data-scientist-i-6m-intern",
+    "who": "Master's and PhD students (preferred) and final-year undergrads in CS, engineering, statistics or maths who can spend six months in Chennai; first and second years are a poor fit.",
+    "field": "software-ai",
     "verified": true
   }
 ]
