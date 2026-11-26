@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-26",
+  "stars": 5,
+  "views": {
+    "count": 210,
+    "uniques": 94,
+    "views": [
+      {
+        "timestamp": "2026-11-12T00:00:00Z",
+        "count": 2,
+        "uniques": 2
+      },
+      {
+        "timestamp": "2026-11-13T00:00:00Z",
+        "count": 3,
+        "uniques": 2
+      },
+      {
+        "timestamp": "2026-11-14T00:00:00Z",
+        "count": 4,
+        "uniques": 3
+      },
+      {
+        "timestamp": "2026-11-15T00:00:00Z",
+        "count": 9,
+        "uniques": 1
+      },
+      {
+        "timestamp": "2026-11-16T00:00:00Z",
+        "count": 8,
+        "uniques": 3
+      },
+      {
+        "timestamp": "2026-11-17T00:00:00Z",
+        "count": 12,
+        "uniques": 7
+      },
+      {
+        "timestamp": "2026-11-18T00:00:00Z",
+        "count": 10,
+        "uniques": 7
+      },
+      {
+        "timestamp": "2026-11-19T00:00:00Z",
+        "count": 8,
+        "uniques": 4
+      },
+      {
+        "timestamp": "2026-11-20T00:00:00Z",
+        "count": 34,
+        "uniques": 15
+      },
+      {
+        "timestamp": "2026-11-21T00:00:00Z",
+        "count": 28,
+        "uniques": 9
+      },
+      {
+        "timestamp": "2026-11-22T00:00:00Z",
+        "count": 25,
+        "uniques": 15
+      },
+      {
+        "timestamp": "2026-11-23T00:00:00Z",
+        "count": 33,
+        "uniques": 11
+      },
+      {
+        "timestamp": "2026-11-24T00:00:00Z",
+        "count": 19,
+        "uniques": 14
+      },
+      {
+        "timestamp": "2026-11-25T00:00:00Z",
+        "count": 15,
+        "uniques": 8
+      }
+    ]
+  },
+  "clones": {
+    "count": 325,
+    "uniques": 128,
+    "clones": [
+      {
+        "timestamp": "2026-11-12T00:00:00Z",
+        "count": 21,
+        "uniques": 10
+      },
+      {
+        "timestamp": "2026-11-13T00:00:00Z",
+        "count": 20,
+        "uniques": 12
+      },
+      {
+        "timestamp": "2026-11-14T00:00:00Z",
+        "count": 29,
+        "uniques": 15
+      },
+      {
+        "timestamp": "2026-11-15T00:00:00Z",
+        "count": 27,
+        "uniques": 14
+      },
+      {
+        "timestamp": "2026-11-16T00:00:00Z",
+        "count": 28,
+        "uniques": 18
+      },
+      {
+        "timestamp": "2026-11-17T00:00:00Z",
+        "count": 7,
+        "uniques": 4
+      },
+      {
+        "timestamp": "2026-11-18T00:00:00Z",
+        "count": 29,
+        "uniques": 16
+      },
+      {
+        "timestamp": "2026-11-19T00:00:00Z",
+        "count": 15,
+        "uniques": 9
+      },
+      {
+        "timestamp": "2026-11-20T00:00:00Z",
+        "count": 13,
+        "uniques": 8
+      },
+      {
+        "timestamp": "2026-11-21T00:00:00Z",
+        "count": 24,
+        "uniques": 13
+      },
+      {
+        "timestamp": "2026-11-22T00:00:00Z",
+        "count": 64,
+        "uniques": 33
+      },
+      {
+        "timestamp": "2026-11-23T00:00:00Z",
+        "count": 17,
+        "uniques": 8
+      },
+      {
+        "timestamp": "2026-11-24T00:00:00Z",
+        "count": 15,
+        "uniques": 9
+      },
+      {
+        "timestamp": "2026-11-25T00:00:00Z",
+        "count": 16,
+        "uniques": 8
+      }
+    ]
+  },
+  "referrers": [
+    {
+      "referrer": "github.com",
+      "count": 13,
+      "uniques": 6
+    },
+    {
+      "referrer": "perplexity.ai",
+      "count": 9,
+      "uniques": 1
+    },
+    {
+      "referrer": "iitianvibes.com",
+      "count": 6,
+      "uniques": 6
+    },
+    {
+      "referrer": "l.instagram.com",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "referrer": "search.brave.com",
+      "count": 1,
+      "uniques": 1
+    }
+  ],
+  "paths": [
+    {
+      "path": "/iitian-vibes/India-Tech-Internships",
+      "title": "Overview",
+      "count": 195,
+      "uniques": 94
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/blob/main/assets/banner.png",
+      "title": "/blob/main/assets/banner.png",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/blob/main/data/internships.json",
+      "title": "/blob/main/data/internships.json",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/blob/main/docs/STATUS.md",
+      "title": "/blob/main/docs/STATUS.md",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/blob/main/README.md",
+      "title": "/blob/main/README.md",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/commit/08ccf8099d14089cf2b8e5fe3590c7392166db65",
+      "title": "/commit/08ccf8099d14089cf2b8e5fe3590c7392166db65",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/commit/77cd6245fda70b610dc1a03ddc9e666043683a76",
+      "title": "/commit/77cd6245fda70b610dc1a03ddc9e666043683a76",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/commits/main",
+      "title": "/commits/main",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/issues",
+      "title": "/issues",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "path": "/iitian-vibes/India-Tech-Internships/tree/main",
+      "title": "/tree/main",
+      "count": 1,
+      "uniques": 1
+    }
+  ],
+  "errors": []
+}
