@@ -1,5 +1,37 @@
 [
   {
+    "id": "stripe:greenhouse:8031833",
+    "company": "Stripe",
+    "company_slug": "stripe",
+    "role": "Software Engineer, Intern",
+    "location": "Bengaluru",
+    "section": "india",
+    "url": "https://stripe.com/jobs/search?gh_jid=8031833",
+    "posted": "2026-07-10",
+    "batch": "Any",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-10-12",
+    "field": "software-ai",
+    "closed_at": "2026-11-26"
+  },
+  {
+    "id": "stripe:greenhouse:8130876",
+    "company": "Stripe",
+    "company_slug": "stripe",
+    "role": "Software Engineer, New Grad",
+    "location": "Bangalore",
+    "section": "india",
+    "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+    "posted": "2026-10-28",
+    "batch": "Any",
+    "stipend": null,
+    "source": "greenhouse",
+    "first_seen": "2026-11-19",
+    "field": "software-ai",
+    "closed_at": "2026-11-26"
+  },
+  {
     "id": "paytm:lever:0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
     "company": "Paytm",
     "company_slug": "paytm",
@@ -14,21 +46,5 @@
     "first_seen": "2026-11-19",
     "field": "software-ai",
     "closed_at": "2026-11-20"
-  },
-  {
-    "id": "graviton-research-capital:greenhouse:8899673002",
-    "company": "Graviton Research Capital",
-    "company_slug": "graviton-research-capital",
-    "role": "Quantitative Researcher - 2027 Summer Internship",
-    "location": "Amsterdam, North Holland, Netherlands; London, England, United Kingdom; New York; Singapore",
-    "section": "abroad",
-    "url": "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8899673002",
-    "posted": "2026-10-19",
-    "batch": "2028",
-    "stipend": null,
-    "source": "greenhouse",
-    "first_seen": "2026-10-20",
-    "field": "quant",
-    "closed_at": "2026-11-18"
   }
 ]

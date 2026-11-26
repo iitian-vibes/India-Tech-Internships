@@ -58,35 +58,5 @@
     "source": "greenhouse",
     "first_seen": "2026-10-12",
     "field": "quant"
-  },
-  {
-    "id": "stripe:greenhouse:8031833",
-    "company": "Stripe",
-    "company_slug": "stripe",
-    "role": "Software Engineer, Intern",
-    "location": "Bengaluru",
-    "section": "india",
-    "url": "https://stripe.com/jobs/search?gh_jid=8031833",
-    "posted": "2026-07-10",
-    "batch": "Any",
-    "stipend": null,
-    "source": "greenhouse",
-    "first_seen": "2026-10-12",
-    "field": "software-ai"
-  },
-  {
-    "id": "stripe:greenhouse:8130876",
-    "company": "Stripe",
-    "company_slug": "stripe",
-    "role": "Software Engineer, New Grad",
-    "location": "Bangalore",
-    "section": "india",
-    "url": "https://stripe.com/jobs/search?gh_jid=8130876",
-    "posted": "2026-10-28",
-    "batch": "Any",
-    "stipend": null,
-    "source": "greenhouse",
-    "first_seen": "2026-11-19",
-    "field": "software-ai"
   }
 ]
