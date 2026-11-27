@@ -1,5 +1,21 @@
 [
   {
+    "id": "sarvam:ashby:0a5bf81d-3370-47e6-88f4-14aa5102ba72",
+    "company": "Sarvam AI",
+    "company_slug": "sarvam",
+    "role": "Product User Research, Intern",
+    "location": "Bengaluru",
+    "section": "india",
+    "url": "https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72",
+    "posted": "2026-11-20",
+    "batch": "Any",
+    "stipend": null,
+    "source": "ashby",
+    "first_seen": "2026-11-20",
+    "field": "software-ai",
+    "closed_at": "2026-11-27"
+  },
+  {
     "id": "stripe:greenhouse:8031833",
     "company": "Stripe",
     "company_slug": "stripe",

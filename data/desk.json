@@ -979,5 +979,32 @@
     "who": "Master's and PhD students (preferred) and final-year undergrads in CS, engineering, statistics or maths who can spend six months in Chennai; first and second years are a poor fit.",
     "field": "software-ai",
     "verified": true
+  },
+  {
+    "company": "IIT Madras, Centre for Cybersecurity, Trust and Reliability (CyStar)",
+    "role": "Protocol Zero: Boot | Hack | CTF",
+    "deadline": "2026-12-02",
+    "url": "https://cystar.iitm.ac.in/protocol-zero-boot-hack-ctf/",
+    "who": "any undergraduate or postgraduate student in India aged 18+, any year or branch, in a team of two or three; no solo entries, and graduates who are no longer enrolled cannot enter",
+    "field": "hackathons",
+    "verified": true
+  },
+  {
+    "company": "Rubrik",
+    "role": "Software Engineer (UI) - Winter Intern",
+    "deadline": null,
+    "url": "https://www.rubrik.com/company/careers/departments/job.8413157?gh_jid=8413157",
+    "who": "final-year students graduating in 2027 from circuital branches (CS, ECE, EE and similar) with CGPA 8+, free for Jan-May 2027 onsite in Bangalore; non-circuital branches and other batch years are excluded",
+    "field": "software-ai",
+    "verified": true
+  },
+  {
+    "company": "SAP Labs India",
+    "role": "Diploma Student / Intern-SAP & AI Development Intern – Oil & Gas Field Logistics",
+    "deadline": null,
+    "url": "https://jobs.sap.com/en/jobs/744000163962509/diploma-student-intern-sap-ai-development-intern-oil-gas-field-logistics/",
+    "who": "bachelor's or master's students in CS, IT, software or data science who have built an LLM, RAG or agent project, able to work hybrid in Bangalore; no graduation year is stated",
+    "field": "software-ai",
+    "verified": true
   }
 ]

@@ -4,7 +4,7 @@
 
 Prestigious internships, hackathons and competitions for engineering students in India, every branch: software and AI, quant, core engineering and research. Hand-picked, checked daily.
 
-**113 open** · Last updated: 26 Nov 2026, 18:25 IST · ⭐ Star to get updates
+**115 open** · Last updated: 27 Nov 2026, 18:20 IST · ⭐ Star to get updates
 
 📅 [Add every deadline to Google Calendar](https://calendar.google.com/calendar/u/0/r/settings/addbyurl?cid=https%3A%2F%2Fiitianvibes.com%2Fblog%2Fdeadline-desk%2Fcalendar.ics) · 🗂️ Scholarships, govt jobs, MBA and more: [the Deadline Desk](https://iitianvibes.com/blog/deadline-desk/?utm_source=github&utm_medium=readme&utm_campaign=india_tech_internships) · ➕ [Submit an internship](https://github.com/iitian-vibes/India-Tech-Internships/issues/new?template=submit-internship.yml)
 
@@ -14,7 +14,6 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Sarvam AI | Product User Research, Intern | Bengaluru | [Apply](https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72) | 6d |
 | Jane Street | Software Engineer: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8617298002?gh_jid=8617298002) | open |
 | Hudson River Trading | Software Engineering Internship: Summer 2027 ✓ | See posting | [Apply](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052083) | open |
 | Citadel | Software Engineer: Intern \(Asia\) ✓ | See posting | [Apply](https://www.citadel.com/careers/details/software-engineer-intern-asia/) | open |
@@ -36,11 +35,13 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Microsoft | Applied Sciences Intern: India ✓ | India | [Apply](https://apply.careers.microsoft.com/careers/job/1970393556917519) | open |
 | IBM | IBM Research / Software Innovation Lab India Summer Internship 2027 ✓ | India | [Apply](https://careers.ibm.com/careers/JobDetail?jobId=137471) | open |
 | Rubrik | Software Engineer \(CPD\) - Winter Intern ✓ | See posting | [Apply](https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537) | open |
+| Rubrik | Software Engineer \(UI\) - Winter Intern ✓ | See posting | [Apply](https://www.rubrik.com/company/careers/departments/job.8413157?gh_jid=8413157) | open |
 | Honeywell | Intern Bachelors Software Eng \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160484/) | open |
 | Honeywell | Intern \(Bach\) Data Engineering \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.honeywell.com/en/sites/Honeywell/job/160486/) | open |
 | Quadeye | Intern: Systems Engineer \(Gurugram\) ✓ | Gurugram | [Apply](https://www.quadeye.com/jobs/199893000002318430/intern-systems-engineer?source=CareerSite) | open |
 | American Express | Technology Apprentice, 12 months \(Bengaluru\) ✓ | Bengaluru | [Apply](https://careers.americanexpress.com/en/sites/CX_1/job/26016647) | open |
 | Amazon | Data Scientist I: 6-month Intern \(Chennai\) ✓ | Chennai | [Apply](https://www.amazon.jobs/en/jobs/10443572/data-scientist-i-6m-intern) | open |
+| SAP Labs India | Diploma Student / Intern-SAP & AI Development Intern – Oil & Gas Field Logistics ✓ | See posting | [Apply](https://jobs.sap.com/en/jobs/744000163962509/diploma-student-intern-sap-ai-development-intern-oil-gas-field-logistics/) | open |
 
 ## 📈 Quant
 
@@ -48,9 +49,9 @@ Prestigious internships, hackathons and competitions for engineering students in
 
 | Company | Role | Where | Apply | Age |
 |---|---|---|---|---|
-| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 50d |
-| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 114d |
-| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 141d |
+| Flow Traders | Summer Trading Internship | Amsterdam \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8260920) | 51d |
+| Flow Traders | Trading Intern ✓ | Hong Kong \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8102618) | 115d |
+| Flow Traders | Quantitative Trading Intern Summer 2027 | New York \(abroad, visa\) | [Apply](https://job-boards.greenhouse.io/flowtraders/jobs/8047166) | 142d |
 | Jane Street | Quantitative Trader: Summer Internship 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://www.janestreet.com/join-jane-street/apply/8623733002?gh_jid=8623733002) | open |
 | IMC Trading | Quantitative Trader Intern 2027 \(Hong Kong\) ✓ | Hong Kong | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4941205101) | open |
 | IMC Trading | Machine Learning Engineer Intern: Summer 2027 ✓ | See posting | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4962456101) | open |
@@ -146,9 +147,11 @@ Prestigious internships, hackathons and competitions for engineering students in
 | Techfest, IIT Bombay \(with Rezolve Labs\) | AgentX: The Agentic Commerce Challenge ✓ | See posting | [Apply](https://techfest.org/competitions/agentx) | closes 30 Nov |
 | Techfest, IIT Bombay with Voltas | The Future-Cool Challenge ✓ | See posting | [Apply](https://techfest.org/competitions/future-cool-challenge) | closes 30 Nov |
 | Cloud9 Esports \(with JetBrains\) | Cloud9 x JetBrains: Sky's The Limit Hackathon 2026 ✓ | See posting | [Apply](https://cloud9.devpost.com/) | closes 12 Jan |
+| IIT Madras, Centre for Cybersecurity, Trust and Reliability \(CyStar\) | Protocol Zero: Boot \| Hack \| CTF ✓ | See posting | [Apply](https://cystar.iitm.ac.in/protocol-zero-boot-hack-ctf/) | closes 2 Dec |
 
 ## 🔒 Recently closed
 
+- ~~Product User Research, Intern~~ at Sarvam AI (closed 2026-11-27)
 - ~~Software Engineer, Intern~~ at Stripe (closed 2026-11-26)
 - ~~Software Engineer, New Grad~~ at Stripe (closed 2026-11-26)
 - ~~Backend - Intern \( SEA & Europe\)~~ at Paytm (closed 2026-11-20)
